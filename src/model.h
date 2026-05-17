@@ -13,13 +13,11 @@ private:
     std::vector<Flow*> flows;
 
 public:
-    // --- FORMA CANÔNICA ---
-    Model();                          // Construtor padrão
-    Model(const Model& mod);          // Construtor de cópia
-    virtual ~Model();                 // Destrutor virtual (Limpará a memória dos vetores)
-    Model& operator=(const Model& mod); // Operador de atribuição
+    Model();                          
+    Model(const Model& mod);         
+    virtual ~Model();                 
+    Model& operator=(const Model& mod); 
 
-    // Construtor parametrizado
     Model(std::string name);
 
     void add(System* s);
@@ -31,4 +29,4 @@ public:
     void setName(std::string name);
 };
 
-#endif // MODEL_H
+#endif

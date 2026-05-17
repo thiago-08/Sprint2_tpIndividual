@@ -10,7 +10,7 @@
 using namespace std;
 
 void exponentialFuncionalTest() {
-    cout << "Iniciando Teste Funcional Exponencial..." << endl;
+    cout << "Starting Exponential Funcional Test..." << endl;
 
     System* pop1 = new System("pop1", 100.0);
     System* pop2 = new System("pop2", 0.0);
@@ -19,7 +19,7 @@ void exponentialFuncionalTest() {
     exp->setSource(pop1);
     exp->setTarget(pop2);
 
-    Model* m = new Model("Modelo Exponencial");
+    Model* m = new Model("Exponencial Model");
     m->add(pop1);
     m->add(pop2);
     m->add(exp);
@@ -29,22 +29,22 @@ void exponentialFuncionalTest() {
     assert(abs(pop1->getValue() - 36.6032) < 0.0001); 
     assert(abs(pop2->getValue() - 63.3968) < 0.0001);
 
-    cout << "Teste Exponencial OK!" << endl;
+    cout << "Exponencial Test OK!" << endl;
     
     delete m; 
 }
 
 void logisticalFuncionalTest() {
-    cout << "Iniciando Teste Funcional Logistico..." << endl;
+    cout << "Starting Logistical Funcional Test..." << endl;
 
     System* p1 = new System("p1", 100.0);
     System* p2 = new System("p2", 10.0);
-    FlowLogistic* log = new FlowLogistic("logistica");
+    FlowLogistic* log = new FlowLogistic("logistical");
     
     log->setSource(p1);
     log->setTarget(p2);
 
-    Model* m = new Model("Modelo Logistico");
+    Model* m = new Model("Logistical Model");
     m->add(p1);
     m->add(p2);
     m->add(log);
@@ -53,7 +53,7 @@ void logisticalFuncionalTest() {
     assert(abs(p1->getValue() - 88.2167) < 0.0001);
     assert(abs(p2->getValue() - 21.7833) < 0.0001);
 
-    cout << "Teste Logistico OK!" << endl;
+    cout << "Logistical Test OK!" << endl;
 
     delete m;
     delete p1;
@@ -62,7 +62,7 @@ void logisticalFuncionalTest() {
 }
 
 void complexFuncionalTest() {
-    cout << "Iniciando Teste Funcional Complexo..." << endl;
+    cout << "Starting Complex Funcional Test..." << endl;
 
     System* q1 = new System("Q1", 100.0);
     System* q2 = new System("Q2", 0.0);
@@ -77,7 +77,7 @@ void complexFuncionalTest() {
     FlowComplex* u = new FlowComplex("u"); u->setSource(q3); u->setTarget(q4);
     FlowComplex* v = new FlowComplex("v"); v->setSource(q4); v->setTarget(q1);
 
-    Model* m = new Model("Modelo Complexo Q");
+    Model* m = new Model("Complex Model Q");
     m->add(q1); m->add(q2); m->add(q3); m->add(q4); m->add(q5);
     m->add(f); m->add(g); m->add(r); m->add(t); m->add(u); m->add(v);
 
@@ -89,7 +89,7 @@ void complexFuncionalTest() {
     assert(abs(q4->getValue() - 56.1728) < 0.0001);
     assert(abs(q5->getValue() - 16.4612) < 0.0001);
 
-    cout << "Teste Complexo OK!" << endl;
+    cout << "Complex Test OK!" << endl;
 
     delete m;
     delete q1; delete q2; delete q3; delete q4; delete q5;

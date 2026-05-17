@@ -11,13 +11,11 @@ protected:
     System* target;
 
 public:
-    // --- FORMA CANÔNICA ---
-    Flow();                         // Construtor padrão
-    Flow(const Flow& fl);           // Construtor de cópia
-    virtual ~Flow();                // Destrutor virtual
-    Flow& operator=(const Flow& fl); // Operador de atribuição
+    Flow();                         
+    Flow(const Flow& fl);           
+    virtual ~Flow();                
+    Flow& operator=(const Flow& fl);
 
-    // Construtor parametrizado
     Flow(std::string name);
 
     void setSource(System* s);
@@ -29,4 +27,4 @@ public:
     virtual double execute() = 0; 
 };
 
-#endif // FLOW_H
+#endif 

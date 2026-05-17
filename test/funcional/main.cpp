@@ -5,13 +5,13 @@
 #include <iostream>
 
 int main() {
-    std::cout << "--- INICIANDO TESTES FUNCIONAIS ---" << std::endl;
+    std::cout << "--- STARTING FUNCIONAL TESTS ---" << std::endl;
     
     exponentialFuncionalTest();
     logisticalFuncionalTest();
     complexFuncionalTest();
     
-    std::cout << "--- TODOS OS TESTES FUNCIONAIS PASSARAM ---" << std::endl;
+    std::cout << "--- ALL TESTS WERE SUCCESSFUL ---" << std::endl;
     return 0;
 }
 

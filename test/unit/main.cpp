@@ -5,21 +5,18 @@
 #include <iostream>
 
 int main() {
-    std::cout << "--- INICIANDO TESTES UNITARIOS ---" << std::endl;
-    
-    // Testes de System
+    std::cout << "--- STARTING UNIT TESTS ---" << std::endl;
+
     testSystemGettersAndSetters();
-    
-    // Testes de Flow
+
     testFlowExponentialExecute();
     testFLowLogisticExecute();
     testFlowGettersAndSetters();
-    
-    // Testes de Model
+
     testModelAddSystem();
     testModelAddFlow();
     
-    std::cout << "--- TODOS OS TESTES UNITARIOS PASSARAM ---" << std::endl;
+    std::cout << "--- ALL TESTS WERE SUCCESSFUL ---" << std::endl;
     return 0;
 }
 

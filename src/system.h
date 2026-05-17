@@ -9,11 +9,10 @@ protected:
     double value;
 
 public:
-    // --- FORMA CANÔNICA ---
-    System();                           // Construtor padrão
-    System(const System& sys);          // Construtor de cópia
-    virtual ~System();                  // Destrutor virtual
-    System& operator=(const System& sys); // Operador de atribuição
+    System();                          
+    System(const System& sys);        
+    virtual ~System();                  
+    System& operator=(const System& sys); 
 
     System(std::string name, double value);
 
@@ -22,4 +21,4 @@ public:
     void setValue(double value);
 };
 
-#endif // SYSTEM_H
+#endif 
