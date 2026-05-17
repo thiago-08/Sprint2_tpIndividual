@@ -8,31 +8,6 @@ O **MyVensim** é um framework modular desenvolvido em C++ projetado para constr
 
 O projeto segue uma arquitetura rígida de separação de responsabilidades entre os arquivos que formam o produto (`src`),  os arquivos de testes (`test`) e os arquivos binários (`bin`):
 
-MyVensim/
-│
-├── bin/                       
-│
-├── src/                        
-│   ├── main.cpp               
-│   ├── system.h / system.cpp   
-│   ├── flow.h / flow.cpp       
-│   ├── flow_types.h / .cpp     
-│   └── model.h / model.cpp     
-│
-├── test/                       
-│   ├── funcional/              
-│   │   ├── main.cpp            
-│   │   ├── funcional_tests.h
-│   │   └── funcional_tests.cpp # Validação dos cenários Exponencial, Logístico e Complexo
-│   │
-│   └── unit/                   
-│       ├── main.cpp            
-│       ├── unit_tests.h
-│       └── unit_tests.cpp      # Validação dos construtores, setter, getter e lógica
-│
-├── Makefile                    
-└── README.md                   
-
 ---
 
 # 🛠️ Detalhes da Arquitetura e Padrões de Projeto
