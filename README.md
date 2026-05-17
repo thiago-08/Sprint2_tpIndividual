@@ -1,4 +1,3 @@
-````md
 # MyVensim - Framework C++ para Simulação de Dinâmica de Sistemas
 
 O **MyVensim** é um framework modular desenvolvido em C++ projetado para construir, modelar e executar simulações baseadas em sistemas. 
@@ -9,7 +8,6 @@ O **MyVensim** é um framework modular desenvolvido em C++ projetado para constr
 
 O projeto segue uma arquitetura rígida de separação de responsabilidades entre os arquivos que formam o produto (`src`),  os arquivos de testes (`test`) e os arquivos binários (`bin`):
 
-```text
 MyVensim/
 │
 ├── bin/                       
@@ -34,7 +32,6 @@ MyVensim/
 │
 ├── Makefile                    
 └── README.md                   
-````
 
 ---
 
