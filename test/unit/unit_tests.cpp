@@ -9,34 +9,28 @@
 
 using namespace std;
 
-// TESTES DA CLASSE SYSTEM
-
-void testSystemDefaultConstructor()
-{
+void testSystemDefaultConstructor(){
     System s;
     assert(s.getName() == "");
     assert(s.getValue() == 0.0);
     cout << "testSystemDefaultConstructor OK!" << endl;
 }
 
-void testSystemParametrizedConstructor()
-{
+void testSystemParametrizedConstructor(){
     System s("Test", 10.0);
     assert(s.getName() == "Test");
     assert(s.getValue() == 10.0);
     cout << "testSystemParametrizedConstructor OK!" << endl;
 }
 
-void testSystemGetters()
-{
+void testSystemGetters(){
     System s("Test", 10.0);
     assert(s.getName() == "Test");
     assert(s.getValue() == 10.0);
     cout << "testSystemGetters OK!" << endl;
 }
 
-void testSystemSetters()
-{
+void testSystemSetters(){
     System s;
     s.setName("NewName");
     s.setValue(20.5);
@@ -46,10 +40,7 @@ void testSystemSetters()
     cout << "testSystemSetters OK!" << endl;
 }
 
-// TESTES DAS CLASSES FLOW
-
-void testFlowGetters()
-{
+void testFlowGetters(){
     System s1("S1", 10.0);
     System s2("S2", 20.0);
     FlowExponencial f("F");
@@ -63,8 +54,7 @@ void testFlowGetters()
     cout << "testFlowGetters OK!" << endl;
 }
 
-void testFlowSetters()
-{
+void testFlowSetters(){
     System s1("S1", 10.0);
     System s2("S2", 20.0);
     FlowExponencial f("F");
@@ -79,8 +69,7 @@ void testFlowSetters()
     cout << "testFlowSetters OK!" << endl;
 }
 
-void testFlowExponentialExecute()
-{
+void testFlowExponentialExecute(){
     System s("Test", 100.0);
     FlowExponencial f("exp");
     f.setSource(&s);
@@ -89,8 +78,7 @@ void testFlowExponentialExecute()
     cout << "testFlowExponentialExecute OK!" << endl;
 }
 
-void testFlowLogisticExecute()
-{
+void testFlowLogisticExecute(){
     System s("Test", 10.0);
     FlowLogistic f("Log");
     f.setTarget(&s);
@@ -99,36 +87,29 @@ void testFlowLogisticExecute()
     cout << "testFlowLogisticExecute OK!" << endl;
 }
 
-void testFlowComplexExecute()
-{
+void testFlowComplexExecute(){
     System s("Test", 100.0);
     FlowComplex f("Comp");
     f.setSource(&s);
 
-    // O FlowComplex no seu código atual tem a mesma lógica do Exponencial
     assert(f.execute() == 1.0);
     cout << "testFlowComplexExecute OK!" << endl;
 }
 
-// TESTES DA CLASSE MODEL
-
-void testModelGetters()
-{
+void testModelGetters(){
     Model m("TestModel");
     assert(m.getName() == "TestModel");
     cout << "testModelGetters OK!" << endl;
 }
 
-void testModelSetters()
-{
+void testModelSetters(){
     Model m;
     m.setName("NewModelName");
     assert(m.getName() == "NewModelName");
     cout << "testModelSetters OK!" << endl;
 }
 
-void testModelAddSystem()
-{
+void testModelAddSystem(){
     Model m("TestModel");
     System *s = new System("S", 10.0);
     m.add(s);
@@ -137,8 +118,7 @@ void testModelAddSystem()
     delete s;
 }
 
-void testModelAddFlow()
-{
+void testModelAddFlow(){
     Model m("TestModel");
     FlowExponencial *f = new FlowExponencial("F");
     m.add(f);
@@ -147,8 +127,7 @@ void testModelAddFlow()
     delete f;
 }
 
-void testModelRun()
-{
+void testModelRun(){
     Model m("Simulation");
     System *q1 = new System("Q1", 100.0);
     System *q2 = new System("Q2", 0.0);

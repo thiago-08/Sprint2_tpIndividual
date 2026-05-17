@@ -4,8 +4,7 @@
 #include <string>
 #include "system.h"
 
-class Flow
-{
+class Flow {
 protected:
     std::string name;
     System *source;

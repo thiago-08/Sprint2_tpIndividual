@@ -3,8 +3,7 @@
 
 using namespace std;
 
-int main()
-{
+int main(){
     cout << "API MyVensim - Framework started" << endl;
     return 0;
 }
