@@ -69,11 +69,13 @@ void testFlowSetters()
     System s2("S2", 20.0);
     FlowExponencial f("F");
 
+    f.setName("NewName");
     f.setSource(&s1);
     f.setTarget(&s2);
 
     assert(f.getSource() == &s1);
     assert(f.getTarget() == &s2);
+    assert(f.getName() == "NewName");
     cout << "testFlowSetters OK!" << endl;
 }
 
