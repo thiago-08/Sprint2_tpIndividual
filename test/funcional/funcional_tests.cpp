@@ -9,6 +9,13 @@
 
 using namespace std;
 
+bool compareRounded(double result, double expected)
+{
+    int resEscalonado = round(result * 10000.0);
+    int espEscalonado = round(expected * 10000.0);
+    return resEscalonado == espEscalonado;
+}
+
 void exponentialFuncionalTest()
 {
     cout << "Starting Exponential Funcional Test..." << endl;
@@ -27,8 +34,8 @@ void exponentialFuncionalTest()
 
     m->run(0, 100);
 
-    assert(abs(pop1->getValue() - 36.6032) < 0.0001);
-    assert(abs(pop2->getValue() - 63.3968) < 0.0001);
+    assert(compareRounded(pop1->getValue(), 36.6032));
+    assert(compareRounded(pop2->getValue(), 63.3968));
 
     cout << "Exponencial Test OK!" << endl;
 
@@ -52,8 +59,9 @@ void logisticalFuncionalTest()
     m->add(log);
 
     m->run(0, 100);
-    assert(abs(p1->getValue() - 88.2167) < 0.0001);
-    assert(abs(p2->getValue() - 21.7833) < 0.0001);
+
+    assert(compareRounded(p1->getValue(), 88.2167));
+    assert(compareRounded(p2->getValue(), 21.7833));
 
     cout << "Logistical Test OK!" << endl;
 
@@ -107,11 +115,11 @@ void complexFuncionalTest()
 
     m->run(0, 100);
 
-    assert(abs(q1->getValue() - 31.8513) < 0.0001);
-    assert(abs(q2->getValue() - 18.4003) < 0.0001);
-    assert(abs(q3->getValue() - 77.1143) < 0.0001);
-    assert(abs(q4->getValue() - 56.1728) < 0.0001);
-    assert(abs(q5->getValue() - 16.4612) < 0.0001);
+    assert(compareRounded(q1->getValue(), 31.8513));
+    assert(compareRounded(q2->getValue(), 18.4003));
+    assert(compareRounded(q3->getValue(), 77.1143));
+    assert(compareRounded(q4->getValue(), 56.1728));
+    assert(compareRounded(q5->getValue(), 16.4612));
 
     cout << "Complex Test OK!" << endl;
 
