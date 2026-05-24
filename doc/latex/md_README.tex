@@ -1,0 +1,80 @@
+\chapter{My\+Vensim -\/ Framework C++ para Simulação de Dinâmica de Sistemas}
+\hypertarget{md_README}{}\label{md_README}\index{MyVensim -\/ Framework C++ para Simulação de Dinâmica de Sistemas@{MyVensim -\/ Framework C++ para Simulação de Dinâmica de Sistemas}}
+\label{md_README_autotoc_md0}%
+\Hypertarget{md_README_autotoc_md0}%
+ O {\bfseries{My\+Vensim}} é um framework modular desenvolvido em C++ projetado para construir, modelar e executar simulações baseadas em sistemas.
+
+\DoxyHorRuler{0}
+\hypertarget{md_README_autotoc_md2}{}\doxysection{\texorpdfstring{📁 Estrutura do Diretório}{📁 Estrutura do Diretório}}\label{md_README_autotoc_md2}
+O projeto segue uma arquitetura rígida de separação de responsabilidades entre os arquivos que formam o produto ({\ttfamily src}), os arquivos de testes ({\ttfamily test}) e os arquivos binários ({\ttfamily bin})\+:
+
+\DoxyHorRuler{0}
+\hypertarget{md_README_autotoc_md4}{}\doxysection{\texorpdfstring{🛠️ Detalhes da Arquitetura e Padrões de Projeto}{🛠️ Detalhes da Arquitetura e Padrões de Projeto}}\label{md_README_autotoc_md4}
+\hypertarget{md_README_autotoc_md5}{}\doxysubsubsection{\texorpdfstring{Fluxos implementados}{Fluxos implementados}}\label{md_README_autotoc_md5}
+\hypertarget{md_README_autotoc_md6}{}\doxyparagraph{\texorpdfstring{$<$tt$>$\+Flow\+Exponencial$<$/tt$>$}{<tt>FlowExponencial</tt>}}\label{md_README_autotoc_md6}
+Computa uma taxa de crescimento constante proporcional ao estoque de origem\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{0.01\ ×\ origem}
+
+\end{DoxyCode}
+\hypertarget{md_README_autotoc_md7}{}\doxyparagraph{\texorpdfstring{$<$tt$>$\+Flow\+Logistico$<$/tt$>$}{<tt>FlowLogistico</tt>}}\label{md_README_autotoc_md7}
+Computa o crescimento baseado em restrições físicas de capacidade máxima do ambiente\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{0.01\ ×\ destino\ ×\ (1\ —\ destino/70)}
+
+\end{DoxyCode}
+\hypertarget{md_README_autotoc_md8}{}\doxyparagraph{\texorpdfstring{$<$tt$>$\+Flow\+Complexo$<$/tt$>$}{<tt>FlowComplexo</tt>}}\label{md_README_autotoc_md8}
+Implementa uma malha interconectada com múltiplos loops de feedback simultâneos.
+
+\DoxyHorRuler{0}
+\hypertarget{md_README_autotoc_md10}{}\doxysection{\texorpdfstring{🔨 Compilação}{🔨 Compilação}}\label{md_README_autotoc_md10}
+O gerenciamento de build é automatizado via {\ttfamily Makefile}.\hypertarget{md_README_autotoc_md11}{}\doxysubsection{\texorpdfstring{Compilar todo o projeto}{Compilar todo o projeto}}\label{md_README_autotoc_md11}
+Gera os executáveis dentro da pasta {\ttfamily bin/}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{make}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{md_README_autotoc_md13}{}\doxysection{\texorpdfstring{▶️ Execução dos Testes}{▶️ Execução dos Testes}}\label{md_README_autotoc_md13}
+Para validar o comportamento matemático do framework e garantir compatibilidade com os resultados de referência do Vensim PLE, execute os binários gerados.\hypertarget{md_README_autotoc_md14}{}\doxysubsection{\texorpdfstring{Executar Testes Funcionais}{Executar Testes Funcionais}}\label{md_README_autotoc_md14}
+PAra executar os testes funcionais\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./bin/funcional\_tests}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{md_README_autotoc_md16}{}\doxysubsection{\texorpdfstring{Executar Testes Unitários}{Executar Testes Unitários}}\label{md_README_autotoc_md16}
+Para executar os testes unitários\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./bin/unit\_tests}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{md_README_autotoc_md18}{}\doxysection{\texorpdfstring{👨‍💻 Autores}{👨‍💻 Autores}}\label{md_README_autotoc_md18}
+Arthur Mendes Torres (24.\+2.\+4042) Thiago Linhares Lage (24.\+2.\+4032)
+
+Projeto desenvolvido para a disciplina\+:
+
+{\bfseries{BCC322 -\/ Engenharia de Software I}} Universidade Federal de Ouro Preto (UFOP)
+
+
+\begin{DoxyCode}{0}
+
+\end{DoxyCode}
+ 
