@@ -2,14 +2,22 @@
 
 Model::Model() : name("") {}
 
-Model::Model(const Model &mod)
-{
+Model::Model(std::string name) : name(name) {}
+
+Model::Model(const Model &mod){
     this->name = mod.name;
     this->systems = mod.systems;
     this->flows = mod.flows;
 }
 
-Model::~Model() {}
+Model::~Model() {
+    for(System* s : systems){
+        delete s;
+    }
+    for(Flow* f : flows){
+        delete f;
+    }
+}
 
 Model &Model::operator=(const Model &mod){
     if (this == &mod){
@@ -20,8 +28,6 @@ Model &Model::operator=(const Model &mod){
     this->flows = mod.flows;
     return *this;
 }
-
-Model::Model(std::string name) : name(name) {}
 
 std::string Model::getName() const{
     return name;

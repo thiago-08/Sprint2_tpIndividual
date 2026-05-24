@@ -63,9 +63,6 @@ void logisticalFuncionalTest(){
     cout << "Logistical Test OK!" << endl;
 
     delete m;
-    delete p1;
-    delete p2;
-    delete log;
 }
 
 void complexFuncionalTest(){
@@ -120,6 +117,4 @@ void complexFuncionalTest(){
     cout << "Complex Test OK!" << endl;
 
     delete m;
-    delete q1; delete q2; delete q3; delete q4; delete q5;
-    delete f; delete g; delete r; delete t; delete u; delete v;
 }
