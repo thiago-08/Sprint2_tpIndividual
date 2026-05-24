@@ -11,8 +11,7 @@ Flow::Flow(const Flow &fl){
 Flow::~Flow() {}
 
 Flow &Flow::operator=(const Flow &fl){
-    if (this == &fl)
-    {
+    if (this == &fl){
         return *this;
     }
     this->name = fl.name;

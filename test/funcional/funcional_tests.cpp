@@ -9,15 +9,13 @@
 
 using namespace std;
 
-bool compareRounded(double result, double expected)
-{
+bool compareRounded(double result, double expected){
     int resEscalonado = round(result * 10000.0);
     int espEscalonado = round(expected * 10000.0);
     return resEscalonado == espEscalonado;
 }
 
-void exponentialFuncionalTest()
-{
+void exponentialFuncionalTest(){
     cout << "Starting Exponential Funcional Test..." << endl;
 
     System *pop1 = new System("pop1", 100.0);
@@ -42,8 +40,7 @@ void exponentialFuncionalTest()
     delete m;
 }
 
-void logisticalFuncionalTest()
-{
+void logisticalFuncionalTest(){
     cout << "Starting Logistical Funcional Test..." << endl;
 
     System *p1 = new System("p1", 100.0);
@@ -71,8 +68,7 @@ void logisticalFuncionalTest()
     delete log;
 }
 
-void complexFuncionalTest()
-{
+void complexFuncionalTest(){
     cout << "Starting Complex Funcional Test..." << endl;
 
     System *q1 = new System("Q1", 100.0);
@@ -124,15 +120,6 @@ void complexFuncionalTest()
     cout << "Complex Test OK!" << endl;
 
     delete m;
-    delete q1;
-    delete q2;
-    delete q3;
-    delete q4;
-    delete q5;
-    delete f;
-    delete g;
-    delete r;
-    delete t;
-    delete u;
-    delete v;
+    delete q1; delete q2; delete q3; delete q4; delete q5;
+    delete f; delete g; delete r; delete t; delete u; delete v;
 }
