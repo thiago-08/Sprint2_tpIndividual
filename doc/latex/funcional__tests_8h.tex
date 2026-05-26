@@ -1,7 +1,6 @@
 \doxysection{test/funcional/funcional\+\_\+tests.h File Reference}
 \hypertarget{funcional__tests_8h}{}\label{funcional__tests_8h}\index{test/funcional/funcional\_tests.h@{test/funcional/funcional\_tests.h}}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,11 +11,11 @@ This graph shows which files directly or indirectly include this file\+:
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{funcional__tests_8h_a2c448ffaffdff4b03c825a01dffa6f27}{exponential\+Funcional\+Test}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Executa o teste funcional para o Fluxo Exponencial. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{funcional__tests_8h_a60914db64bde71b56d69320797266c29}{logistical\+Funcional\+Test}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Executa o teste funcional para o Fluxo Logístico. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{funcional__tests_8h_a943dfe0c597a01c9760c140715fed527}{complex\+Funcional\+Test}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Executa o teste funcional para um sistema Complexo. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
@@ -26,15 +25,37 @@ void \mbox{\hyperlink{funcional__tests_8h_a943dfe0c597a01c9760c140715fed527}{com
 \doxysubsubsection{\texorpdfstring{complexFuncionalTest()}{complexFuncionalTest()}}
 {\footnotesize\ttfamily void complex\+Funcional\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\Hypertarget{funcional__tests_8h_a2c448ffaffdff4b03c825a01dffa6f27}\label{funcional__tests_8h_a2c448ffaffdff4b03c825a01dffa6f27} 
+
+
+Executa o teste funcional para um sistema Complexo. 
+
+
+\begin{DoxyItemize}
+\item Monta uma rede mais complexa com cinco sistemas e seis fluxos interconectados. Ao final da execução, valida o valor resultante em cada um dos sistemas. 
+\end{DoxyItemize}\Hypertarget{funcional__tests_8h_a2c448ffaffdff4b03c825a01dffa6f27}\label{funcional__tests_8h_a2c448ffaffdff4b03c825a01dffa6f27} 
 \index{funcional\_tests.h@{funcional\_tests.h}!exponentialFuncionalTest@{exponentialFuncionalTest}}
 \index{exponentialFuncionalTest@{exponentialFuncionalTest}!funcional\_tests.h@{funcional\_tests.h}}
 \doxysubsubsection{\texorpdfstring{exponentialFuncionalTest()}{exponentialFuncionalTest()}}
 {\footnotesize\ttfamily void exponential\+Funcional\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\Hypertarget{funcional__tests_8h_a60914db64bde71b56d69320797266c29}\label{funcional__tests_8h_a60914db64bde71b56d69320797266c29} 
+
+
+Executa o teste funcional para o Fluxo Exponencial. 
+
+
+\begin{DoxyItemize}
+\item Cria dois sistemas e um fluxo exponencial ligando-\/os, e testa com assert. 
+\end{DoxyItemize}\Hypertarget{funcional__tests_8h_a60914db64bde71b56d69320797266c29}\label{funcional__tests_8h_a60914db64bde71b56d69320797266c29} 
 \index{funcional\_tests.h@{funcional\_tests.h}!logisticalFuncionalTest@{logisticalFuncionalTest}}
 \index{logisticalFuncionalTest@{logisticalFuncionalTest}!funcional\_tests.h@{funcional\_tests.h}}
 \doxysubsubsection{\texorpdfstring{logisticalFuncionalTest()}{logisticalFuncionalTest()}}
 {\footnotesize\ttfamily void logistical\+Funcional\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Executa o teste funcional para o Fluxo Logístico. 
+
+
+\begin{DoxyItemize}
+\item Cria dois sistemas e um fluxo logístico ligando-\/os, e testa com assert. 
+\end{DoxyItemize}

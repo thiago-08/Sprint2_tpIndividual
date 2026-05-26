@@ -77,18 +77,21 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Classe base abstrata que representa um Fluxo. Um fluxo é responsavel por calcular valor de transferencia de um sistema para outro.  
+ <a href="classFlow.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="flow_8h_source.html">flow.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Flow:</div>
 <div class="dyncontent">
 <div class="center"><img src="classFlow__inherit__graph.png" border="0" usemap="#aFlow_inherit__map" alt="Inheritance graph"/></div>
 <map name="aFlow_inherit__map" id="aFlow_inherit__map">
-<area shape="rect" title=" " alt="" coords="195,5,301,331"/>
-<area shape="rect" href="classFlowComplex.html" title=" " alt="" coords="5,379,144,544"/>
+<area shape="rect" title="Classe base abstrata que representa um Fluxo. Um fluxo é responsavel por calcular valor de transferen..." alt="" coords="195,5,301,331"/>
+<area shape="rect" href="classFlowComplex.html" title="Classe que implementa um Fluxo Complexo. Herda de flow, implementado o comportamento de vários sistem..." alt="" coords="5,379,144,544"/>
 <area shape="poly" title=" " alt="" coords="190,271,126,380,121,377,186,268"/>
-<area shape="rect" href="classFlowExponencial.html" title=" " alt="" coords="168,379,328,544"/>
+<area shape="rect" href="classFlowExponencial.html" title="Classe que implementa um Fluxo Exponencial." alt="" coords="168,379,328,544"/>
 <area shape="poly" title=" " alt="" coords="251,344,251,379,245,379,245,344"/>
-<area shape="rect" href="classFlowLogistic.html" title=" " alt="" coords="352,379,483,544"/>
+<area shape="rect" href="classFlowLogistic.html" title="Classe que implementa um Fluxo Logístico." alt="" coords="352,379,483,544"/>
 <area shape="poly" title=" " alt="" coords="310,270,372,377,367,380,305,273"/>
 </map>
 </div>
@@ -97,8 +100,8 @@ Collaboration diagram for Flow:</div>
 <div class="dyncontent">
 <div class="center"><img src="classFlow__coll__graph.png" border="0" usemap="#aFlow_coll__map" alt="Collaboration graph"/></div>
 <map name="aFlow_coll__map" id="aFlow_coll__map">
-<area shape="rect" title=" " alt="" coords="5,328,111,613"/>
-<area shape="rect" href="classSystem.html" title=" " alt="" coords="5,5,111,251"/>
+<area shape="rect" title="Classe base abstrata que representa um Fluxo. Um fluxo é responsavel por calcular valor de transferen..." alt="" coords="5,328,111,613"/>
+<area shape="rect" href="classSystem.html" title="Classe que representa um Sistema (System)." alt="" coords="5,5,111,251"/>
 <area shape="poly" title=" " alt="" coords="61,251,61,311,55,311,55,251"/>
 </map>
 </div>
@@ -106,28 +109,40 @@ Collaboration diagram for Flow:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ac9975e144e606242748197798e87dd32" id="r_ac9975e144e606242748197798e87dd32"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#ac9975e144e606242748197798e87dd32">Flow</a> ()</td></tr>
+<tr class="memdesc:ac9975e144e606242748197798e87dd32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor padrão. Inicializa ponteiros nulos e nome vazio.  <br /></td></tr>
 <tr class="separator:ac9975e144e606242748197798e87dd32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8bac1a4df7bfcf821b57c27e13e34312" id="r_a8bac1a4df7bfcf821b57c27e13e34312"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#a8bac1a4df7bfcf821b57c27e13e34312">Flow</a> (const <a class="el" href="classFlow.html">Flow</a> &amp;fl)</td></tr>
+<tr class="memdesc:a8bac1a4df7bfcf821b57c27e13e34312"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor de cópia.  <br /></td></tr>
 <tr class="separator:a8bac1a4df7bfcf821b57c27e13e34312"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5991efa6e8cf88c4ef2125cc727db333" id="r_a5991efa6e8cf88c4ef2125cc727db333"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#a5991efa6e8cf88c4ef2125cc727db333">~Flow</a> ()</td></tr>
+<tr class="memdesc:a5991efa6e8cf88c4ef2125cc727db333"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor virtual padrão.  <br /></td></tr>
 <tr class="separator:a5991efa6e8cf88c4ef2125cc727db333"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e309aa65db90d733f5bdcee1665ce58" id="r_a1e309aa65db90d733f5bdcee1665ce58"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFlow.html">Flow</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#a1e309aa65db90d733f5bdcee1665ce58">operator=</a> (const <a class="el" href="classFlow.html">Flow</a> &amp;fl)</td></tr>
+<tr class="memdesc:a1e309aa65db90d733f5bdcee1665ce58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operador de atribuição.  <br /></td></tr>
 <tr class="separator:a1e309aa65db90d733f5bdcee1665ce58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3118b0aa8f2aa886ebb2a8798a04460" id="r_ad3118b0aa8f2aa886ebb2a8798a04460"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#ad3118b0aa8f2aa886ebb2a8798a04460">Flow</a> (std::string <a class="el" href="classFlow.html#a687d8bbbb87d6c1965e272768167dcac">name</a>)</td></tr>
+<tr class="memdesc:ad3118b0aa8f2aa886ebb2a8798a04460"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor parametrizado.  <br /></td></tr>
 <tr class="separator:ad3118b0aa8f2aa886ebb2a8798a04460"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4da8089ed4e652c414180252d22c8516" id="r_a4da8089ed4e652c414180252d22c8516"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#a4da8089ed4e652c414180252d22c8516">setSource</a> (<a class="el" href="classSystem.html">System</a> *s)</td></tr>
+<tr class="memdesc:a4da8089ed4e652c414180252d22c8516"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define o sistema de origem (fonte).  <br /></td></tr>
 <tr class="separator:a4da8089ed4e652c414180252d22c8516"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6187a9f827d2c699fa2176b5bf0d05dd" id="r_a6187a9f827d2c699fa2176b5bf0d05dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#a6187a9f827d2c699fa2176b5bf0d05dd">setTarget</a> (<a class="el" href="classSystem.html">System</a> *t)</td></tr>
+<tr class="memdesc:a6187a9f827d2c699fa2176b5bf0d05dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define o sistema de destino (alvo).  <br /></td></tr>
 <tr class="separator:a6187a9f827d2c699fa2176b5bf0d05dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f3858f90d141807377c2640fb5dd0fc" id="r_a1f3858f90d141807377c2640fb5dd0fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSystem.html">System</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#a1f3858f90d141807377c2640fb5dd0fc">getSource</a> () const</td></tr>
+<tr class="memdesc:a1f3858f90d141807377c2640fb5dd0fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o sistema de origem.  <br /></td></tr>
 <tr class="separator:a1f3858f90d141807377c2640fb5dd0fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff8a0f8ca8dc50d37c92ab7556e172b5" id="r_aff8a0f8ca8dc50d37c92ab7556e172b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSystem.html">System</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#aff8a0f8ca8dc50d37c92ab7556e172b5">getTarget</a> () const</td></tr>
+<tr class="memdesc:aff8a0f8ca8dc50d37c92ab7556e172b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o sistema de destino.  <br /></td></tr>
 <tr class="separator:aff8a0f8ca8dc50d37c92ab7556e172b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadd3a8ab712a2063461d917a867eedc4" id="r_aadd3a8ab712a2063461d917a867eedc4"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#aadd3a8ab712a2063461d917a867eedc4">getName</a> () const</td></tr>
+<tr class="memdesc:aadd3a8ab712a2063461d917a867eedc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o nome do fluxo.  <br /></td></tr>
 <tr class="separator:aadd3a8ab712a2063461d917a867eedc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafb4bf7f22f0df6237aadb2deefdb34c" id="r_aafb4bf7f22f0df6237aadb2deefdb34c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#aafb4bf7f22f0df6237aadb2deefdb34c">setName</a> (std::string <a class="el" href="classFlow.html#a687d8bbbb87d6c1965e272768167dcac">name</a>)</td></tr>
+<tr class="memdesc:aafb4bf7f22f0df6237aadb2deefdb34c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define o nome do fluxo.  <br /></td></tr>
 <tr class="separator:aafb4bf7f22f0df6237aadb2deefdb34c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a619be0b590c78202127bc6ac7fb04029" id="r_a619be0b590c78202127bc6ac7fb04029"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#a619be0b590c78202127bc6ac7fb04029">execute</a> ()=0</td></tr>
+<tr class="memdesc:a619be0b590c78202127bc6ac7fb04029"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método virtual puro para executar a equação do fluxo.  <br /></td></tr>
 <tr class="separator:a619be0b590c78202127bc6ac7fb04029"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
@@ -139,7 +154,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a87be88d9bae4e927b29205faabeaf387" id="r_a87be88d9bae4e927b29205faabeaf387"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSystem.html">System</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#a87be88d9bae4e927b29205faabeaf387">target</a></td></tr>
 <tr class="separator:a87be88d9bae4e927b29205faabeaf387"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Classe base abstrata que representa um Fluxo. Um fluxo é responsavel por calcular valor de transferencia de um sistema para outro. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ac9975e144e606242748197798e87dd32" name="ac9975e144e606242748197798e87dd32"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac9975e144e606242748197798e87dd32">&#9670;&#160;</a></span>Flow() <span class="overload">[1/3]</span></h2>
 
@@ -154,6 +171,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Construtor padrão. Inicializa ponteiros nulos e nome vazio. </p>
 
 </div>
 </div>
@@ -172,6 +191,14 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Construtor de cópia. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fl</td><td>Objeto <a class="el" href="classFlow.html" title="Classe base abstrata que representa um Fluxo. Um fluxo é responsavel por calcular valor de transferen...">Flow</a> a ser copiado. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -198,6 +225,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Destrutor virtual padrão. </p>
+
 </div>
 </div>
 <a id="ad3118b0aa8f2aa886ebb2a8798a04460" name="ad3118b0aa8f2aa886ebb2a8798a04460"></a>
@@ -215,6 +244,14 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Construtor parametrizado. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Nome do fluxo. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -242,6 +279,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Método virtual puro para executar a equação do fluxo. </p>
+<dl class="section return"><dt>Returns</dt><dd>double O valor calculado a ser transferido. </dd></dl>
+
 <p>Implemented in <a class="el" href="classFlowExponencial.html#ae68b39789d77bb7474b883d659c9552c">FlowExponencial</a>, <a class="el" href="classFlowLogistic.html#a9b25e905a9501d4b4bcc32183cccc4c5">FlowLogistic</a>, and <a class="el" href="classFlowComplex.html#a3b541e9032dad40b9d013835887b97f6">FlowComplex</a>.</p>
 
 </div>
@@ -261,6 +301,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Retorna o nome do fluxo. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::string contendo o nome. </dd></dl>
+
 </div>
 </div>
 <a id="a1f3858f90d141807377c2640fb5dd0fc" name="a1f3858f90d141807377c2640fb5dd0fc"></a>
@@ -278,6 +321,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Retorna o sistema de origem. </p>
+<dl class="section return"><dt>Returns</dt><dd>System* Ponteiro para o sistema fonte. </dd></dl>
+
 </div>
 </div>
 <a id="aff8a0f8ca8dc50d37c92ab7556e172b5" name="aff8a0f8ca8dc50d37c92ab7556e172b5"></a>
@@ -294,6 +340,9 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Retorna o sistema de destino. </p>
+<dl class="section return"><dt>Returns</dt><dd>System* Ponteiro para o sistema alvo. </dd></dl>
 
 </div>
 </div>
@@ -313,6 +362,15 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Operador de atribuição. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fl</td><td>Objeto <a class="el" href="classFlow.html" title="Classe base abstrata que representa um Fluxo. Um fluxo é responsavel por calcular valor de transferen...">Flow</a> a ser atribuído. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Referência para o próprio objeto atualizado. </dd></dl>
+
 </div>
 </div>
 <a id="aafb4bf7f22f0df6237aadb2deefdb34c" name="aafb4bf7f22f0df6237aadb2deefdb34c"></a>
@@ -330,6 +388,14 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Define o nome do fluxo. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Novo nome do fluxo. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -349,6 +415,14 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Define o sistema de origem (fonte). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>Ponteiro para o sistema fonte. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a6187a9f827d2c699fa2176b5bf0d05dd" name="a6187a9f827d2c699fa2176b5bf0d05dd"></a>
@@ -366,6 +440,14 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Define o sistema de destino (alvo). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">t</td><td>Ponteiro para o sistema alvo. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

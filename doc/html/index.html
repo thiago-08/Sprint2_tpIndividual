@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Main Page</title>
+<title>My Project: MyVensim - Framework C++ para Simulação de Dinâmica de Sistemas</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -68,10 +68,54 @@ $(function() {
 </div>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">My Project Documentation</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">MyVensim - Framework C++ para Simulação de Dinâmica de Sistemas </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p><a class="anchor" id="md_README"></a> O <b>MyVensim</b> é um framework modular desenvolvido em C++ projetado para construir, modelar e executar simulações baseadas em sistemas.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md2"></a>
+📁 Estrutura do Diretório</h1>
+<p>O projeto segue uma arquitetura rígida de separação de responsabilidades entre os arquivos que formam o produto (<code>src</code>), os arquivos de testes (<code>test</code>) e os arquivos binários (<code>bin</code>):</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md4"></a>
+🛠️ Detalhes da Arquitetura e Padrões de Projeto</h1>
+<h3><a class="anchor" id="autotoc_md5"></a>
+Fluxos implementados</h3>
+<h4><a class="anchor" id="autotoc_md6"></a>
+&lt;tt&gt;FlowExponencial&lt;/tt&gt;</h4>
+<p>Computa uma taxa de crescimento constante proporcional ao estoque de origem:</p>
+<div class="fragment"><div class="line">0.01 × origem</div>
+</div><!-- fragment --><h4><a class="anchor" id="autotoc_md7"></a>
+&lt;tt&gt;FlowLogistico&lt;/tt&gt;</h4>
+<p>Computa o crescimento baseado em restrições físicas de capacidade máxima do ambiente:</p>
+<div class="fragment"><div class="line">0.01 × destino × (1 — destino/70)</div>
+</div><!-- fragment --><h4><a class="anchor" id="autotoc_md8"></a>
+&lt;tt&gt;FlowComplexo&lt;/tt&gt;</h4>
+<p>Implementa uma malha interconectada com múltiplos loops de feedback simultâneos.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md10"></a>
+🔨 Compilação</h1>
+<p>O gerenciamento de build é automatizado via <code>Makefile</code>.</p>
+<h2><a class="anchor" id="autotoc_md11"></a>
+Compilar todo o projeto</h2>
+<p>Gera os executáveis dentro da pasta <code>bin/</code>.</p>
+<div class="fragment"><div class="line">make</div>
+</div><!-- fragment --><hr  />
+<h1><a class="anchor" id="autotoc_md13"></a>
+▶️ Execução dos Testes</h1>
+<p>Para validar o comportamento matemático do framework e garantir compatibilidade com os resultados de referência do Vensim PLE, execute os binários gerados.</p>
+<h2><a class="anchor" id="autotoc_md14"></a>
+Executar Testes Funcionais</h2>
+<p>PAra executar os testes funcionais:</p>
+<div class="fragment"><div class="line">make run</div>
+</div><!-- fragment --><hr  />
+<h1><a class="anchor" id="autotoc_md16"></a>
+👨‍💻 Autores</h1>
+<p>Arthur Mendes Torres (24.2.4042) Thiago Linhares Lage (24.2.4032)</p>
+<p>Projeto desenvolvido para a disciplina:</p>
+<p><b>BCC322 - Engenharia de Software I</b> Universidade Federal de Ouro Preto (UFOP)</p>
+<div class="fragment"></div><!-- fragment --> </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

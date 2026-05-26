@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['🔨_20compilação_0',['🔨 Compilação',['../md_README.html#autotoc_md10',1,'']]]
+  ['value_0',['value',['../classSystem.html#a879687b1125ef20757c2a61345fedd00',1,'System']]]
 ];

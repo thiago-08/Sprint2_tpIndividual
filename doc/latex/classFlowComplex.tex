@@ -2,12 +2,16 @@
 \hypertarget{classFlowComplex}{}\label{classFlowComplex}\index{FlowComplex@{FlowComplex}}
 
 
+Classe que implementa um Fluxo Complexo. Herda de flow, implementado o comportamento de vários sistemas interligados.  
+
+
+
+
 {\ttfamily \#include $<$flow\+\_\+types.\+h$>$}
 
 
 
-Inheritance diagram for Flow\+Complex\+:
-\nopagebreak
+Inheritance diagram for Flow\+Complex\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,8 +20,7 @@ Inheritance diagram for Flow\+Complex\+:
 \end{figure}
 
 
-Collaboration diagram for Flow\+Complex\+:
-\nopagebreak
+Collaboration diagram for Flow\+Complex\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -38,32 +41,32 @@ virtual \mbox{\hyperlink{classFlowComplex_ab56a0e5042dc252f8053945cf069148e}{\te
 \mbox{\hyperlink{classFlowComplex_ab5e4a95cec329bd0c0ec64fe9e59065b}{Flow\+Complex}} (std\+::string \mbox{\hyperlink{classFlow_a687d8bbbb87d6c1965e272768167dcac}{name}})
 \item 
 double \mbox{\hyperlink{classFlowComplex_a3b541e9032dad40b9d013835887b97f6}{execute}} () override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Executa o cálculo complexo do fluxo. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classFlow}{Flow}}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classFlow_ac9975e144e606242748197798e87dd32}{Flow}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Construtor padrão. Inicializa ponteiros nulos e nome vazio. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classFlow_a8bac1a4df7bfcf821b57c27e13e34312}{Flow}} (const \mbox{\hyperlink{classFlow}{Flow}} \&fl)
-\item 
+\begin{DoxyCompactList}\small\item\em Construtor de cópia. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classFlow_a5991efa6e8cf88c4ef2125cc727db333}{\texorpdfstring{$\sim$}{\string~}\+Flow}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Destrutor virtual padrão. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classFlow}{Flow}} \& \mbox{\hyperlink{classFlow_a1e309aa65db90d733f5bdcee1665ce58}{operator=}} (const \mbox{\hyperlink{classFlow}{Flow}} \&fl)
-\item 
+\begin{DoxyCompactList}\small\item\em Operador de atribuição. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classFlow_ad3118b0aa8f2aa886ebb2a8798a04460}{Flow}} (std\+::string \mbox{\hyperlink{classFlow_a687d8bbbb87d6c1965e272768167dcac}{name}})
-\item 
+\begin{DoxyCompactList}\small\item\em Construtor parametrizado. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classFlow_a4da8089ed4e652c414180252d22c8516}{set\+Source}} (\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}s)
-\item 
+\begin{DoxyCompactList}\small\item\em Define o sistema de origem (fonte). \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classFlow_a6187a9f827d2c699fa2176b5bf0d05dd}{set\+Target}} (\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}t)
-\item 
+\begin{DoxyCompactList}\small\item\em Define o sistema de destino (alvo). \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classFlow_a1f3858f90d141807377c2640fb5dd0fc}{get\+Source}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Retorna o sistema de origem. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classFlow_aff8a0f8ca8dc50d37c92ab7556e172b5}{get\+Target}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Retorna o sistema de destino. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classFlow_aadd3a8ab712a2063461d917a867eedc4}{get\+Name}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Retorna o nome do fluxo. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classFlow_aafb4bf7f22f0df6237aadb2deefdb34c}{set\+Name}} (std\+::string \mbox{\hyperlink{classFlow_a687d8bbbb87d6c1965e272768167dcac}{name}})
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Define o nome do fluxo. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classFlow}{Flow}}}
 \begin{DoxyCompactItemize}
@@ -75,6 +78,9 @@ std\+::string \mbox{\hyperlink{classFlow_a687d8bbbb87d6c1965e272768167dcac}{name
 \mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classFlow_a87be88d9bae4e927b29205faabeaf387}{target}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Classe que implementa um Fluxo Complexo. Herda de flow, implementado o comportamento de vários sistemas interligados. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{classFlowComplex_ac4f82f013048ecb46bd51268d8c66eea}\label{classFlowComplex_ac4f82f013048ecb46bd51268d8c66eea} 
@@ -110,6 +116,13 @@ std\+::string \mbox{\hyperlink{classFlow_a687d8bbbb87d6c1965e272768167dcac}{name
 \doxysubsubsection{\texorpdfstring{execute()}{execute()}}
 {\footnotesize\ttfamily double Flow\+Complex\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+
+
+Executa o cálculo complexo do fluxo. 
+
+\begin{DoxyReturn}{Returns}
+double O resultado da equação. 
+\end{DoxyReturn}
 
 
 Implements \mbox{\hyperlink{classFlow_a619be0b590c78202127bc6ac7fb04029}{Flow}}.

@@ -3,40 +3,67 @@
 
 #include "flow.h"
 
-class FlowExponencial : public Flow {
+/**
+ * @brief Classe que implementa um Fluxo Exponencial.
+ * * Herda de Flow e implementa a equação exponencial.
+ */
+class FlowExponencial : public Flow
+{
 public:
-    FlowExponencial();                                    
-    FlowExponencial(const FlowExponencial& f);              
-    virtual ~FlowExponencial();                            
-    FlowExponencial& operator=(const FlowExponencial& f); 
+    FlowExponencial();
+    FlowExponencial(const FlowExponencial &f);
+    virtual ~FlowExponencial();
+    FlowExponencial &operator=(const FlowExponencial &f);
 
     FlowExponencial(std::string name);
 
+    /**
+     * @brief Executa o cálculo exponencial do fluxo.
+     * @return double O resultado da equação. Retorna 0.0 se a fonte for nula.
+     */
     double execute() override;
 };
 
-class FlowLogistic : public Flow {
+/**
+ * @brief Classe que implementa um Fluxo Logístico.
+ * * Herda de Flow e implementa uma equação logística baseada no valor do sistema alvo.
+ */
+class FlowLogistic : public Flow
+{
 public:
     FlowLogistic();
-    FlowLogistic(const FlowLogistic& f);
+    FlowLogistic(const FlowLogistic &f);
     virtual ~FlowLogistic();
-    FlowLogistic& operator=(const FlowLogistic& f);
+    FlowLogistic &operator=(const FlowLogistic &f);
 
     FlowLogistic(std::string name);
 
+    /**
+     * @brief Executa o cálculo logístico do fluxo.
+     * @return double O resultado da equação. Retorna 0.0 se o alvo for nulo.
+     */
     double execute() override;
 };
 
-class FlowComplex : public Flow {
+/**
+ * @brief Classe que implementa um Fluxo Complexo.
+ * Herda de flow, implementado o comportamento de vários sistemas interligados.
+ */
+class FlowComplex : public Flow
+{
 public:
     FlowComplex();
-    FlowComplex(const FlowComplex& f);
+    FlowComplex(const FlowComplex &f);
     virtual ~FlowComplex();
-    FlowComplex& operator=(const FlowComplex& f);
+    FlowComplex &operator=(const FlowComplex &f);
 
     FlowComplex(std::string name);
 
+    /**
+     * @brief Executa o cálculo complexo do fluxo.
+     * @return double O resultado da equação.
+     */
     double execute() override;
 };
 
-#endif 
+#endif

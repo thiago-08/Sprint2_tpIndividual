@@ -1,12 +1,12 @@
 # MyVensim - Framework C++ para Simulação de Dinâmica de Sistemas
 
-O **MyVensim** é um framework modular desenvolvido em C++ projetado para construir, modelar e executar simulações baseadas em sistemas. 
+O **MyVensim** é um framework modular desenvolvido em C++ projetado para construir, modelar e executar simulações baseadas em sistemas.
 
 ---
 
 # 📁 Estrutura do Diretório
 
-O projeto segue uma arquitetura rígida de separação de responsabilidades entre os arquivos que formam o produto (`src`),  os arquivos de testes (`test`) e os arquivos binários (`bin`):
+O projeto segue uma arquitetura rígida de separação de responsabilidades entre os arquivos que formam o produto (`src`), os arquivos de testes (`test`) e os arquivos binários (`bin`):
 
 ---
 
@@ -59,17 +59,7 @@ Para validar o comportamento matemático do framework e garantir compatibilidade
 PAra executar os testes funcionais:
 
 ```bash
-./bin/funcional_tests
-```
-
----
-
-## Executar Testes Unitários
-
-Para executar os testes unitários:
-
-```bash
-./bin/unit_tests
+make run
 ```
 
 ---
@@ -85,4 +75,5 @@ Projeto desenvolvido para a disciplina:
 Universidade Federal de Ouro Preto (UFOP)
 
 ```
+
 ```
