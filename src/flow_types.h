@@ -1,13 +1,13 @@
 #ifndef FLOW_TYPES_H
 #define FLOW_TYPES_H
 
-#include "flow.h"
+#include "flowImpl.h"
 
 /**
  * @brief Classe que implementa um Fluxo Exponencial.
  * * Herda de Flow e implementa a equação exponencial.
  */
-class FlowExponencial : public Flow
+class FlowExponencial : public FlowImpl
 {
 public:
     FlowExponencial();
@@ -28,7 +28,7 @@ public:
  * @brief Classe que implementa um Fluxo Logístico.
  * * Herda de Flow e implementa uma equação logística baseada no valor do sistema alvo.
  */
-class FlowLogistic : public Flow
+class FlowLogistic : public FlowImpl
 {
 public:
     FlowLogistic();
@@ -49,7 +49,7 @@ public:
  * @brief Classe que implementa um Fluxo Complexo.
  * Herda de flow, implementado o comportamento de vários sistemas interligados.
  */
-class FlowComplex : public Flow
+class FlowComplex : public FlowImpl
 {
 public:
     FlowComplex();

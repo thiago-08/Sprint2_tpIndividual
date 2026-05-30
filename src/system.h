@@ -15,58 +15,29 @@ protected:
 
 public:
     /**
-     * @brief Construtor padrão.
-     */
-    System();
-
-    /**
-     * @brief Construtor de cópia.
-     * @param sys Objeto System a ser copiado.
-     */
-    System(const System &sys);
-
-    /**
      * @brief Destrutor virtual padrão.
      */
-    virtual ~System();
-
-    /**
-     * @brief Operador de atribuição.
-     * @param sys Objeto System a ser atribuído.
-     * @return Referência para o próprio objeto atualizado.
-     */
-    System &operator=(const System &sys);
-
-    /**
-     * @brief Construtor parametrizado.
-     * @param name Nome do sistema.
-     * @param value Valor inicial do sistema.
-     */
-    System(std::string name, double value);
-
+    virtual ~System() {}
     /**
      * @brief Retorna o nome do sistema.
      * @return std::string contendo o nome.
      */
-    std::string getName() const;
-
+    virtual std::string getName() const = 0;
     /**
      * @brief Retorna o valor atual do sistema.
      * @return double representando o valor.
      */
-    double getValue() const;
-
+    virtual double getValue() const = 0;
     /**
      * @brief Define um novo valor para o sistema.
      * @param value Novo valor a ser atribuído.
      */
-    void setValue(double value);
-
+    virtual void setValue(double value) = 0;
     /**
      * @brief Define um novo nome para o sistema.
      * @param name Novo nome a ser atribuído.
      */
-    void setName(std::string name);
+    virtual void setName(std::string name) = 0;
 };
 
 #endif

@@ -2,11 +2,11 @@
 
 //Implementação do FlowExponencial
 
-FlowExponencial::FlowExponencial() : Flow() {}
+FlowExponencial::FlowExponencial() : FlowImpl() {}
 
-FlowExponencial::FlowExponencial(std::string name) : Flow(name) {}
+FlowExponencial::FlowExponencial(std::string name) : FlowImpl(name) {}
 
-FlowExponencial::FlowExponencial(const FlowExponencial& f) : Flow(f) {}
+FlowExponencial::FlowExponencial(const FlowExponencial& f) : FlowImpl(f) {}
 
 FlowExponencial::~FlowExponencial() {}
 
@@ -25,11 +25,11 @@ double FlowExponencial::execute() {
 
 // Implementação do FlowLogistic
 
-FlowLogistic::FlowLogistic() : Flow() {}
+FlowLogistic::FlowLogistic() : FlowImpl() {}
 
-FlowLogistic::FlowLogistic(std::string name) : Flow(name) {}
+FlowLogistic::FlowLogistic(std::string name) : FlowImpl(name) {}
 
-FlowLogistic::FlowLogistic(const FlowLogistic& f) : Flow(f) {}
+FlowLogistic::FlowLogistic(const FlowLogistic& f) : FlowImpl(f) {}
 
 FlowLogistic::~FlowLogistic() {}
 
@@ -49,11 +49,11 @@ double FlowLogistic::execute() {
 
 // Implementação do FlowComplex
 
-FlowComplex::FlowComplex() : Flow() {}
+FlowComplex::FlowComplex() : FlowImpl() {}
 
-FlowComplex::FlowComplex(std::string name) : Flow(name) {}
+FlowComplex::FlowComplex(std::string name) : FlowImpl(name) {}
 
-FlowComplex::FlowComplex(const FlowComplex& f) : Flow(f) {}
+FlowComplex::FlowComplex(const FlowComplex& f) : FlowImpl(f) {}
 
 FlowComplex::~FlowComplex() {}
 

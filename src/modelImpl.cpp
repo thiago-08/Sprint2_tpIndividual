@@ -1,16 +1,16 @@
-#include "model.h"
+#include "modelImpl.h"
 
-Model::Model() : name("") {}
+ModelImpl::ModelImpl() : name("") {}
 
-Model::Model(std::string name) : name(name) {}
+ModelImpl::ModelImpl(std::string name) : name(name) {}
 
-Model::Model(const Model &mod){
+ModelImpl::ModelImpl(const ModelImpl &mod){
     this->name = mod.name;
     this->systems = mod.systems;
     this->flows = mod.flows;
 }
 
-Model::~Model() {
+ModelImpl::~ModelImpl() {
     for(System* s : systems){
         delete s;
     }
@@ -19,7 +19,7 @@ Model::~Model() {
     }
 }
 
-Model &Model::operator=(const Model &mod){
+ModelImpl &ModelImpl::operator=(const ModelImpl &mod){
     if (this == &mod){
         return *this;
     }
@@ -29,23 +29,23 @@ Model &Model::operator=(const Model &mod){
     return *this;
 }
 
-std::string Model::getName() const{
+std::string ModelImpl::getName() const{
     return name;
 }
 
-void Model::setName(std::string n){
+void ModelImpl::setName(std::string n){
     name = n;
 }
 
-void Model::add(System *s){
+void ModelImpl::add(System *s){
     systems.push_back(s);
 }
 
-void Model::add(Flow *f){
+void ModelImpl::add(Flow *f){
     flows.push_back(f);
 }
 
-void Model::run(int t_initial, int t_end){
+void ModelImpl::run(int t_initial, int t_end){
     for (int time = t_initial; time < t_end; ++time){
         std::vector<double> results;
         for (auto it = flows.begin(); it != flows.end(); ++it){

@@ -17,70 +17,39 @@ protected:
 
 public:
     /**
-     * @brief Construtor padrão. Inicializa ponteiros nulos e nome vazio.
-     */
-    Flow();
-
-    /**
-     * @brief Construtor de cópia.
-     * @param fl Objeto Flow a ser copiado.
-     */
-    Flow(const Flow &fl);
-
-    /**
      * @brief Destrutor virtual padrão.
      */
-    virtual ~Flow();
-
-    /**
-     * @brief Operador de atribuição.
-     * @param fl Objeto Flow a ser atribuído.
-     * @return Referência para o próprio objeto atualizado.
-     */
-    Flow &operator=(const Flow &fl);
-
-    /**
-     * @brief Construtor parametrizado.
-     * @param name Nome do fluxo.
-     */
-    Flow(std::string name);
-
+    virtual ~Flow() {}
     /**
      * @brief Define o sistema de origem (fonte).
      * @param s Ponteiro para o sistema fonte.
      */
-    void setSource(System *s);
-
+    virtual void setSource(System *s) = 0;
     /**
      * @brief Define o sistema de destino (alvo).
      * @param t Ponteiro para o sistema alvo.
      */
-    void setTarget(System *t);
-
+    virtual void setTarget(System *t) = 0;
     /**
      * @brief Retorna o sistema de origem.
      * @return System* Ponteiro para o sistema fonte.
      */
-    System *getSource() const;
-
+    virtual System *getSource() const = 0;
     /**
      * @brief Retorna o sistema de destino.
      * @return System* Ponteiro para o sistema alvo.
      */
-    System *getTarget() const;
-
+    virtual System *getTarget() const = 0;
     /**
      * @brief Retorna o nome do fluxo.
      * @return std::string contendo o nome.
      */
-    std::string getName() const;
-
+    virtual std::string getName() const = 0;
     /**
      * @brief Define o nome do fluxo.
      * @param name Novo nome do fluxo.
      */
-    void setName(std::string name);
-
+    virtual void setName(std::string name) = 0;
     /**
      * @brief Método virtual puro para executar a equação do fluxo.
      * @return double O valor calculado a ser transferido.
