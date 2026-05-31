@@ -21,11 +21,7 @@ public:
     void setValue(double value) override;
     void setName(std::string name) override;
 
-    friend void unit_System_constructor();
-    friend void unit_System_getName();
-    friend void unit_System_setName();
-    friend void unit_System_getValue();
-    friend void unit_System_setValue();
+    friend class UnitSystem;
 };
 
 #endif

@@ -1,9 +1,8 @@
 #include "unit_system.h"
 #include <assert.h>
-#include <math.h>
 #include "../../src/systemImpl.h"
 
-void unit_System_constructor(void) {
+void UnitSystem::unit_System_constructor() {
     //teste do construtor padrão
     SystemImpl s1;
     assert(s1.name == "");
@@ -26,38 +25,38 @@ void unit_System_constructor(void) {
     assert(s4.value == 10.5);
 }
 
-void unit_System_destructor(void) {
+void UnitSystem::unit_System_destructor() {
     SystemImpl* s1 = new SystemImpl("Sys", 10.0);
     delete s1;
 }
 
-void unit_System_getName(void) {
+void UnitSystem::unit_System_getName() {
     SystemImpl s("Name", 100.0);
     assert(s.getName() == "Name");
 }
 
-void unit_System_setName(void) {
+void UnitSystem:: unit_System_setName() {
     SystemImpl s;
     s.setName("NewName");
     assert(s.name == "NewName");
 }
 
-void unit_System_getValue(void) {
+void UnitSystem::unit_System_getValue() {
     SystemImpl s("Name", 150.0);
     assert(s.getValue() == 150.0);
 }
 
-void unit_System_setValue(void) {
+void UnitSystem::unit_System_setValue() {
     SystemImpl s;
     s.setValue(25.5);
     assert(s.value == 25.5);
 }
 
-void run_unit_tests_System(void) {
-    unit_System_constructor();
-    unit_System_destructor();
-    unit_System_getName();
-    unit_System_setName();
-    unit_System_getValue();
-    unit_System_setValue();
+void run_unit_tests_System() {
+    UnitSystem::unit_System_constructor();
+    UnitSystem::unit_System_destructor();
+    UnitSystem::unit_System_getName();
+    UnitSystem::unit_System_setName();
+    UnitSystem::unit_System_getValue();
+    UnitSystem::unit_System_setValue();
 }

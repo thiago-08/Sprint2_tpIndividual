@@ -4,7 +4,7 @@
 #include "../../src/systemImpl.h"
 #include "../../src/flow_types.h" 
 
-void unit_Model_constructor() {
+void UnitModel::unit_Model_constructor() {
     //teste construtor padrão
     ModelImpl m1;
     assert(m1.name == "");
@@ -42,25 +42,25 @@ void unit_Model_constructor() {
     m4.flows.clear();
 }
 
-void unit_Model_destructor() {
+void UnitModel::unit_Model_destructor() {
     ModelImpl* m = new ModelImpl();
     m->systems.push_back(new SystemImpl("Sys", 10.0));
     delete m; 
 }
 
-void unit_Model_getName() {
+void UnitModel::unit_Model_getName() {
     ModelImpl m;
     m.name = "Name"; 
     assert(m.getName() == "Name");
 }
 
-void unit_Model_setName() {
+void UnitModel::unit_Model_setName() {
     ModelImpl m;
     m.setName("NewName");
     assert(m.name == "NewName");
 }
 
-void unit_Model_addSystem() {
+void UnitModel::unit_Model_addSystem() {
     ModelImpl m;
     SystemImpl* s = new SystemImpl("Sys", 10.0); 
     m.add(s);
@@ -68,7 +68,7 @@ void unit_Model_addSystem() {
     assert(m.systems[0] == s);
 }
 
-void unit_Model_addFlow() {
+void UnitModel::unit_Model_addFlow() {
     ModelImpl m;
     FlowExponencial* f = new FlowExponencial("Flow"); 
     m.add(f);
@@ -76,7 +76,7 @@ void unit_Model_addFlow() {
     assert(m.flows[0] == f);
 }
 
-void unit_Model_run() {
+void UnitModel::unit_Model_run() {
     ModelImpl m("Test Run");
     SystemImpl* s1 = new SystemImpl("Source", 100.0);
     SystemImpl* s2 = new SystemImpl("Target", 0.0);
@@ -96,11 +96,11 @@ void unit_Model_run() {
 }
 
 void run_unit_tests_Model() {
-    unit_Model_constructor();
-    unit_Model_destructor();
-    unit_Model_getName();
-    unit_Model_setName();
-    unit_Model_addSystem();
-    unit_Model_addFlow();
-    unit_Model_run();
+    UnitModel::unit_Model_constructor();
+    UnitModel::unit_Model_destructor();
+    UnitModel::unit_Model_getName();
+    UnitModel::unit_Model_setName();
+    UnitModel::unit_Model_addSystem();
+    UnitModel::unit_Model_addFlow();
+    UnitModel::unit_Model_run();
 }

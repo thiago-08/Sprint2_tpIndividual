@@ -17,7 +17,7 @@ public:
     double execute() override { return 0.0; } 
 };
 
-void unit_Flow_constructor() {
+void UnitFlow::unit_Flow_constructor() {
     //teste construtor padrão
     AbstractFlow f1;
     assert(f1.name == "");
@@ -48,45 +48,45 @@ void unit_Flow_constructor() {
     assert(f4.target == &s2);
 }
 
-void unit_Flow_destructor() {
+void UnitFlow::unit_Flow_destructor() {
     AbstractFlow* f = new AbstractFlow("flow");
     delete f;
 }
 
-void unit_Flow_getName() {
+void UnitFlow::unit_Flow_getName() {
     AbstractFlow f;
     f.name = "Name";
     assert(f.getName() == "Name");
 }
 
-void unit_Flow_setName() {
+void UnitFlow::unit_Flow_setName() {
     AbstractFlow f;
     f.setName("NewName");
     assert(f.name == "NewName");
 }
 
-void unit_Flow_getSource() {
+void UnitFlow::unit_Flow_getSource() {
     AbstractFlow f;
     SystemImpl s("Sys1", 10.0);
     f.source = &s; 
     assert(f.getSource() == &s);
 }
 
-void unit_Flow_setSource() {
+void UnitFlow::unit_Flow_setSource() {
     AbstractFlow f;
     SystemImpl s("Sys1", 10.0);
     f.setSource(&s);
     assert(f.source == &s);
 }
 
-void unit_Flow_getTarget() {
+void UnitFlow::unit_Flow_getTarget() {
     AbstractFlow f;
     SystemImpl s("Sys2", 20.0);
     f.target = &s; 
     assert(f.getTarget() == &s);
 }
 
-void unit_Flow_setTarget() {
+void UnitFlow::unit_Flow_setTarget() {
     AbstractFlow f;
     SystemImpl s("Sys2", 20.0);
     f.setTarget(&s);
@@ -94,12 +94,12 @@ void unit_Flow_setTarget() {
 }
 
 void run_unit_tests_Flow() {
-    unit_Flow_constructor();
-    unit_Flow_destructor();
-    unit_Flow_getName();
-    unit_Flow_setName();
-    unit_Flow_getSource();
-    unit_Flow_setSource();
-    unit_Flow_getTarget();
-    unit_Flow_setTarget();
+    UnitFlow::unit_Flow_constructor();
+    UnitFlow::unit_Flow_destructor();
+    UnitFlow::unit_Flow_getName();
+    UnitFlow::unit_Flow_setName();
+    UnitFlow::unit_Flow_getSource();
+    UnitFlow::unit_Flow_setSource();
+    UnitFlow::unit_Flow_getTarget();
+    UnitFlow::unit_Flow_setTarget();
 }

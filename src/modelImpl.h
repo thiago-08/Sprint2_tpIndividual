@@ -26,13 +26,7 @@ public:
     std::string getName() const override;
     void setName(std::string name) override;
 
-    friend void unit_Model_constructor();
-    friend void unit_Model_destructor();
-    friend void unit_Model_getName();
-    friend void unit_Model_setName();
-    friend void unit_Model_addSystem();
-    friend void unit_Model_addFlow();
-    friend void unit_Model_run();
+    friend class UnitModel;
 };
 
 #endif

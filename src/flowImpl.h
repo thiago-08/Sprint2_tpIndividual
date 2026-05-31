@@ -35,9 +35,8 @@ public:
     friend void unit_Flow_getTarget();
     friend void unit_Flow_setTarget();
 
-    friend void unit_FlowExponencial_execute();
-    friend void unit_FlowLogistic_execute();
-    friend void unit_FlowComplex_execute();
+    friend class UnitFlow;
+    friend class UnitFlowTypes;
 };
 
 #endif
