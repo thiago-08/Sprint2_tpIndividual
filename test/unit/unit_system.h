@@ -6,8 +6,17 @@
  */
 class UnitSystem {
 public:
-    /** @brief Testa os construtores e operador de atribuição. */
-    static void unit_System_constructor();
+    /** @brief Testa o construtor padrão da classe System. */
+    static void unit_System_DefaultConstructor();
+
+    /** @brief Testa o construtor parametrizado da classe System. */
+    static void unit_System_ParameterizedConstructor();
+
+    /** @brief Testa o construtor de cópia da classe System. */
+    static void unit_System_CopyConstructor();
+
+    /** @brief Testa o operador de atribuição da classe System. */
+    static void unit_System_Operator();
 
     /** @brief Testa o destrutor. */
     static void unit_System_destructor();

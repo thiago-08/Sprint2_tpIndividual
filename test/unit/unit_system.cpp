@@ -2,23 +2,27 @@
 #include <assert.h>
 #include "../../src/systemImpl.h"
 
-void UnitSystem::unit_System_constructor() {
-    //teste do construtor padrão
+void UnitSystem::unit_System_DefaultConstructor() {
     SystemImpl s1;
     assert(s1.name == "");
     assert(s1.value == 0.0);
+}
 
-    //teste do construtor parametrizado
+void UnitSystem::unit_System_ParameterizedConstructor() {
     SystemImpl s2("Test System", 10.5);
     assert(s2.name == "Test System");
     assert(s2.value == 10.5);
-    
-    //teste do construtor de cópia
+}
+
+void UnitSystem::unit_System_CopyConstructor() {
+    SystemImpl s2("Test System", 10.5);
     SystemImpl s3(s2);
     assert(s3.name == "Test System");
     assert(s3.value == 10.5);
+}
 
-    //teste do operador de atribuição
+void UnitSystem::unit_System_Operator() {
+    SystemImpl s2("Test System", 10.5);
     SystemImpl s4;
     s4 = s2;
     assert(s4.name == "Test System");
@@ -53,7 +57,10 @@ void UnitSystem::unit_System_setValue() {
 }
 
 void run_unit_tests_System() {
-    UnitSystem::unit_System_constructor();
+    UnitSystem::unit_System_DefaultConstructor();
+    UnitSystem::unit_System_ParameterizedConstructor();
+    UnitSystem::unit_System_CopyConstructor();
+    UnitSystem::unit_System_Operator();
     UnitSystem::unit_System_destructor();
     UnitSystem::unit_System_getName();
     UnitSystem::unit_System_setName();

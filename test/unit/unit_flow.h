@@ -3,12 +3,21 @@
 
 /**
  * @brief Testes unitários para a classe FlowImpl.
- */
+ */ 
 class UnitFlow {
 public:
-    /** @brief Testa os construtores e operador de atribuição. */
-    static void unit_Flow_constructor();
+    /** @brief Testa o construtor padrão da classe FlowImpl. */
+    static void unit_Flow_DefaultConstructor();
 
+    /** @brief Testa o construtor parametrizado da classe FlowImpl. */
+    static void unit_Flow_ParameterizedConstructor();
+
+    /** @brief Testa o construtor de cópia da classe FlowImpl. */
+    static void unit_Flow_CopyConstructor();
+
+    /** @brief Testa o operador de atribuição da classe FlowImpl. */
+    static void unit_Flow_Operator();
+    
     /** @brief Testa o destrutor. */
     static void unit_Flow_destructor();
 

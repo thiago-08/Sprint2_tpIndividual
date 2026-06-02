@@ -4,22 +4,25 @@
 #include "../../src/systemImpl.h"
 #include "../../src/flow_types.h" 
 
-void UnitModel::unit_Model_constructor() {
-    //teste construtor padrão
+void UnitModel::unit_Model_DefaultConstructor() {
     ModelImpl m1;
     assert(m1.name == "");
     assert(m1.systems.empty());
     assert(m1.flows.empty());
+}
 
-    //teste construtor parametrizado
+void UnitModel::unit_Model_ParameterizedConstructor() {
     ModelImpl m2("Model Test");
     assert(m2.name == "Model Test");
+}
 
-    //teste construtor de cópia
+void UnitModel::unit_Model_CopyConstructor() {
+    ModelImpl m2("Model Test");
     SystemImpl* s = new SystemImpl("Sys", 10.0);
     FlowExponencial* f = new FlowExponencial("Flow");
     m2.add(s);
     m2.add(f);
+    
     ModelImpl m3(m2);
     assert(m3.name == "Model Test");
     assert(m3.systems.size() == 1);
@@ -27,7 +30,17 @@ void UnitModel::unit_Model_constructor() {
     assert(m3.systems[0] == s);
     assert(m3.flows[0] == f);
 
-    //teste operador de atribuição
+    m3.systems.clear();
+    m3.flows.clear();
+}
+
+void UnitModel::unit_Model_Operator() {
+    ModelImpl m2("Model Test");
+    SystemImpl* s = new SystemImpl("Sys", 10.0);
+    FlowExponencial* f = new FlowExponencial("Flow");
+    m2.add(s);
+    m2.add(f);
+
     ModelImpl m4;
     m4 = m2;
     assert(m4.name == "Model Test");
@@ -36,8 +49,6 @@ void UnitModel::unit_Model_constructor() {
     assert(m4.systems[0] == s);
     assert(m4.flows[0] == f);
 
-    m3.systems.clear();
-    m3.flows.clear();
     m4.systems.clear();
     m4.flows.clear();
 }
@@ -96,7 +107,10 @@ void UnitModel::unit_Model_run() {
 }
 
 void run_unit_tests_Model() {
-    UnitModel::unit_Model_constructor();
+    UnitModel::unit_Model_DefaultConstructor();
+    UnitModel::unit_Model_ParameterizedConstructor();
+    UnitModel::unit_Model_CopyConstructor();
+    UnitModel::unit_Model_Operator();
     UnitModel::unit_Model_destructor();
     UnitModel::unit_Model_getName();
     UnitModel::unit_Model_setName();
