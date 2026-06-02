@@ -2,7 +2,7 @@
 \hypertarget{classModel}{}\label{classModel}\index{Model@{Model}}
 
 
-Classe que representa um Modelo (\doxylink{classModel}{Model}). O model gerencia os sistemas e fluxos, de tal forma que roda a simulação de acordo com o tempo e atualizando sistema de acordo com fluxo.  
+Interface abstrata de especificação para um Modelo de Simulação.  
 
 
 
@@ -11,182 +11,147 @@ Classe que representa um Modelo (\doxylink{classModel}{Model}). O model gerencia
 
 
 
-Collaboration diagram for Model\+:\nopagebreak
+Inheritance diagram for Model\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=159pt]{classModel__coll__graph}
+\includegraphics[width=168pt]{classModel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Model\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=153pt]{classModel__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classModel_ae3b375de5f6df4faf74a95d64748e048}{Model}} ()
-\begin{DoxyCompactList}\small\item\em Construtor padrão. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classModel_aaf8e95755a9f516418b3c64926b0025c}{Model}} (const \mbox{\hyperlink{classModel}{Model}} \&mod)
-\begin{DoxyCompactList}\small\item\em Construtor de cópia. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{classModel_ad6ebd2062a0b823db841a0b88baac4c0}{\texorpdfstring{$\sim$}{\string~}\+Model}} ()
+virtual \mbox{\hyperlink{classModel_af032d8433c87a0a3a431faf6563a1f03}{\texorpdfstring{$\sim$}{\string~}\+Model}} ()
 \begin{DoxyCompactList}\small\item\em Destrutor virtual padrão. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classModel}{Model}} \& \mbox{\hyperlink{classModel_a5cb799b0ae3e2d490d0c4e71c77a82da}{operator=}} (const \mbox{\hyperlink{classModel}{Model}} \&mod)
-\begin{DoxyCompactList}\small\item\em Operador de atribuição. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classModel_abfac43ac5b57077d0456b29b2f0b1045}{Model}} (std\+::string name)
-\begin{DoxyCompactList}\small\item\em Construtor parametrizado. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classModel_a054350312f72e04ef46fe5b14f987735}{add}} (\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}s)
-\begin{DoxyCompactList}\small\item\em Adiciona um Sistema ao modelo. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classModel_a237ff1636694a6e26ff280c8d122540e}{add}} (\mbox{\hyperlink{classFlow}{Flow}} \texorpdfstring{$\ast$}{*}f)
-\begin{DoxyCompactList}\small\item\em Adiciona um Fluxo ao modelo. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classModel_aca6100aaf372b1b7ed4f3d77efe22a1d}{run}} (int t\+\_\+initial, int t\+\_\+end)
-\begin{DoxyCompactList}\small\item\em Executa a simulação do modelo no intervalo de tempo especificado. Ao rodar sera feito o calculo de todos os fluxos e depois atualizar os sistemas. \end{DoxyCompactList}\item 
-std\+::string \mbox{\hyperlink{classModel_ad98a14258e1e21e529b8df8ac930dc3e}{get\+Name}} () const
-\begin{DoxyCompactList}\small\item\em Retorna o nome do modelo. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classModel_a833b855481cf748352c92db5e0192337}{set\+Name}} (std\+::string name)
-\begin{DoxyCompactList}\small\item\em Define o nome do modelo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+virtual void \mbox{\hyperlink{classModel_a1c57f13b17e1fd598fa7ebe1fa55a7df}{add}} (\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}s)=0
+\begin{DoxyCompactList}\small\item\em Registra e adiciona um Sistema ao escopo do modelo. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classModel_ad248b54040ab38124af621cbc4c7c2e6}{add}} (\mbox{\hyperlink{classFlow}{Flow}} \texorpdfstring{$\ast$}{*}f)=0
+\begin{DoxyCompactList}\small\item\em Registra e adiciona um Fluxo ao escopo do modelo. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classModel_a8fced9263616fdd102fa0cf54a51462e}{run}} (int t\+\_\+initial, int t\+\_\+end)=0
+\begin{DoxyCompactList}\small\item\em Executa todo o sistema de simulação, processando os fluxos e atualizando os sistemas para cada ciclo temporal. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classModel_a17e89ca8d15af46d074423a47d3c6802}{get\+Name}} () const =0
+\begin{DoxyCompactList}\small\item\em Retorna o nome identificador do modelo. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classModel_ab01f68499cf9c680d64d07c7160b4cf7}{set\+Name}} (std\+::string name)=0
+\begin{DoxyCompactList}\small\item\em Define um nome identificador para o modelo. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Classe que representa um Modelo (\doxylink{classModel}{Model}). O model gerencia os sistemas e fluxos, de tal forma que roda a simulação de acordo com o tempo e atualizando sistema de acordo com fluxo. 
+Interface abstrata de especificação para um Modelo de Simulação. 
 
+\label{doc-constructors}
+\Hypertarget{classModel_doc-constructors}
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classModel_ae3b375de5f6df4faf74a95d64748e048}\label{classModel_ae3b375de5f6df4faf74a95d64748e048} 
-\index{Model@{Model}!Model@{Model}}
-\index{Model@{Model}!Model@{Model}}
-\doxysubsubsection{\texorpdfstring{Model()}{Model()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
-{\footnotesize\ttfamily Model\+::\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Construtor padrão. 
-
-\Hypertarget{classModel_aaf8e95755a9f516418b3c64926b0025c}\label{classModel_aaf8e95755a9f516418b3c64926b0025c} 
-\index{Model@{Model}!Model@{Model}}
-\index{Model@{Model}!Model@{Model}}
-\doxysubsubsection{\texorpdfstring{Model()}{Model()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
-{\footnotesize\ttfamily Model\+::\+Model (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classModel}{Model}} \&}]{mod }\end{DoxyParamCaption})}
-
-
-
-Construtor de cópia. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em mod} & Objeto \doxylink{classModel}{Model} a ser copiado. \\
-\hline
-\end{DoxyParams}
-\Hypertarget{classModel_ad6ebd2062a0b823db841a0b88baac4c0}\label{classModel_ad6ebd2062a0b823db841a0b88baac4c0} 
-\index{Model@{Model}!````~Model@{\texorpdfstring{$\sim$}{\string~}Model}}
+\Hypertarget{classModel_af032d8433c87a0a3a431faf6563a1f03}\index{Model@{Model}!````~Model@{\texorpdfstring{$\sim$}{\string~}Model}}
 \index{````~Model@{\texorpdfstring{$\sim$}{\string~}Model}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Model()}{\string~Model()}}
-{\footnotesize\ttfamily Model\+::\texorpdfstring{$\sim$}{\string~}\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily \label{classModel_af032d8433c87a0a3a431faf6563a1f03} 
+virtual Model\+::\texorpdfstring{$\sim$}{\string~}\+Model (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 
 
 Destrutor virtual padrão. 
 
-\Hypertarget{classModel_abfac43ac5b57077d0456b29b2f0b1045}\label{classModel_abfac43ac5b57077d0456b29b2f0b1045} 
-\index{Model@{Model}!Model@{Model}}
-\index{Model@{Model}!Model@{Model}}
-\doxysubsubsection{\texorpdfstring{Model()}{Model()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily Model\+::\+Model (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
 
 
-
-Construtor parametrizado. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em name} & Nome do modelo. \\
-\hline
-\end{DoxyParams}
-
-
+\label{doc-func-members}
+\Hypertarget{classModel_doc-func-members}
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classModel_a237ff1636694a6e26ff280c8d122540e}\label{classModel_a237ff1636694a6e26ff280c8d122540e} 
-\index{Model@{Model}!add@{add}}
+\Hypertarget{classModel_ad248b54040ab38124af621cbc4c7c2e6}\index{Model@{Model}!add@{add}}
 \index{add@{add}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void Model\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFlow}{Flow}} \texorpdfstring{$\ast$}{*}}]{f }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{classModel_ad248b54040ab38124af621cbc4c7c2e6} 
+virtual void Model\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFlow}{Flow}} \texorpdfstring{$\ast$}{*}}]{f}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
-Adiciona um Fluxo ao modelo. 
+Registra e adiciona um Fluxo ao escopo do modelo. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em f} & Ponteiro para o fluxo a ser adicionado. \\
+{\em f} & Ponteiro para o objeto do fluxo a ser inserido. \\
 \hline
 \end{DoxyParams}
-\Hypertarget{classModel_a054350312f72e04ef46fe5b14f987735}\label{classModel_a054350312f72e04ef46fe5b14f987735} 
-\index{Model@{Model}!add@{add}}
+
+
+Implemented in \mbox{\hyperlink{classModelImpl_aca3d3c64275deb96f4180618279b0825}{Model\+Impl}}.
+
+\Hypertarget{classModel_a1c57f13b17e1fd598fa7ebe1fa55a7df}\index{Model@{Model}!add@{add}}
 \index{add@{add}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void Model\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}}]{s }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{classModel_a1c57f13b17e1fd598fa7ebe1fa55a7df} 
+virtual void Model\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}}]{s}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
-Adiciona um Sistema ao modelo. 
+Registra e adiciona um Sistema ao escopo do modelo. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em s} & Ponteiro para o sistema a ser adicionado. \\
+{\em s} & Ponteiro para o objeto do sistema a ser inserido. \\
 \hline
 \end{DoxyParams}
-\Hypertarget{classModel_ad98a14258e1e21e529b8df8ac930dc3e}\label{classModel_ad98a14258e1e21e529b8df8ac930dc3e} 
-\index{Model@{Model}!getName@{getName}}
+
+
+Implemented in \mbox{\hyperlink{classModelImpl_a1f3286251acdf80ed0b79aad3afc3b5c}{Model\+Impl}}.
+
+\Hypertarget{classModel_a17e89ca8d15af46d074423a47d3c6802}\index{Model@{Model}!getName@{getName}}
 \index{getName@{getName}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{getName()}{getName()}}
-{\footnotesize\ttfamily std\+::string Model\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily \label{classModel_a17e89ca8d15af46d074423a47d3c6802} 
+virtual std\+::string Model\+::get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
-Retorna o nome do modelo. 
+Retorna o nome identificador do modelo. 
 
 \begin{DoxyReturn}{Returns}
 std\+::string contendo o nome. 
 \end{DoxyReturn}
-\Hypertarget{classModel_a5cb799b0ae3e2d490d0c4e71c77a82da}\label{classModel_a5cb799b0ae3e2d490d0c4e71c77a82da} 
-\index{Model@{Model}!operator=@{operator=}}
-\index{operator=@{operator=}!Model@{Model}}
-\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classModel}{Model}} \& Model\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classModel}{Model}} \&}]{mod }\end{DoxyParamCaption})}
 
 
+Implemented in \mbox{\hyperlink{classModelImpl_a6d6ef8f72413650749d9ca9850226a6b}{Model\+Impl}}.
 
-Operador de atribuição. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em mod} & Objeto \doxylink{classModel}{Model} a ser atribuído. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Referência para o próprio objeto atualizado. 
-\end{DoxyReturn}
-\Hypertarget{classModel_aca6100aaf372b1b7ed4f3d77efe22a1d}\label{classModel_aca6100aaf372b1b7ed4f3d77efe22a1d} 
-\index{Model@{Model}!run@{run}}
+\Hypertarget{classModel_a8fced9263616fdd102fa0cf54a51462e}\index{Model@{Model}!run@{run}}
 \index{run@{run}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{run()}{run()}}
-{\footnotesize\ttfamily void Model\+::run (\begin{DoxyParamCaption}\item[{int}]{t\+\_\+initial,  }\item[{int}]{t\+\_\+end }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{classModel_a8fced9263616fdd102fa0cf54a51462e} 
+virtual void Model\+::run (\begin{DoxyParamCaption}\item[{int}]{t\+\_\+initial}{, }\item[{int}]{t\+\_\+end}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
-Executa a simulação do modelo no intervalo de tempo especificado. Ao rodar sera feito o calculo de todos os fluxos e depois atualizar os sistemas. 
+Executa todo o sistema de simulação, processando os fluxos e atualizando os sistemas para cada ciclo temporal. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em t\+\_\+initial} & Tempo inicial da simulação. \\
+{\em t\+\_\+initial} & Tempo/\+Ciclo de início da simulação. \\
 \hline
-{\em t\+\_\+end} & Tempo final da simulação. \\
+{\em t\+\_\+end} & Tempo/\+Ciclo final do encerramento da simulação. \\
 \hline
 \end{DoxyParams}
-\Hypertarget{classModel_a833b855481cf748352c92db5e0192337}\label{classModel_a833b855481cf748352c92db5e0192337} 
-\index{Model@{Model}!setName@{setName}}
+
+
+Implemented in \mbox{\hyperlink{classModelImpl_ac8a62e544938f2de54a4e722d65927fa}{Model\+Impl}}.
+
+\Hypertarget{classModel_ab01f68499cf9c680d64d07c7160b4cf7}\index{Model@{Model}!setName@{setName}}
 \index{setName@{setName}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{setName()}{setName()}}
-{\footnotesize\ttfamily void Model\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{classModel_ab01f68499cf9c680d64d07c7160b4cf7} 
+virtual void Model\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
-Define o nome do modelo. 
+Define um nome identificador para o modelo. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -195,7 +160,10 @@ Define o nome do modelo.
 \end{DoxyParams}
 
 
-The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+Implemented in \mbox{\hyperlink{classModelImpl_a4c11009a6eed8fabce6c6c3a584a53b8}{Model\+Impl}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-src/\mbox{\hyperlink{model_8h}{model.\+h}}\item 
-src/\mbox{\hyperlink{model_8cpp}{model.\+cpp}}\end{DoxyCompactItemize}
+src/\mbox{\hyperlink{model_8h}{model.\+h}}\end{DoxyCompactItemize}

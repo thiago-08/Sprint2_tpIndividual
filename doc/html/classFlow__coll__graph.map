@@ -1,5 +1,3 @@
 <map id="Flow" name="Flow">
-<area shape="rect" id="Node000001" title="Classe base abstrata que representa um Fluxo. Um fluxo é responsavel por calcular valor de transferen..." alt="" coords="5,328,111,613"/>
-<area shape="rect" id="Node000002" href="$classSystem.html" title="Classe que representa um Sistema (System)." alt="" coords="5,5,111,251"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="61,251,61,311,55,311,55,251"/>
+<area shape="rect" id="Node000001" title="Interface abstrata de especificação para um Fluxo." alt="" coords="5,5,107,234"/>
 </map>

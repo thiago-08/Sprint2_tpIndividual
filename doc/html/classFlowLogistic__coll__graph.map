@@ -1,7 +1,9 @@
 <map id="FlowLogistic" name="FlowLogistic">
-<area shape="rect" id="Node000001" title="Classe que implementa um Fluxo Logístico." alt="" coords="5,663,136,828"/>
-<area shape="rect" id="Node000002" href="$classFlow.html" title="Classe base abstrata que representa um Fluxo. Um fluxo é responsavel por calcular valor de transferen..." alt="" coords="18,328,123,613"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="73,627,73,663,68,663,68,627"/>
-<area shape="rect" id="Node000003" href="$classSystem.html" title="Classe que representa um Sistema (System)." alt="" coords="18,5,123,251"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="73,251,73,311,68,311,68,251"/>
+<area shape="rect" id="Node000001" title="Classe que implementa o tipo de Fluxo Logístico. Herda de FlowImpl e implementa uma equação logística..." alt="" coords="53,697,182,881"/>
+<area shape="rect" id="Node000002" href="$classFlowImpl.html" title="Classe que implementa Fluxo (herda da interface). Armazena ponteiros para os sistemas de origem e des..." alt="" coords="64,329,172,647"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,660,120,697,115,696,117,665"/>
+<area shape="rect" id="Node000003" href="$classFlow.html" title="Interface abstrata de especificação para um Fluxo." alt="" coords="5,5,107,234"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="78,246,94,329,89,330,78,252"/>
+<area shape="rect" id="Node000004" href="$classSystem.html" title="Interface abstrata de especificação para um Sistema." alt="" coords="132,39,229,200"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="167,198,150,313,145,312,166,203"/>
 </map>

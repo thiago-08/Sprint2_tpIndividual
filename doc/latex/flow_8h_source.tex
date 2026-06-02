@@ -8,39 +8,26 @@
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{system_8h}{system.h}}"{}}}
 \DoxyCodeLine{00006\ }
-\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classFlow}{Flow}}}
-\DoxyCodeLine{00012\ \{}
-\DoxyCodeLine{00013\ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00014\ \ \ \ \ std::string\ \mbox{\hyperlink{classFlow_a687d8bbbb87d6c1965e272768167dcac}{name}};}
-\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{classSystem}{System}}\ *\mbox{\hyperlink{classFlow_a963ca162995d112f0f30322e2bb9de63}{source}};}
-\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{classSystem}{System}}\ *\mbox{\hyperlink{classFlow_a87be88d9bae4e927b29205faabeaf387}{target}};}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classFlow}{Flow}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classFlow_a325d284a50ca3274b126b21f5c39b9af}{\string~Flow}}()\ \{\}}
 \DoxyCodeLine{00017\ }
-\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{classFlow_ac9975e144e606242748197798e87dd32}{Flow}}();}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFlow_a4d756236982858350e7bf80a465926a7}{setSource}}(\mbox{\hyperlink{classSystem}{System}}\ *s)\ =\ 0;}
 \DoxyCodeLine{00023\ }
-\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{classFlow_ac9975e144e606242748197798e87dd32}{Flow}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classFlow}{Flow}}\ \&fl);}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFlow_abacc363985e28905dcc10c9fab7c4328}{setTarget}}(\mbox{\hyperlink{classSystem}{System}}\ *t)\ =\ 0;}
 \DoxyCodeLine{00029\ }
-\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classFlow_a5991efa6e8cf88c4ef2125cc727db333}{\string~Flow}}();}
-\DoxyCodeLine{00034\ }
-\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{classFlow}{Flow}}\ \&\mbox{\hyperlink{classFlow_a1e309aa65db90d733f5bdcee1665ce58}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classFlow}{Flow}}\ \&fl);}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classSystem}{System}}\ *\mbox{\hyperlink{classFlow_abf0f3dbb285fe82e5ba6449de06b97c8}{getSource}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classSystem}{System}}\ *\mbox{\hyperlink{classFlow_afb9b8d93ea0fc81868b8e02dd382a787}{getTarget}}()\ \textcolor{keyword}{const}\ =\ 0;}
 \DoxyCodeLine{00041\ }
-\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{classFlow_ac9975e144e606242748197798e87dd32}{Flow}}(std::string\ \mbox{\hyperlink{classFlow_a687d8bbbb87d6c1965e272768167dcac}{name}});}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ \mbox{\hyperlink{classFlow_a2d0340d844ab2d275222938234e44169}{getName}}()\ \textcolor{keyword}{const}\ =\ 0;}
 \DoxyCodeLine{00047\ }
-\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFlow_a4da8089ed4e652c414180252d22c8516}{setSource}}(\mbox{\hyperlink{classSystem}{System}}\ *s);}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFlow_af83353015d9841e35c972625f450efe5}{setName}}(std::string\ name)\ =\ 0;}
 \DoxyCodeLine{00053\ }
-\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFlow_a6187a9f827d2c699fa2176b5bf0d05dd}{setTarget}}(\mbox{\hyperlink{classSystem}{System}}\ *t);}
-\DoxyCodeLine{00059\ }
-\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{classSystem}{System}}\ *\mbox{\hyperlink{classFlow_a1f3858f90d141807377c2640fb5dd0fc}{getSource}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00065\ }
-\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{classSystem}{System}}\ *\mbox{\hyperlink{classFlow_aff8a0f8ca8dc50d37c92ab7556e172b5}{getTarget}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00071\ }
-\DoxyCodeLine{00076\ \ \ \ \ std::string\ \mbox{\hyperlink{classFlow_aadd3a8ab712a2063461d917a867eedc4}{getName}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00077\ }
-\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFlow_aafb4bf7f22f0df6237aadb2deefdb34c}{setName}}(std::string\ \mbox{\hyperlink{classFlow_a687d8bbbb87d6c1965e272768167dcac}{name}});}
-\DoxyCodeLine{00083\ }
-\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classFlow_a619be0b590c78202127bc6ac7fb04029}{execute}}()\ =\ 0;}
-\DoxyCodeLine{00089\ \};}
-\DoxyCodeLine{00090\ }
-\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classFlow_a619be0b590c78202127bc6ac7fb04029}{execute}}()\ =\ 0;}
+\DoxyCodeLine{00059\ \};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

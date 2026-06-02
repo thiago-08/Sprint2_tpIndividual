@@ -1,26 +1,28 @@
 \doxysection{src/flow\+\_\+types.h File Reference}
 \hypertarget{flow__types_8h}{}\label{flow__types_8h}\index{src/flow\_types.h@{src/flow\_types.h}}
-{\ttfamily \#include "{}flow.\+h"{}}\newline
-Include dependency graph for flow\+\_\+types.\+h\+:\nopagebreak
+{\ttfamily \#include "{}flow\+Impl.\+h"{}}\newline
+Include dependency graph for flow\+\_\+types.\+h\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=189pt]{flow__types_8h__incl}
+\includegraphics[width=188pt]{flow__types_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=336pt]{flow__types_8h__dep__incl}
+\includegraphics[width=350pt]{flow__types_8h__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{classFlowExponencial}{Flow\+Exponencial}}
-\begin{DoxyCompactList}\small\item\em Classe que implementa um Fluxo Exponencial. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Classe que implementa o tipo de Fluxo Exponencial. Herda de \doxylink{classFlowImpl}{Flow\+Impl} e implementa a equação de comportamento exponencial. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classFlowLogistic}{Flow\+Logistic}}
-\begin{DoxyCompactList}\small\item\em Classe que implementa um Fluxo Logístico. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Classe que implementa o tipo de Fluxo Logístico. Herda de \doxylink{classFlowImpl}{Flow\+Impl} e implementa uma equação logística baseada no valor do sistema alvo. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classFlowComplex}{Flow\+Complex}}
-\begin{DoxyCompactList}\small\item\em Classe que implementa um Fluxo Complexo. Herda de flow, implementado o comportamento de vários sistemas interligados. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Classe que implementa o tipo de Fluxo Complexo. Herda de \doxylink{classFlowImpl}{Flow\+Impl}, implementando o comportamento de vários sistemas interligados. \end{DoxyCompactList}\end{DoxyCompactItemize}

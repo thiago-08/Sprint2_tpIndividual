@@ -2,7 +2,7 @@
 \hypertarget{classSystem}{}\label{classSystem}\index{System@{System}}
 
 
-Classe que representa um Sistema (\doxylink{classSystem}{System}).  
+Interface abstrata de especificação para um Sistema.  
 
 
 
@@ -11,175 +11,122 @@ Classe que representa um Sistema (\doxylink{classSystem}{System}).
 
 
 
-Collaboration diagram for System\+:\nopagebreak
+Inheritance diagram for System\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=159pt]{classSystem__coll__graph}
+\includegraphics[width=175pt]{classSystem__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=153pt]{classSystem__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classSystem_ae317936c9bcf1374d61745572e0f2f8a}{System}} ()
-\begin{DoxyCompactList}\small\item\em Construtor padrão. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classSystem_a9dd6c24612a98e55eaf1ec971bc44f4a}{System}} (const \mbox{\hyperlink{classSystem}{System}} \&sys)
-\begin{DoxyCompactList}\small\item\em Construtor de cópia. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{classSystem_a3be70bb338e3f062f821173fd15680d0}{\texorpdfstring{$\sim$}{\string~}\+System}} ()
+virtual \mbox{\hyperlink{classSystem_a2fc0f34023977cab9b628aa9f734d88c}{\texorpdfstring{$\sim$}{\string~}\+System}} ()
 \begin{DoxyCompactList}\small\item\em Destrutor virtual padrão. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classSystem}{System}} \& \mbox{\hyperlink{classSystem_a9baec86de531db675fe23edaa74d6e4a}{operator=}} (const \mbox{\hyperlink{classSystem}{System}} \&sys)
-\begin{DoxyCompactList}\small\item\em Operador de atribuição. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classSystem_ad8467f90704511e02657dca73fe38f82}{System}} (std\+::string \mbox{\hyperlink{classSystem_af3995745f52d4359f628ddd67de5121f}{name}}, double \mbox{\hyperlink{classSystem_a879687b1125ef20757c2a61345fedd00}{value}})
-\begin{DoxyCompactList}\small\item\em Construtor parametrizado. \end{DoxyCompactList}\item 
-std\+::string \mbox{\hyperlink{classSystem_a30116b105d876ff2b445c0c7d99816bb}{get\+Name}} () const
+virtual std\+::string \mbox{\hyperlink{classSystem_a3bc2509274e6c346e07b0bf1151378c5}{get\+Name}} () const =0
 \begin{DoxyCompactList}\small\item\em Retorna o nome do sistema. \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{classSystem_aa7d17369d1034e7d8643a63f69d1901d}{get\+Value}} () const
-\begin{DoxyCompactList}\small\item\em Retorna o valor atual do sistema. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classSystem_a5343de0a45485edd88bc87f338fe9a19}{set\+Value}} (double \mbox{\hyperlink{classSystem_a879687b1125ef20757c2a61345fedd00}{value}})
-\begin{DoxyCompactList}\small\item\em Define um novo valor para o sistema. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classSystem_a29dd9ba3320e94630a999f1334519692}{set\+Name}} (std\+::string \mbox{\hyperlink{classSystem_af3995745f52d4359f628ddd67de5121f}{name}})
-\begin{DoxyCompactList}\small\item\em Define um novo nome para o sistema. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Protected Attributes}
-\begin{DoxyCompactItemize}
-\item 
-std\+::string \mbox{\hyperlink{classSystem_af3995745f52d4359f628ddd67de5121f}{name}}
-\item 
-double \mbox{\hyperlink{classSystem_a879687b1125ef20757c2a61345fedd00}{value}}
-\end{DoxyCompactItemize}
+virtual double \mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{get\+Value}} () const =0
+\begin{DoxyCompactList}\small\item\em Retorna o valor atual armazenado pelo sistema. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classSystem_a7421d2e6970a0c4169a2febe254f2060}{set\+Value}} (double value)=0
+\begin{DoxyCompactList}\small\item\em Define um novo valor numérico para o sistema. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classSystem_a9da89282a416daa3ab0950a6f5760bdc}{set\+Name}} (std\+::string name)=0
+\begin{DoxyCompactList}\small\item\em Define um novo nome identificador para o sistema. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Classe que representa um Sistema (\doxylink{classSystem}{System}). 
+Interface abstrata de especificação para um Sistema. 
 
-
-\begin{DoxyItemize}
-\item Um Sistema é uma classe que armazena um valor numérico e possui um nome. 
-\end{DoxyItemize}
-
+\label{doc-constructors}
+\Hypertarget{classSystem_doc-constructors}
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classSystem_ae317936c9bcf1374d61745572e0f2f8a}\label{classSystem_ae317936c9bcf1374d61745572e0f2f8a} 
-\index{System@{System}!System@{System}}
-\index{System@{System}!System@{System}}
-\doxysubsubsection{\texorpdfstring{System()}{System()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
-{\footnotesize\ttfamily System\+::\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Construtor padrão. 
-
-\Hypertarget{classSystem_a9dd6c24612a98e55eaf1ec971bc44f4a}\label{classSystem_a9dd6c24612a98e55eaf1ec971bc44f4a} 
-\index{System@{System}!System@{System}}
-\index{System@{System}!System@{System}}
-\doxysubsubsection{\texorpdfstring{System()}{System()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
-{\footnotesize\ttfamily System\+::\+System (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSystem}{System}} \&}]{sys }\end{DoxyParamCaption})}
-
-
-
-Construtor de cópia. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em sys} & Objeto \doxylink{classSystem}{System} a ser copiado. \\
-\hline
-\end{DoxyParams}
-\Hypertarget{classSystem_a3be70bb338e3f062f821173fd15680d0}\label{classSystem_a3be70bb338e3f062f821173fd15680d0} 
-\index{System@{System}!````~System@{\texorpdfstring{$\sim$}{\string~}System}}
+\Hypertarget{classSystem_a2fc0f34023977cab9b628aa9f734d88c}\index{System@{System}!````~System@{\texorpdfstring{$\sim$}{\string~}System}}
 \index{````~System@{\texorpdfstring{$\sim$}{\string~}System}!System@{System}}
 \doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}System()}{\string~System()}}
-{\footnotesize\ttfamily System\+::\texorpdfstring{$\sim$}{\string~}\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily \label{classSystem_a2fc0f34023977cab9b628aa9f734d88c} 
+virtual System\+::\texorpdfstring{$\sim$}{\string~}\+System (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 
 
 Destrutor virtual padrão. 
 
-\Hypertarget{classSystem_ad8467f90704511e02657dca73fe38f82}\label{classSystem_ad8467f90704511e02657dca73fe38f82} 
-\index{System@{System}!System@{System}}
-\index{System@{System}!System@{System}}
-\doxysubsubsection{\texorpdfstring{System()}{System()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily System\+::\+System (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{double}]{value }\end{DoxyParamCaption})}
 
 
-
-Construtor parametrizado. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em name} & Nome do sistema. \\
-\hline
-{\em value} & Valor inicial do sistema. \\
-\hline
-\end{DoxyParams}
-
-
+\label{doc-func-members}
+\Hypertarget{classSystem_doc-func-members}
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classSystem_a30116b105d876ff2b445c0c7d99816bb}\label{classSystem_a30116b105d876ff2b445c0c7d99816bb} 
-\index{System@{System}!getName@{getName}}
+\Hypertarget{classSystem_a3bc2509274e6c346e07b0bf1151378c5}\index{System@{System}!getName@{getName}}
 \index{getName@{getName}!System@{System}}
 \doxysubsubsection{\texorpdfstring{getName()}{getName()}}
-{\footnotesize\ttfamily std\+::string System\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily \label{classSystem_a3bc2509274e6c346e07b0bf1151378c5} 
+virtual std\+::string System\+::get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
 Retorna o nome do sistema. 
 
 \begin{DoxyReturn}{Returns}
-std\+::string contendo o nome. 
+std\+::string contendo o nome identificador. 
 \end{DoxyReturn}
-\Hypertarget{classSystem_aa7d17369d1034e7d8643a63f69d1901d}\label{classSystem_aa7d17369d1034e7d8643a63f69d1901d} 
-\index{System@{System}!getValue@{getValue}}
+
+
+Implemented in \mbox{\hyperlink{classSystemImpl_ad3843b49bbde11738f395c5fbeae4633}{System\+Impl}}.
+
+\Hypertarget{classSystem_a41b673faa6c199eb8e4f204639fab4f2}\index{System@{System}!getValue@{getValue}}
 \index{getValue@{getValue}!System@{System}}
 \doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
-{\footnotesize\ttfamily double System\+::get\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily \label{classSystem_a41b673faa6c199eb8e4f204639fab4f2} 
+virtual double System\+::get\+Value (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
-Retorna o valor atual do sistema. 
+Retorna o valor atual armazenado pelo sistema. 
 
 \begin{DoxyReturn}{Returns}
-double representando o valor. 
+double representando a quantidade/valor do sistema. 
 \end{DoxyReturn}
-\Hypertarget{classSystem_a9baec86de531db675fe23edaa74d6e4a}\label{classSystem_a9baec86de531db675fe23edaa74d6e4a} 
-\index{System@{System}!operator=@{operator=}}
-\index{operator=@{operator=}!System@{System}}
-\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classSystem}{System}} \& System\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSystem}{System}} \&}]{sys }\end{DoxyParamCaption})}
 
 
+Implemented in \mbox{\hyperlink{classSystemImpl_abd3ff91586d4474c0a747dc5dd6e0268}{System\+Impl}}.
 
-Operador de atribuição. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em sys} & Objeto \doxylink{classSystem}{System} a ser atribuído. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Referência para o próprio objeto atualizado. 
-\end{DoxyReturn}
-\Hypertarget{classSystem_a29dd9ba3320e94630a999f1334519692}\label{classSystem_a29dd9ba3320e94630a999f1334519692} 
-\index{System@{System}!setName@{setName}}
+\Hypertarget{classSystem_a9da89282a416daa3ab0950a6f5760bdc}\index{System@{System}!setName@{setName}}
 \index{setName@{setName}!System@{System}}
 \doxysubsubsection{\texorpdfstring{setName()}{setName()}}
-{\footnotesize\ttfamily void System\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{classSystem_a9da89282a416daa3ab0950a6f5760bdc} 
+virtual void System\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
-Define um novo nome para o sistema. 
+Define um novo nome identificador para o sistema. 
 
 
 \begin{DoxyParams}{Parameters}
 {\em name} & Novo nome a ser atribuído. \\
 \hline
 \end{DoxyParams}
-\Hypertarget{classSystem_a5343de0a45485edd88bc87f338fe9a19}\label{classSystem_a5343de0a45485edd88bc87f338fe9a19} 
-\index{System@{System}!setValue@{setValue}}
+
+
+Implemented in \mbox{\hyperlink{classSystemImpl_a2acbc548ef25167adaa25effec099432}{System\+Impl}}.
+
+\Hypertarget{classSystem_a7421d2e6970a0c4169a2febe254f2060}\index{System@{System}!setValue@{setValue}}
 \index{setValue@{setValue}!System@{System}}
 \doxysubsubsection{\texorpdfstring{setValue()}{setValue()}}
-{\footnotesize\ttfamily void System\+::set\+Value (\begin{DoxyParamCaption}\item[{double}]{value }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{classSystem_a7421d2e6970a0c4169a2febe254f2060} 
+virtual void System\+::set\+Value (\begin{DoxyParamCaption}\item[{double}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
-Define um novo valor para o sistema. 
+Define um novo valor numérico para o sistema. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -188,22 +135,10 @@ Define um novo valor para o sistema.
 \end{DoxyParams}
 
 
-\doxysubsection{Member Data Documentation}
-\Hypertarget{classSystem_af3995745f52d4359f628ddd67de5121f}\label{classSystem_af3995745f52d4359f628ddd67de5121f} 
-\index{System@{System}!name@{name}}
-\index{name@{name}!System@{System}}
-\doxysubsubsection{\texorpdfstring{name}{name}}
-{\footnotesize\ttfamily std\+::string System\+::name\hspace{0.3cm}{\ttfamily [protected]}}
-
-\Hypertarget{classSystem_a879687b1125ef20757c2a61345fedd00}\label{classSystem_a879687b1125ef20757c2a61345fedd00} 
-\index{System@{System}!value@{value}}
-\index{value@{value}!System@{System}}
-\doxysubsubsection{\texorpdfstring{value}{value}}
-{\footnotesize\ttfamily double System\+::value\hspace{0.3cm}{\ttfamily [protected]}}
+Implemented in \mbox{\hyperlink{classSystemImpl_a3ebff8dd869e1fab281375d5c2ef8362}{System\+Impl}}.
 
 
 
-The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-src/\mbox{\hyperlink{system_8h}{system.\+h}}\item 
-src/\mbox{\hyperlink{system_8cpp}{system.\+cpp}}\end{DoxyCompactItemize}
+src/\mbox{\hyperlink{system_8h}{system.\+h}}\end{DoxyCompactItemize}
