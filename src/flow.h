@@ -5,54 +5,55 @@
 #include "system.h"
 
 /**
- * @brief Classe base abstrata que representa um Fluxo.
- * Um fluxo é responsavel por calcular valor de transferencia de um sistema para outro.
+ * @brief Interface abstrata de especificação para um Fluxo.
  */
 class Flow
 {
-protected:
-    std::string name;
-    System *source;
-    System *target;
-
 public:
     /**
      * @brief Destrutor virtual padrão.
      */
     virtual ~Flow() {}
+
     /**
-     * @brief Define o sistema de origem (fonte).
-     * @param s Ponteiro para o sistema fonte.
+     * @brief Define o sistema de origem (fonte) da transferência.
+     * @param s Ponteiro para o sistema de onde sairá o valor.
      */
     virtual void setSource(System *s) = 0;
+
     /**
-     * @brief Define o sistema de destino (alvo).
-     * @param t Ponteiro para o sistema alvo.
+     * @brief Define o sistema de destino (alvo) da transferência.
+     * @param t Ponteiro para o sistema que receberá o valor.
      */
     virtual void setTarget(System *t) = 0;
+
     /**
-     * @brief Retorna o sistema de origem.
-     * @return System* Ponteiro para o sistema fonte.
+     * @brief Retorna o ponteiro para o sistema de origem atual.
+     * @return System* Ponteiro do sistema fonte.
      */
     virtual System *getSource() const = 0;
+
     /**
-     * @brief Retorna o sistema de destino.
-     * @return System* Ponteiro para o sistema alvo.
+     * @brief Retorna o ponteiro para o sistema de destino atual.
+     * @return System* Ponteiro do sistema alvo.
      */
     virtual System *getTarget() const = 0;
+
     /**
-     * @brief Retorna o nome do fluxo.
-     * @return std::string contendo o nome.
+     * @brief Retorna o nome identificador do fluxo.
+     * @return std::string contendo o nome do fluxo.
      */
     virtual std::string getName() const = 0;
+
     /**
-     * @brief Define o nome do fluxo.
-     * @param name Novo nome do fluxo.
+     * @brief Define um nome identificador para o fluxo.
+     * @param name Novo nome a ser atribuído.
      */
     virtual void setName(std::string name) = 0;
+
     /**
-     * @brief Método virtual puro para executar a equação do fluxo.
-     * @return double O valor calculado a ser transferido.
+     * @brief Método virtual puro que executa a equação matemática do fluxo.
+     * @return double O valor calculado a ser debitado da origem e creditado no destino.
      */
     virtual double execute() = 0;
 };
