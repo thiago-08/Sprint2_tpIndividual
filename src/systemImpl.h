@@ -52,6 +52,7 @@ public:
     void setName(std::string name) override;
 
     friend class UnitSystem;
+    friend class UnitModel;
 };
 
 #endif

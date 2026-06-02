@@ -93,8 +93,8 @@ void UnitModel::unit_Model_run() {
     SystemImpl* s2 = new SystemImpl("Target", 0.0);
     FlowExponencial* f = new FlowExponencial("Flow");
 
-    f->setSource(s1);
-    f->setTarget(s2);
+    f->source = s1;
+    f->target = s2;
     
     m.add(s1);
     m.add(s2);
@@ -102,8 +102,8 @@ void UnitModel::unit_Model_run() {
 
     m.run(0, 1); 
 
-    assert(s1->getValue() == 99.0);
-    assert(s2->getValue() == 1.0);
+    assert(s1->value == 99.0);
+    assert(s2->value == 1.0);
 }
 
 void run_unit_tests_Model() {

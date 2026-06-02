@@ -67,6 +67,7 @@ public:
 
     friend class UnitFlow;
     friend class UnitFlowTypes;
+    friend class UnitModel;
 };
 
 #endif
