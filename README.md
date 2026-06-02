@@ -56,10 +56,16 @@ Para validar o comportamento matemático do framework e garantir compatibilidade
 
 ## Executar Testes Funcionais
 
-PAra executar os testes funcionais:
+Para executar os testes funcionais:
 
 ```bash
-make run
+make run_funcional
+```
+
+## Executar Testes Unitários
+
+```bash
+make run_unit
 ```
 
 ---
