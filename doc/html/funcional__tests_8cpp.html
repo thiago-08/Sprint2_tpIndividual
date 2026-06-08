@@ -80,11 +80,14 @@ $(function() {
   <div class="headertitle"><div class="title">funcional_tests.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Implementação dos testes funcionais do framework MyVensim.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="funcional__tests_8h_source.html">funcional_tests.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="systemImpl_8h_source.html">../../src/systemImpl.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="flow_8h_source.html">../../src/flow.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="flow__types_8h_source.html">../../src/flow_types.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="modelImpl_8h_source.html">../../src/modelImpl.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="system_8h_source.html">../../src/api/system.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="flow_8h_source.html">../../src/api/flow.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="model_8h_source.html">../../src/api/model.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="model__factory_8h_source.html">../../src/api/model_factory.h</a>&quot;</code><br />
 <code>#include &lt;cassert&gt;</code><br />
 <code>#include &lt;cmath&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
@@ -93,141 +96,50 @@ Include dependency graph for funcional_tests.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="funcional__tests_8cpp__incl.png" border="0" usemap="#atest_2funcional_2funcional__tests_8cpp" loading="lazy" alt=""/></div>
 <map name="atest_2funcional_2funcional__tests_8cpp" id="atest_2funcional_2funcional__tests_8cpp">
-<area shape="rect" title=" " alt="" coords="368,5,543,50"/>
-<area shape="rect" href="funcional__tests_8h.html" title=" " alt="" coords="5,98,138,126"/>
-<area shape="poly" title=" " alt="" coords="366,50,149,97,147,92,369,45"/>
-<area shape="rect" href="systemImpl_8h.html" title=" " alt="" coords="336,249,493,277"/>
-<area shape="poly" title=" " alt="" coords="445,49,427,99,417,171,415,235,411,233,412,171,422,97,442,53"/>
-<area shape="rect" href="flow_8h.html" title=" " alt="" coords="205,249,311,277"/>
-<area shape="poly" title=" " alt="" coords="366,43,268,66,228,82,203,100,194,116,191,133,193,151,199,170,217,206,239,237,234,237,212,209,194,172,188,152,186,133,189,114,199,96,225,77,267,61,370,40"/>
-<area shape="rect" href="flow__types_8h.html" title=" " alt="" coords="212,98,363,126"/>
-<area shape="poly" title=" " alt="" coords="409,52,330,93,327,89,413,49"/>
-<area shape="rect" href="modelImpl_8h.html" title=" " alt="" coords="436,98,587,126"/>
-<area shape="poly" title=" " alt="" coords="471,48,497,85,491,85,470,53"/>
-<area shape="rect" title=" " alt="" coords="611,98,679,126"/>
-<area shape="poly" title=" " alt="" coords="506,48,603,91,598,92,506,53"/>
-<area shape="rect" title=" " alt="" coords="703,98,765,126"/>
-<area shape="poly" title=" " alt="" coords="529,48,691,96,685,98,529,53"/>
-<area shape="rect" title=" " alt="" coords="789,98,868,126"/>
-<area shape="poly" title=" " alt="" coords="543,45,776,96,771,98,543,50"/>
-<area shape="rect" href="system_8h.html" title=" " alt="" coords="374,325,455,353"/>
-<area shape="poly" title=" " alt="" coords="416,275,416,311,412,308,412,280"/>
-<area shape="rect" title=" " alt="" coords="385,401,443,428"/>
-<area shape="poly" title=" " alt="" coords="416,351,416,387,412,383,412,355"/>
-<area shape="poly" title=" " alt="" coords="286,275,375,318,370,319,286,280"/>
-<area shape="poly" title=" " alt="" coords="273,275,392,389,387,390,270,280"/>
-<area shape="rect" href="flowImpl_8h.html" title=" " alt="" coords="228,174,318,201"/>
-<area shape="poly" title=" " alt="" coords="286,124,281,160,276,157,284,129"/>
-<area shape="poly" title=" " alt="" coords="272,200,266,235,261,233,269,204"/>
-<area shape="rect" href="model_8h.html" title=" " alt="" coords="522,174,597,201"/>
-<area shape="poly" title=" " alt="" coords="521,124,545,161,540,160,519,129"/>
-<area shape="rect" title=" " alt="" coords="436,174,499,201"/>
-<area shape="poly" title=" " alt="" coords="506,124,485,162,481,158,502,128"/>
-<area shape="poly" title=" " alt="" coords="556,200,537,239,507,279,481,301,454,319,452,314,478,297,503,275,532,236,552,204"/>
-<area shape="poly" title=" " alt="" coords="559,200,552,237,537,278,515,312,490,343,442,392,439,388,486,339,511,309,532,276,547,236,556,203"/>
-<area shape="poly" title=" " alt="" coords="519,199,511,204,327,248,325,243,510,199,524,198"/>
+<area shape="rect" title="Implementação dos testes funcionais do framework MyVensim." alt="" coords="359,5,533,50"/>
+<area shape="rect" href="funcional__tests_8h.html" title=" " alt="" coords="5,106,138,134"/>
+<area shape="poly" title=" " alt="" coords="357,52,157,101,141,104,138,100,156,95,360,47"/>
+<area shape="rect" href="system_8h.html" title=" " alt="" coords="258,342,410,370"/>
+<area shape="poly" title=" " alt="" coords="374,52,328,74,279,104,235,143,218,166,205,192,200,213,203,233,211,253,225,272,260,306,299,334,294,334,257,310,221,276,207,256,198,235,195,213,200,190,213,163,231,139,275,100,326,70,378,49"/>
+<area shape="rect" href="flow_8h.html" title=" " alt="" coords="382,266,513,294"/>
+<area shape="poly" title=" " alt="" coords="458,48,475,97,479,140,475,182,459,253,455,250,470,181,473,140,470,99,456,53"/>
+<area shape="rect" href="model_8h.html" title=" " alt="" coords="214,191,359,218"/>
+<area shape="poly" title=" " alt="" coords="379,52,347,73,318,100,306,117,299,137,290,176,286,174,294,135,302,115,313,96,344,68,383,49"/>
+<area shape="rect" href="model__factory_8h.html" title=" " alt="" coords="328,98,461,143"/>
+<area shape="poly" title=" " alt="" coords="436,48,416,87,412,83,432,52"/>
+<area shape="rect" title=" " alt="" coords="536,106,604,134"/>
+<area shape="poly" title=" " alt="" coords="476,48,543,97,538,98,475,53"/>
+<area shape="rect" title=" " alt="" coords="628,106,691,134"/>
+<area shape="poly" title=" " alt="" coords="503,48,618,96,623,100,618,100,616,100,503,53"/>
+<area shape="rect" title=" " alt="" coords="714,106,794,134"/>
+<area shape="poly" title=" " alt="" coords="533,47,703,95,712,100,707,101,701,101,534,52"/>
+<area shape="rect" title=" " alt="" coords="361,418,419,445"/>
+<area shape="poly" title=" " alt="" coords="345,368,374,406,369,405,343,373"/>
+<area shape="poly" title=" " alt="" coords="430,294,368,336,366,331,425,296"/>
+<area shape="poly" title=" " alt="" coords="447,293,425,371,407,406,404,402,420,369,443,296"/>
+<area shape="poly" title=" " alt="" coords="292,216,328,327,323,327,289,221"/>
+<area shape="poly" title=" " alt="" coords="278,217,261,249,244,288,237,330,240,350,248,368,268,389,293,404,320,415,348,425,343,424,318,420,290,409,264,393,244,371,235,351,232,330,239,286,256,247,275,221"/>
+<area shape="poly" title=" " alt="" coords="315,216,408,259,403,260,315,222"/>
+<area shape="poly" title=" " alt="" coords="391,141,374,219,344,328,340,325,369,218,388,145"/>
+<area shape="poly" title=" " alt="" coords="431,141,471,169,507,205,521,226,530,248,533,271,527,295,507,331,481,363,424,411,422,406,477,359,503,328,522,293,527,271,525,249,516,229,503,209,467,173,431,146"/>
+<area shape="poly" title=" " alt="" coords="403,141,441,252,436,251,400,145"/>
+<area shape="poly" title=" " alt="" coords="364,145,317,183,314,179,368,141"/>
 </map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:afe15e688fc85170a6e52b2b0d303c950" id="r_afe15e688fc85170a6e52b2b0d303c950"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe15e688fc85170a6e52b2b0d303c950">compareRounded</a> (double result, double expected)</td></tr>
-<tr class="memitem:a2c448ffaffdff4b03c825a01dffa6f27" id="r_a2c448ffaffdff4b03c825a01dffa6f27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c448ffaffdff4b03c825a01dffa6f27">exponentialFuncionalTest</a> ()</td></tr>
-<tr class="memdesc:a2c448ffaffdff4b03c825a01dffa6f27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executa o teste funcional para o Fluxo Exponencial.  <br /></td></tr>
-<tr class="memitem:a60914db64bde71b56d69320797266c29" id="r_a60914db64bde71b56d69320797266c29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60914db64bde71b56d69320797266c29">logisticalFuncionalTest</a> ()</td></tr>
-<tr class="memdesc:a60914db64bde71b56d69320797266c29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executa o teste funcional para o Fluxo Logístico.  <br /></td></tr>
-<tr class="memitem:a943dfe0c597a01c9760c140715fed527" id="r_a943dfe0c597a01c9760c140715fed527"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a943dfe0c597a01c9760c140715fed527">complexFuncionalTest</a> ()</td></tr>
-<tr class="memdesc:a943dfe0c597a01c9760c140715fed527"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executa o teste funcional para um sistema Complexo.  <br /></td></tr>
+<tr class="memitem:ga2c448ffaffdff4b03c825a01dffa6f27" id="r_ga2c448ffaffdff4b03c825a01dffa6f27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__FuncionalTests.html#ga2c448ffaffdff4b03c825a01dffa6f27">exponentialFuncionalTest</a> ()</td></tr>
+<tr class="memdesc:ga2c448ffaffdff4b03c825a01dffa6f27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testa o modelo de crescimento/decaimento exponencial.  <br /></td></tr>
+<tr class="memitem:ga60914db64bde71b56d69320797266c29" id="r_ga60914db64bde71b56d69320797266c29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__FuncionalTests.html#ga60914db64bde71b56d69320797266c29">logisticalFuncionalTest</a> ()</td></tr>
+<tr class="memdesc:ga60914db64bde71b56d69320797266c29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testa o modelo de crescimento logístico.  <br /></td></tr>
+<tr class="memitem:ga943dfe0c597a01c9760c140715fed527" id="r_ga943dfe0c597a01c9760c140715fed527"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__FuncionalTests.html#ga943dfe0c597a01c9760c140715fed527">complexFuncionalTest</a> ()</td></tr>
+<tr class="memdesc:ga943dfe0c597a01c9760c140715fed527"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testa o modelo complexo com múltiplos sistemas e fluxos.  <br /></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="afe15e688fc85170a6e52b2b0d303c950" name="afe15e688fc85170a6e52b2b0d303c950"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe15e688fc85170a6e52b2b0d303c950">&#9670;&#160;</a></span>compareRounded()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool compareRounded </td>
-          <td>(</td>
-          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>result</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>expected</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a943dfe0c597a01c9760c140715fed527" name="a943dfe0c597a01c9760c140715fed527"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a943dfe0c597a01c9760c140715fed527">&#9670;&#160;</a></span>complexFuncionalTest()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void complexFuncionalTest </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Executa o teste funcional para um sistema Complexo. </p>
-<ul>
-<li>Monta uma rede mais complexa com cinco sistemas e seis fluxos interconectados. Ao final da execução, valida o valor resultante em cada um dos sistemas. </li>
-</ul>
-
-</div>
-</div>
-<a id="a2c448ffaffdff4b03c825a01dffa6f27" name="a2c448ffaffdff4b03c825a01dffa6f27"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c448ffaffdff4b03c825a01dffa6f27">&#9670;&#160;</a></span>exponentialFuncionalTest()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void exponentialFuncionalTest </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Executa o teste funcional para o Fluxo Exponencial. </p>
-<ul>
-<li>Cria dois sistemas e um fluxo exponencial ligando-os, e testa com assert. </li>
-</ul>
-
-</div>
-</div>
-<a id="a60914db64bde71b56d69320797266c29" name="a60914db64bde71b56d69320797266c29"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a60914db64bde71b56d69320797266c29">&#9670;&#160;</a></span>logisticalFuncionalTest()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void logisticalFuncionalTest </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Executa o teste funcional para o Fluxo Logístico. </p>
-<ul>
-<li>Cria dois sistemas e um fluxo logístico ligando-os, e testa com assert. </li>
-</ul>
-
-</div>
-</div>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Implementação dos testes funcionais do framework MyVensim. </p>
+<p>Todo o acesso ao framework é feito exclusivamente via interfaces da camada de API pública (<span class="tt">src/api/</span>) e da <a class="el" href="classModelFactory.html">ModelFactory</a>. Nenhum header de <span class="tt">src/impl/</span> é incluído aqui — demonstrando o desacoplamento correto da arquitetura em camadas. </p>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0

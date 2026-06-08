@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['unitários_0',['Executar Testes Unitários',['../index.html#autotoc_md15',1,'']]],
+  ['unitários_0',['Executar Testes Unitários',['../index.html#autotoc_md17',1,'']]],
   ['unit_5fflow_2ecpp_1',['unit_flow.cpp',['../unit__flow_8cpp.html',1,'']]],
   ['unit_5fflow_2eh_2',['unit_flow.h',['../unit__flow_8h.html',1,'']]],
   ['unit_5fflow_5fconstructor_3',['unit_Flow_constructor',['../classFlowImpl.html#abae010d669044ac8e9f87914b6cbeafe',1,'FlowImpl']]],
@@ -47,6 +47,7 @@ var searchData=
   ['unit_5ftests_2eh_44',['unit_tests.h',['../unit__tests_8h.html',1,'']]],
   ['unitflow_45',['UnitFlow',['../classUnitFlow.html',1,'UnitFlow'],['../classFlowImpl.html#a721d5d04f522e83ced8e0b615c21fcda',1,'FlowImpl::UnitFlow()']]],
   ['unitflowtypes_46',['UnitFlowTypes',['../classUnitFlowTypes.html',1,'UnitFlowTypes'],['../classFlowImpl.html#afca8bf1723c815c8e70ff00b95a782ec',1,'FlowImpl::UnitFlowTypes()']]],
-  ['unitmodel_47',['UnitModel',['../classUnitModel.html',1,'UnitModel'],['../classModelImpl.html#acfe6145ac71b7c6b9065c61d09de0131',1,'ModelImpl::UnitModel()']]],
-  ['unitsystem_48',['UnitSystem',['../classUnitSystem.html',1,'UnitSystem'],['../classSystemImpl.html#a6682d04f47a9097422c08f54782ffaab',1,'SystemImpl::UnitSystem()']]]
+  ['unitmodel_47',['UnitModel',['../classUnitModel.html',1,'UnitModel'],['../classFlowImpl.html#acfe6145ac71b7c6b9065c61d09de0131',1,'FlowImpl::UnitModel()'],['../classModelImpl.html#acfe6145ac71b7c6b9065c61d09de0131',1,'ModelImpl::UnitModel()'],['../classSystemImpl.html#acfe6145ac71b7c6b9065c61d09de0131',1,'SystemImpl::UnitModel()']]],
+  ['unitsystem_48',['UnitSystem',['../classUnitSystem.html',1,'UnitSystem'],['../classSystemImpl.html#a6682d04f47a9097422c08f54782ffaab',1,'SystemImpl::UnitSystem()']]],
+  ['uso_20típico_49',['Uso típico',['../group__Factory.html#autotoc_md1',1,'']]]
 ];

@@ -1,10 +1,15 @@
 \doxysection{test/funcional/funcional\+\_\+tests.cpp File Reference}
 \hypertarget{funcional__tests_8cpp}{}\label{funcional__tests_8cpp}\index{test/funcional/funcional\_tests.cpp@{test/funcional/funcional\_tests.cpp}}
+
+
+Implementação dos testes funcionais do framework My\+Vensim.  
+
+
 {\ttfamily \#include "{}funcional\+\_\+tests.\+h"{}}\newline
-{\ttfamily \#include "{}../../src/system\+Impl.\+h"{}}\newline
-{\ttfamily \#include "{}../../src/flow.\+h"{}}\newline
-{\ttfamily \#include "{}../../src/flow\+\_\+types.\+h"{}}\newline
-{\ttfamily \#include "{}../../src/model\+Impl.\+h"{}}\newline
+{\ttfamily \#include "{}../../src/api/system.\+h"{}}\newline
+{\ttfamily \#include "{}../../src/api/flow.\+h"{}}\newline
+{\ttfamily \#include "{}../../src/api/model.\+h"{}}\newline
+{\ttfamily \#include "{}../../src/api/model\+\_\+factory.\+h"{}}\newline
 {\ttfamily \#include $<$cassert$>$}\newline
 {\ttfamily \#include $<$cmath$>$}\newline
 {\ttfamily \#include $<$iostream$>$}\newline
@@ -19,62 +24,15 @@ Include dependency graph for funcional\+\_\+tests.\+cpp\+:
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-bool \mbox{\hyperlink{funcional__tests_8cpp_afe15e688fc85170a6e52b2b0d303c950}{compare\+Rounded}} (double result, double expected)
-\item 
-void \mbox{\hyperlink{funcional__tests_8cpp_a2c448ffaffdff4b03c825a01dffa6f27}{exponential\+Funcional\+Test}} ()
-\begin{DoxyCompactList}\small\item\em Executa o teste funcional para o Fluxo Exponencial. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{funcional__tests_8cpp_a60914db64bde71b56d69320797266c29}{logistical\+Funcional\+Test}} ()
-\begin{DoxyCompactList}\small\item\em Executa o teste funcional para o Fluxo Logístico. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{funcional__tests_8cpp_a943dfe0c597a01c9760c140715fed527}{complex\+Funcional\+Test}} ()
-\begin{DoxyCompactList}\small\item\em Executa o teste funcional para um sistema Complexo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{group__FuncionalTests_ga2c448ffaffdff4b03c825a01dffa6f27}{exponential\+Funcional\+Test}} ()
+\begin{DoxyCompactList}\small\item\em Testa o modelo de crescimento/decaimento exponencial. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__FuncionalTests_ga60914db64bde71b56d69320797266c29}{logistical\+Funcional\+Test}} ()
+\begin{DoxyCompactList}\small\item\em Testa o modelo de crescimento logístico. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__FuncionalTests_ga943dfe0c597a01c9760c140715fed527}{complex\+Funcional\+Test}} ()
+\begin{DoxyCompactList}\small\item\em Testa o modelo complexo com múltiplos sistemas e fluxos. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\label{doc-func-members}
-\Hypertarget{funcional__tests_8cpp_doc-func-members}
-\doxysubsection{Function Documentation}
-\Hypertarget{funcional__tests_8cpp_afe15e688fc85170a6e52b2b0d303c950}\index{funcional\_tests.cpp@{funcional\_tests.cpp}!compareRounded@{compareRounded}}
-\index{compareRounded@{compareRounded}!funcional\_tests.cpp@{funcional\_tests.cpp}}
-\doxysubsubsection{\texorpdfstring{compareRounded()}{compareRounded()}}
-{\footnotesize\ttfamily \label{funcional__tests_8cpp_afe15e688fc85170a6e52b2b0d303c950} 
-bool compare\+Rounded (\begin{DoxyParamCaption}\item[{double}]{result}{, }\item[{double}]{expected}{}\end{DoxyParamCaption})}
+\doxysubsection{Detailed Description}
+Implementação dos testes funcionais do framework My\+Vensim. 
 
-\Hypertarget{funcional__tests_8cpp_a943dfe0c597a01c9760c140715fed527}\index{funcional\_tests.cpp@{funcional\_tests.cpp}!complexFuncionalTest@{complexFuncionalTest}}
-\index{complexFuncionalTest@{complexFuncionalTest}!funcional\_tests.cpp@{funcional\_tests.cpp}}
-\doxysubsubsection{\texorpdfstring{complexFuncionalTest()}{complexFuncionalTest()}}
-{\footnotesize\ttfamily \label{funcional__tests_8cpp_a943dfe0c597a01c9760c140715fed527} 
-void complex\+Funcional\+Test (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
-
-
-
-Executa o teste funcional para um sistema Complexo. 
-
-
-\begin{DoxyItemize}
-\item Monta uma rede mais complexa com cinco sistemas e seis fluxos interconectados. Ao final da execução, valida o valor resultante em cada um dos sistemas. 
-\end{DoxyItemize}\Hypertarget{funcional__tests_8cpp_a2c448ffaffdff4b03c825a01dffa6f27}\index{funcional\_tests.cpp@{funcional\_tests.cpp}!exponentialFuncionalTest@{exponentialFuncionalTest}}
-\index{exponentialFuncionalTest@{exponentialFuncionalTest}!funcional\_tests.cpp@{funcional\_tests.cpp}}
-\doxysubsubsection{\texorpdfstring{exponentialFuncionalTest()}{exponentialFuncionalTest()}}
-{\footnotesize\ttfamily \label{funcional__tests_8cpp_a2c448ffaffdff4b03c825a01dffa6f27} 
-void exponential\+Funcional\+Test (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
-
-
-
-Executa o teste funcional para o Fluxo Exponencial. 
-
-
-\begin{DoxyItemize}
-\item Cria dois sistemas e um fluxo exponencial ligando-\/os, e testa com assert. 
-\end{DoxyItemize}\Hypertarget{funcional__tests_8cpp_a60914db64bde71b56d69320797266c29}\index{funcional\_tests.cpp@{funcional\_tests.cpp}!logisticalFuncionalTest@{logisticalFuncionalTest}}
-\index{logisticalFuncionalTest@{logisticalFuncionalTest}!funcional\_tests.cpp@{funcional\_tests.cpp}}
-\doxysubsubsection{\texorpdfstring{logisticalFuncionalTest()}{logisticalFuncionalTest()}}
-{\footnotesize\ttfamily \label{funcional__tests_8cpp_a60914db64bde71b56d69320797266c29} 
-void logistical\+Funcional\+Test (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
-
-
-
-Executa o teste funcional para o Fluxo Logístico. 
-
-
-\begin{DoxyItemize}
-\item Cria dois sistemas e um fluxo logístico ligando-\/os, e testa com assert. 
-\end{DoxyItemize}
+Todo o acesso ao framework é feito exclusivamente via interfaces da camada de API pública ({\ttfamily src/api/}) e da \doxylink{classModelFactory}{Model\+Factory}. Nenhum header de {\ttfamily src/impl/} é incluído aqui — demonstrando o desacoplamento correto da arquitetura em camadas. 

@@ -74,7 +74,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classFlow-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Flow Class Reference<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
+  <div class="headertitle"><div class="title">Flow Class Reference<span class="mlabels"><span class="mlabel abstract">abstract</span></span><div class="ingroups"><a class="el" href="group__API.html">Camada de Interface Pública (API)</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -88,15 +88,15 @@ Inheritance diagram for Flow:</div>
 <div class="center"><img src="classFlow__inherit__graph.png" border="0" usemap="#aFlow_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
 <map name="aFlow_inherit__map" id="aFlow_inherit__map">
 <area shape="rect" title="Interface abstrata de especificação para um Fluxo." alt="" coords="254,5,356,234"/>
-<area shape="rect" href="classFlowImpl.html" title="Classe que implementa Fluxo (herda da interface). Armazena ponteiros para os sistemas de origem e des..." alt="" coords="251,282,359,645"/>
+<area shape="rect" href="classFlowImpl.html" title="Implementação base abstrata da interface Flow." alt="" coords="251,282,359,645"/>
 <area shape="poly" title=" " alt="" coords="306,246,308,283,302,282,304,251"/>
-<area shape="rect" href="classAbstractFlow.html" title=" " alt="" coords="5,704,127,866"/>
+<area shape="rect" href="classAbstractFlow.html" title="Subclasse concreta de FlowImpl usada exclusivamente nos testes unitários." alt="" coords="5,704,127,866"/>
 <area shape="poly" title=" " alt="" coords="241,551,128,705,124,702,243,546"/>
-<area shape="rect" href="classFlowComplex.html" title="Classe que implementa o tipo de Fluxo Complexo. Herda de FlowImpl, implementando o comportamento de v..." alt="" coords="151,693,288,877"/>
+<area shape="rect" href="classFlowComplex.html" title="Fluxo com equação para cenários complexos de múltiplos sistemas." alt="" coords="151,693,288,877"/>
 <area shape="poly" title=" " alt="" coords="254,657,246,694,242,691,251,661"/>
-<area shape="rect" href="classFlowExponencial.html" title="Classe que implementa o tipo de Fluxo Exponencial. Herda de FlowImpl e implementa a equação de compor..." alt="" coords="313,693,471,877"/>
+<area shape="rect" href="classFlowExponencial.html" title="Fluxo com equação de crescimento/decaimento exponencial." alt="" coords="313,693,471,877"/>
 <area shape="poly" title=" " alt="" coords="359,657,370,694,365,692,357,662"/>
-<area shape="rect" href="classFlowLogistic.html" title="Classe que implementa o tipo de Fluxo Logístico. Herda de FlowImpl e implementa uma equação logística..." alt="" coords="495,693,624,877"/>
+<area shape="rect" href="classFlowLogistic.html" title="Fluxo com equação de crescimento logístico." alt="" coords="495,693,624,877"/>
 <area shape="poly" title=" " alt="" coords="369,541,498,702,493,703,367,546"/>
 </map>
 </div>
@@ -130,6 +130,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Interface abstrata de especificação para um Fluxo. </p>
+<p>Representa a transferência de valor entre dois sistemas durante a simulação. Cada fluxo possui uma equação matemática (método <a class="el" href="#a619be0b590c78202127bc6ac7fb04029" title="Método virtual puro que executa a equação matemática do fluxo.">execute()</a>) que determina quanto valor é transferido do sistema de origem para o de destino a cada ciclo. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a325d284a50ca3274b126b21f5c39b9af" name="a325d284a50ca3274b126b21f5c39b9af"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a325d284a50ca3274b126b21f5c39b9af">&#9670;&#160;</a></span>~Flow()</h2>
@@ -385,7 +386,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/<a class="el" href="flow_8h_source.html">flow.h</a></li>
+<li>src/api/<a class="el" href="flow_8h_source.html">flow.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

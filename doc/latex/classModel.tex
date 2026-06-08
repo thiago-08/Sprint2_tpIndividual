@@ -39,7 +39,7 @@ virtual void \mbox{\hyperlink{classModel_a1c57f13b17e1fd598fa7ebe1fa55a7df}{add}
 virtual void \mbox{\hyperlink{classModel_ad248b54040ab38124af621cbc4c7c2e6}{add}} (\mbox{\hyperlink{classFlow}{Flow}} \texorpdfstring{$\ast$}{*}f)=0
 \begin{DoxyCompactList}\small\item\em Registra e adiciona um Fluxo ao escopo do modelo. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classModel_a8fced9263616fdd102fa0cf54a51462e}{run}} (int t\+\_\+initial, int t\+\_\+end)=0
-\begin{DoxyCompactList}\small\item\em Executa todo o sistema de simulação, processando os fluxos e atualizando os sistemas para cada ciclo temporal. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Executa a simulação, processando os fluxos e atualizando os sistemas para cada ciclo temporal no intervalo \mbox{[}t\+\_\+initial, t\+\_\+end). \end{DoxyCompactList}\item 
 virtual std\+::string \mbox{\hyperlink{classModel_a17e89ca8d15af46d074423a47d3c6802}{get\+Name}} () const =0
 \begin{DoxyCompactList}\small\item\em Retorna o nome identificador do modelo. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classModel_ab01f68499cf9c680d64d07c7160b4cf7}{set\+Name}} (std\+::string name)=0
@@ -48,6 +48,8 @@ virtual void \mbox{\hyperlink{classModel_ab01f68499cf9c680d64d07c7160b4cf7}{set\
 
 \doxysubsection{Detailed Description}
 Interface abstrata de especificação para um Modelo de Simulação. 
+
+Gerencia coleções de sistemas e fluxos, orquestrando a execução da simulação ao longo de intervalos de tempo definidos pelo usuário. 
 
 \label{doc-constructors}
 \Hypertarget{classModel_doc-constructors}
@@ -130,13 +132,13 @@ virtual void Model\+::run (\begin{DoxyParamCaption}\item[{int}]{t\+\_\+initial}{
 
 
 
-Executa todo o sistema de simulação, processando os fluxos e atualizando os sistemas para cada ciclo temporal. 
+Executa a simulação, processando os fluxos e atualizando os sistemas para cada ciclo temporal no intervalo \mbox{[}t\+\_\+initial, t\+\_\+end). 
 
 
 \begin{DoxyParams}{Parameters}
 {\em t\+\_\+initial} & Tempo/\+Ciclo de início da simulação. \\
 \hline
-{\em t\+\_\+end} & Tempo/\+Ciclo final do encerramento da simulação. \\
+{\em t\+\_\+end} & Tempo/\+Ciclo final (exclusive) da simulação. \\
 \hline
 \end{DoxyParams}
 
@@ -166,4 +168,4 @@ Implemented in \mbox{\hyperlink{classModelImpl_a4c11009a6eed8fabce6c6c3a584a53b8
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-src/\mbox{\hyperlink{model_8h}{model.\+h}}\end{DoxyCompactItemize}
+src/api/\mbox{\hyperlink{model_8h}{model.\+h}}\end{DoxyCompactItemize}

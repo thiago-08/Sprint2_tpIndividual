@@ -1,15 +1,16 @@
 \doxysection{Class List}
 Here are the classes, structs, unions and interfaces with brief descriptions\+:\begin{DoxyCompactList}
-\item\contentsline{section}{\mbox{\hyperlink{classAbstractFlow}{Abstract\+Flow}} }{\pageref{classAbstractFlow}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classAbstractFlow}{Abstract\+Flow}} \\*Subclasse concreta de \doxylink{classFlowImpl}{Flow\+Impl} usada exclusivamente nos testes unitários }{\pageref{classAbstractFlow}}{}
 \item\contentsline{section}{\mbox{\hyperlink{classFlow}{Flow}} \\*Interface abstrata de especificação para um Fluxo }{\pageref{classFlow}}{}
-\item\contentsline{section}{\mbox{\hyperlink{classFlowComplex}{Flow\+Complex}} \\*Classe que implementa o tipo de Fluxo Complexo. Herda de \doxylink{classFlowImpl}{Flow\+Impl}, implementando o comportamento de vários sistemas interligados }{\pageref{classFlowComplex}}{}
-\item\contentsline{section}{\mbox{\hyperlink{classFlowExponencial}{Flow\+Exponencial}} \\*Classe que implementa o tipo de Fluxo Exponencial. Herda de \doxylink{classFlowImpl}{Flow\+Impl} e implementa a equação de comportamento exponencial }{\pageref{classFlowExponencial}}{}
-\item\contentsline{section}{\mbox{\hyperlink{classFlowImpl}{Flow\+Impl}} \\*Classe que implementa Fluxo (herda da interface). Armazena ponteiros para os sistemas de origem e destino, além do nome do fluxo }{\pageref{classFlowImpl}}{}
-\item\contentsline{section}{\mbox{\hyperlink{classFlowLogistic}{Flow\+Logistic}} \\*Classe que implementa o tipo de Fluxo Logístico. Herda de \doxylink{classFlowImpl}{Flow\+Impl} e implementa uma equação logística baseada no valor do sistema alvo }{\pageref{classFlowLogistic}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classFlowComplex}{Flow\+Complex}} \\*Fluxo com equação para cenários complexos de múltiplos sistemas }{\pageref{classFlowComplex}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classFlowExponencial}{Flow\+Exponencial}} \\*Fluxo com equação de crescimento/decaimento exponencial }{\pageref{classFlowExponencial}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classFlowImpl}{Flow\+Impl}} \\*Implementação base abstrata da interface \doxylink{classFlow}{Flow} }{\pageref{classFlowImpl}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classFlowLogistic}{Flow\+Logistic}} \\*Fluxo com equação de crescimento logístico }{\pageref{classFlowLogistic}}{}
 \item\contentsline{section}{\mbox{\hyperlink{classModel}{Model}} \\*Interface abstrata de especificação para um Modelo de Simulação }{\pageref{classModel}}{}
-\item\contentsline{section}{\mbox{\hyperlink{classModelImpl}{Model\+Impl}} \\*Classe que implementa as funções de gerenciamento de múltiplos sistemas e fluxos. Responsável por executar os ciclos da simulação temporal atualizando os dados }{\pageref{classModelImpl}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classModelFactory}{Model\+Factory}} \\*Fábrica estática para instanciação de objetos do framework My\+Vensim }{\pageref{classModelFactory}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classModelImpl}{Model\+Impl}} \\*Implementação concreta da interface \doxylink{classModel}{Model} }{\pageref{classModelImpl}}{}
 \item\contentsline{section}{\mbox{\hyperlink{classSystem}{System}} \\*Interface abstrata de especificação para um Sistema }{\pageref{classSystem}}{}
-\item\contentsline{section}{\mbox{\hyperlink{classSystemImpl}{System\+Impl}} \\*Classe que implementa \doxylink{classSystem}{System} (herda da interface). Herda da interface \doxylink{classSystem}{System} e gerencia o armazenamento do nome e do valor numérico }{\pageref{classSystemImpl}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classSystemImpl}{System\+Impl}} \\*Implementação concreta da interface \doxylink{classSystem}{System} }{\pageref{classSystemImpl}}{}
 \item\contentsline{section}{\mbox{\hyperlink{classUnitFlow}{Unit\+Flow}} \\*Testes unitários para a classe \doxylink{classFlowImpl}{Flow\+Impl} }{\pageref{classUnitFlow}}{}
 \item\contentsline{section}{\mbox{\hyperlink{classUnitFlowTypes}{Unit\+Flow\+Types}} \\*Testes unitários para as equações dos fluxos especializados }{\pageref{classUnitFlowTypes}}{}
 \item\contentsline{section}{\mbox{\hyperlink{classUnitModel}{Unit\+Model}} \\*Testes unitários para a classe \doxylink{classModel}{Model} }{\pageref{classUnitModel}}{}

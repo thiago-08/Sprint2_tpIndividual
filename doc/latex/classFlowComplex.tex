@@ -2,7 +2,7 @@
 \hypertarget{classFlowComplex}{}\label{classFlowComplex}\index{FlowComplex@{FlowComplex}}
 
 
-Classe que implementa o tipo de Fluxo Complexo. Herda de \doxylink{classFlowImpl}{Flow\+Impl}, implementando o comportamento de vários sistemas interligados.  
+Fluxo com equação para cenários complexos de múltiplos sistemas.  
 
 
 
@@ -33,30 +33,30 @@ Collaboration diagram for Flow\+Complex\+:
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classFlowComplex_ac4f82f013048ecb46bd51268d8c66eea}{Flow\+Complex}} ()
-\begin{DoxyCompactList}\small\item\em Construtor padrão do fluxo complexo. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Construtor padrão. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classFlowComplex_a67b868fba873dc698f3f1e1e2e9a48af}{Flow\+Complex}} (const \mbox{\hyperlink{classFlowComplex}{Flow\+Complex}} \&f)
-\begin{DoxyCompactList}\small\item\em Construtor de cópia do fluxo complexo. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Construtor de cópia. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classFlowComplex_ab56a0e5042dc252f8053945cf069148e}{\texorpdfstring{$\sim$}{\string~}\+Flow\+Complex}} ()
-\begin{DoxyCompactList}\small\item\em Destrutor virtual do fluxo complexo. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Destrutor virtual. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classFlowComplex}{Flow\+Complex}} \& \mbox{\hyperlink{classFlowComplex_a3b749a57cd7a680b51ac752bd6a2ebb5}{operator=}} (const \mbox{\hyperlink{classFlowComplex}{Flow\+Complex}} \&f)
-\begin{DoxyCompactList}\small\item\em Operador de atribuição por cópia para o fluxo complexo. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Operador de atribuição por cópia. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classFlowComplex_ab5e4a95cec329bd0c0ec64fe9e59065b}{Flow\+Complex}} (std\+::string \mbox{\hyperlink{classFlowImpl_afcc3f687245c4a6fa3d26ac386c8221b}{name}})
-\begin{DoxyCompactList}\small\item\em Construtor parametrizado do fluxo complexo. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Construtor parametrizado. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classFlowComplex_a3b541e9032dad40b9d013835887b97f6}{execute}} () override
-\begin{DoxyCompactList}\small\item\em Executa o cálculo complexo do fluxo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Executa o cálculo do fluxo complexo. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classFlowImpl}{Flow\+Impl}}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classFlowImpl_aa835ccb3c368c683aa95d660175a298b}{Flow\+Impl}} ()
-\begin{DoxyCompactList}\small\item\em Operação a ser realizada pelo fluxo. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Construtor padrão. Inicializa name como vazio, source e target como nullptr. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classFlowImpl_a34b906caaf8a339eb02915472a50cca2}{Flow\+Impl}} (const \mbox{\hyperlink{classFlowImpl}{Flow\+Impl}} \&fl)
-\begin{DoxyCompactList}\small\item\em Construtor de cópia de \doxylink{classFlowImpl}{Flow\+Impl}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Construtor de cópia. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classFlowImpl_a2d91539593b336aee4a19048f8a82e8c}{\texorpdfstring{$\sim$}{\string~}\+Flow\+Impl}} ()
-\begin{DoxyCompactList}\small\item\em Destrutor virtual de \doxylink{classFlowImpl}{Flow\+Impl}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Destrutor virtual. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classFlowImpl}{Flow\+Impl}} \& \mbox{\hyperlink{classFlowImpl_a323251bc0282f0f6e395add4b69d74fa}{operator=}} (const \mbox{\hyperlink{classFlowImpl}{Flow\+Impl}} \&fl)
-\begin{DoxyCompactList}\small\item\em Operador de atribuição por cópia (Sobrecarga de operador =). \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Operador de atribuição por cópia. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classFlowImpl_a1a3855f88e93d7c682af82fcfd61b12f}{Flow\+Impl}} (std\+::string \mbox{\hyperlink{classFlowImpl_afcc3f687245c4a6fa3d26ac386c8221b}{name}})
-\begin{DoxyCompactList}\small\item\em Construtor parametrizado de \doxylink{classFlowImpl}{Flow\+Impl}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Construtor parametrizado. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classFlowImpl_a47bbb64941fde986da1198b4af443c16}{set\+Source}} (\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}s) override
 \begin{DoxyCompactList}\small\item\em Define o sistema de origem (fonte) da transferência. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classFlowImpl_a48a3c5a8425ce7deb3ae041f46f07368}{set\+Target}} (\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}t) override
@@ -87,7 +87,11 @@ std\+::string \mbox{\hyperlink{classFlowImpl_afcc3f687245c4a6fa3d26ac386c8221b}{
 
 
 \doxysubsection{Detailed Description}
-Classe que implementa o tipo de Fluxo Complexo. Herda de \doxylink{classFlowImpl}{Flow\+Impl}, implementando o comportamento de vários sistemas interligados. 
+Fluxo com equação para cenários complexos de múltiplos sistemas. 
+
+Equação\+: {\ttfamily \doxylink{classFlowComplex_a3b541e9032dad40b9d013835887b97f6}{execute()} = 0.\+01 \texorpdfstring{$\ast$}{*} source-\/\texorpdfstring{$>$}{>}get\+Value()}
+
+Utilizado em modelos com vários reservatórios interligados. Criado exclusivamente via \doxylink{classModelFactory_a8330cb45937ecde86cfbd18dec306ab7}{Model\+Factory\+::create\+Flow\+Complex}. 
 
 \label{doc-constructors}
 \Hypertarget{classFlowComplex_doc-constructors}
@@ -100,7 +104,7 @@ Flow\+Complex\+::\+Flow\+Complex (\begin{DoxyParamCaption}{}{}\end{DoxyParamCapt
 
 
 
-Construtor padrão do fluxo complexo. 
+Construtor padrão. 
 
 \Hypertarget{classFlowComplex_a67b868fba873dc698f3f1e1e2e9a48af}\index{FlowComplex@{FlowComplex}!FlowComplex@{FlowComplex}}
 \index{FlowComplex@{FlowComplex}!FlowComplex@{FlowComplex}}
@@ -110,7 +114,7 @@ Flow\+Complex\+::\+Flow\+Complex (\begin{DoxyParamCaption}\item[{const \mbox{\hy
 
 
 
-Construtor de cópia do fluxo complexo. 
+Construtor de cópia. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -125,7 +129,7 @@ Flow\+Complex\+::\texorpdfstring{$\sim$}{\string~}\+Flow\+Complex (\begin{DoxyPa
 
 
 
-Destrutor virtual do fluxo complexo. 
+Destrutor virtual. 
 
 \Hypertarget{classFlowComplex_ab5e4a95cec329bd0c0ec64fe9e59065b}\index{FlowComplex@{FlowComplex}!FlowComplex@{FlowComplex}}
 \index{FlowComplex@{FlowComplex}!FlowComplex@{FlowComplex}}
@@ -135,7 +139,7 @@ Flow\+Complex\+::\+Flow\+Complex (\begin{DoxyParamCaption}\item[{std\+::string}]
 
 
 
-Construtor parametrizado do fluxo complexo. 
+Construtor parametrizado. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -155,10 +159,10 @@ double Flow\+Complex\+::execute (\begin{DoxyParamCaption}{}{}\end{DoxyParamCapti
 
 
 
-Executa o cálculo complexo do fluxo. 
+Executa o cálculo do fluxo complexo. 
 
 \begin{DoxyReturn}{Returns}
-double O resultado da equação. 
+double Resultado de {\ttfamily 0.\+01 \texorpdfstring{$\ast$}{*} source-\/\texorpdfstring{$>$}{>}get\+Value()}, ou 0.\+0 se source for nulo. 
 \end{DoxyReturn}
 
 
@@ -172,7 +176,7 @@ Implements \mbox{\hyperlink{classFlowImpl_a88d14f759988f1dcf393b83a93aea1f1}{Flo
 
 
 
-Operador de atribuição por cópia para o fluxo complexo. 
+Operador de atribuição por cópia. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -186,5 +190,5 @@ Operador de atribuição por cópia para o fluxo complexo.
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-src/\mbox{\hyperlink{flow__types_8h}{flow\+\_\+types.\+h}}\item 
-src/\mbox{\hyperlink{flow__types_8cpp}{flow\+\_\+types.\+cpp}}\end{DoxyCompactItemize}
+src/impl/\mbox{\hyperlink{flow__types_8h}{flow\+\_\+types.\+h}}\item 
+src/impl/\mbox{\hyperlink{flow__types_8cpp}{flow\+\_\+types.\+cpp}}\end{DoxyCompactItemize}

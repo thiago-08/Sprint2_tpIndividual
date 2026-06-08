@@ -2,7 +2,7 @@
 \hypertarget{classFlowLogistic}{}\label{classFlowLogistic}\index{FlowLogistic@{FlowLogistic}}
 
 
-Classe que implementa o tipo de Fluxo Logístico. Herda de \doxylink{classFlowImpl}{Flow\+Impl} e implementa uma equação logística baseada no valor do sistema alvo.  
+Fluxo com equação de crescimento logístico.  
 
 
 
@@ -33,30 +33,30 @@ Collaboration diagram for Flow\+Logistic\+:
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classFlowLogistic_a8a0c7a4f52f7571d26022374ee0f3779}{Flow\+Logistic}} ()
-\begin{DoxyCompactList}\small\item\em Construtor padrão do fluxo logístico. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Construtor padrão. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classFlowLogistic_aeb042bb05ed79bda2ca1ac75853784af}{Flow\+Logistic}} (const \mbox{\hyperlink{classFlowLogistic}{Flow\+Logistic}} \&f)
-\begin{DoxyCompactList}\small\item\em Construtor de cópia do fluxo logístico. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Construtor de cópia. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classFlowLogistic_acffaaf74e8683e574bc9e06a1357d665}{\texorpdfstring{$\sim$}{\string~}\+Flow\+Logistic}} ()
-\begin{DoxyCompactList}\small\item\em Destrutor virtual do fluxo logístico. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Destrutor virtual. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classFlowLogistic}{Flow\+Logistic}} \& \mbox{\hyperlink{classFlowLogistic_a6014ea271c00ef014bdb22f788b4e964}{operator=}} (const \mbox{\hyperlink{classFlowLogistic}{Flow\+Logistic}} \&f)
-\begin{DoxyCompactList}\small\item\em Operador de atribuição por cópia para o fluxo logístico. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Operador de atribuição por cópia. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classFlowLogistic_a506c7733119f036b01ef5267f7e8188d}{Flow\+Logistic}} (std\+::string \mbox{\hyperlink{classFlowImpl_afcc3f687245c4a6fa3d26ac386c8221b}{name}})
-\begin{DoxyCompactList}\small\item\em Construtor parametrizado do fluxo logístico. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Construtor parametrizado. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classFlowLogistic_a9b25e905a9501d4b4bcc32183cccc4c5}{execute}} () override
-\begin{DoxyCompactList}\small\item\em Executa o cálculo logístico do fluxo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Executa o cálculo logístico. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classFlowImpl}{Flow\+Impl}}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classFlowImpl_aa835ccb3c368c683aa95d660175a298b}{Flow\+Impl}} ()
-\begin{DoxyCompactList}\small\item\em Operação a ser realizada pelo fluxo. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Construtor padrão. Inicializa name como vazio, source e target como nullptr. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classFlowImpl_a34b906caaf8a339eb02915472a50cca2}{Flow\+Impl}} (const \mbox{\hyperlink{classFlowImpl}{Flow\+Impl}} \&fl)
-\begin{DoxyCompactList}\small\item\em Construtor de cópia de \doxylink{classFlowImpl}{Flow\+Impl}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Construtor de cópia. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classFlowImpl_a2d91539593b336aee4a19048f8a82e8c}{\texorpdfstring{$\sim$}{\string~}\+Flow\+Impl}} ()
-\begin{DoxyCompactList}\small\item\em Destrutor virtual de \doxylink{classFlowImpl}{Flow\+Impl}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Destrutor virtual. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classFlowImpl}{Flow\+Impl}} \& \mbox{\hyperlink{classFlowImpl_a323251bc0282f0f6e395add4b69d74fa}{operator=}} (const \mbox{\hyperlink{classFlowImpl}{Flow\+Impl}} \&fl)
-\begin{DoxyCompactList}\small\item\em Operador de atribuição por cópia (Sobrecarga de operador =). \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Operador de atribuição por cópia. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classFlowImpl_a1a3855f88e93d7c682af82fcfd61b12f}{Flow\+Impl}} (std\+::string \mbox{\hyperlink{classFlowImpl_afcc3f687245c4a6fa3d26ac386c8221b}{name}})
-\begin{DoxyCompactList}\small\item\em Construtor parametrizado de \doxylink{classFlowImpl}{Flow\+Impl}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Construtor parametrizado. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classFlowImpl_a47bbb64941fde986da1198b4af443c16}{set\+Source}} (\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}s) override
 \begin{DoxyCompactList}\small\item\em Define o sistema de origem (fonte) da transferência. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classFlowImpl_a48a3c5a8425ce7deb3ae041f46f07368}{set\+Target}} (\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}t) override
@@ -87,7 +87,11 @@ std\+::string \mbox{\hyperlink{classFlowImpl_afcc3f687245c4a6fa3d26ac386c8221b}{
 
 
 \doxysubsection{Detailed Description}
-Classe que implementa o tipo de Fluxo Logístico. Herda de \doxylink{classFlowImpl}{Flow\+Impl} e implementa uma equação logística baseada no valor do sistema alvo. 
+Fluxo com equação de crescimento logístico. 
+
+Equação\+: {\ttfamily \doxylink{classFlowLogistic_a9b25e905a9501d4b4bcc32183cccc4c5}{execute()} = 0.\+01 \texorpdfstring{$\ast$}{*} target-\/\texorpdfstring{$>$}{>}get\+Value() \texorpdfstring{$\ast$}{*} (1 -\/ target-\/\texorpdfstring{$>$}{>}get\+Value() / 70.\+0)}
+
+Modela uma população com capacidade de suporte igual a 70 unidades. Criado exclusivamente via \doxylink{classModelFactory_ab28e93c2366319ff5264047c36c84552}{Model\+Factory\+::create\+Flow\+Logistic}. 
 
 \label{doc-constructors}
 \Hypertarget{classFlowLogistic_doc-constructors}
@@ -100,7 +104,7 @@ Flow\+Logistic\+::\+Flow\+Logistic (\begin{DoxyParamCaption}{}{}\end{DoxyParamCa
 
 
 
-Construtor padrão do fluxo logístico. 
+Construtor padrão. 
 
 \Hypertarget{classFlowLogistic_aeb042bb05ed79bda2ca1ac75853784af}\index{FlowLogistic@{FlowLogistic}!FlowLogistic@{FlowLogistic}}
 \index{FlowLogistic@{FlowLogistic}!FlowLogistic@{FlowLogistic}}
@@ -110,7 +114,7 @@ Flow\+Logistic\+::\+Flow\+Logistic (\begin{DoxyParamCaption}\item[{const \mbox{\
 
 
 
-Construtor de cópia do fluxo logístico. 
+Construtor de cópia. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -125,7 +129,7 @@ Flow\+Logistic\+::\texorpdfstring{$\sim$}{\string~}\+Flow\+Logistic (\begin{Doxy
 
 
 
-Destrutor virtual do fluxo logístico. 
+Destrutor virtual. 
 
 \Hypertarget{classFlowLogistic_a506c7733119f036b01ef5267f7e8188d}\index{FlowLogistic@{FlowLogistic}!FlowLogistic@{FlowLogistic}}
 \index{FlowLogistic@{FlowLogistic}!FlowLogistic@{FlowLogistic}}
@@ -135,7 +139,7 @@ Flow\+Logistic\+::\+Flow\+Logistic (\begin{DoxyParamCaption}\item[{std\+::string
 
 
 
-Construtor parametrizado do fluxo logístico. 
+Construtor parametrizado. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -155,10 +159,10 @@ double Flow\+Logistic\+::execute (\begin{DoxyParamCaption}{}{}\end{DoxyParamCapt
 
 
 
-Executa o cálculo logístico do fluxo. 
+Executa o cálculo logístico. 
 
 \begin{DoxyReturn}{Returns}
-double O resultado da equação. Retorna 0.\+0 se o alvo for nulo. 
+double Resultado da equação logística, ou 0.\+0 se target for nulo. 
 \end{DoxyReturn}
 
 
@@ -172,7 +176,7 @@ Implements \mbox{\hyperlink{classFlowImpl_a88d14f759988f1dcf393b83a93aea1f1}{Flo
 
 
 
-Operador de atribuição por cópia para o fluxo logístico. 
+Operador de atribuição por cópia. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -186,5 +190,5 @@ Operador de atribuição por cópia para o fluxo logístico.
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-src/\mbox{\hyperlink{flow__types_8h}{flow\+\_\+types.\+h}}\item 
-src/\mbox{\hyperlink{flow__types_8cpp}{flow\+\_\+types.\+cpp}}\end{DoxyCompactItemize}
+src/impl/\mbox{\hyperlink{flow__types_8h}{flow\+\_\+types.\+h}}\item 
+src/impl/\mbox{\hyperlink{flow__types_8cpp}{flow\+\_\+types.\+cpp}}\end{DoxyCompactItemize}

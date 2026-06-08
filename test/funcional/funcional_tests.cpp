@@ -1,31 +1,49 @@
+/**
+ * @file funcional_tests.cpp
+ * @brief Implementação dos testes funcionais do framework MyVensim.
+ *
+ * Todo o acesso ao framework é feito exclusivamente via interfaces da
+ * camada de API pública (`src/api/`) e da @ref ModelFactory. Nenhum
+ * header de `src/impl/` é incluído aqui — demonstrando o desacoplamento
+ * correto da arquitetura em camadas.
+ */
+
 #include "funcional_tests.h"
-#include "../../src/systemImpl.h"
-#include "../../src/flow.h"
-#include "../../src/flow_types.h"
-#include "../../src/modelImpl.h"
+#include "../../src/api/system.h"
+#include "../../src/api/flow.h"
+#include "../../src/api/model.h"
+#include "../../src/api/model_factory.h"
 #include <cassert>
 #include <cmath>
 #include <iostream>
 
 using namespace std;
 
-bool compareRounded(double result, double expected){
-    int resEscalonado = round(result * 10000.0);
+/**
+ * @brief Compara dois doubles com precisão de 4 casas decimais.
+ * @param result   Valor obtido pela simulação.
+ * @param expected Valor esperado pela especificação.
+ * @return true se os valores são iguais ao arredondar para 4 casas decimais.
+ */
+static bool compareRounded(double result, double expected)
+{
+    int resEscalonado = round(result   * 10000.0);
     int espEscalonado = round(expected * 10000.0);
     return resEscalonado == espEscalonado;
 }
 
-void exponentialFuncionalTest(){
+void exponentialFuncionalTest()
+{
     cout << "Starting Exponential Funcional Test..." << endl;
 
-    System *pop1 = new SystemImpl("pop1", 100.0);
-    System *pop2 = new SystemImpl("pop2", 0.0);
-    FlowExponencial *exp = new FlowExponencial("exponencial");
+    System *pop1 = ModelFactory::createSystem("pop1", 100.0);
+    System *pop2 = ModelFactory::createSystem("pop2", 0.0);
+    Flow   *exp  = ModelFactory::createFlowExponencial("exponencial");
 
     exp->setSource(pop1);
     exp->setTarget(pop2);
 
-    ModelImpl *m = new ModelImpl("Exponencial Model");
+    Model *m = ModelFactory::createModel("Exponencial Model");
     m->add(pop1);
     m->add(pop2);
     m->add(exp);
@@ -40,17 +58,18 @@ void exponentialFuncionalTest(){
     delete m;
 }
 
-void logisticalFuncionalTest(){
+void logisticalFuncionalTest()
+{
     cout << "Starting Logistical Funcional Test..." << endl;
 
-    System *p1 = new SystemImpl("p1", 100.0);
-    System *p2 = new SystemImpl("p2", 10.0);
-    FlowLogistic *log = new FlowLogistic("logistical");
+    System *p1  = ModelFactory::createSystem("p1", 100.0);
+    System *p2  = ModelFactory::createSystem("p2", 10.0);
+    Flow   *log = ModelFactory::createFlowLogistic("logistical");
 
     log->setSource(p1);
     log->setTarget(p2);
 
-    Model *m = new ModelImpl("Logistical Model");
+    Model *m = ModelFactory::createModel("Logistical Model");
     m->add(p1);
     m->add(p2);
     m->add(log);
@@ -65,35 +84,41 @@ void logisticalFuncionalTest(){
     delete m;
 }
 
-void complexFuncionalTest(){
+void complexFuncionalTest()
+{
     cout << "Starting Complex Funcional Test..." << endl;
 
-    System *q1 = new SystemImpl("Q1", 100.0);
-    System *q2 = new SystemImpl("Q2", 0.0);
-    System *q3 = new SystemImpl("Q3", 100.0);
-    System *q4 = new SystemImpl("Q4", 0.0);
-    System *q5 = new SystemImpl("Q5", 0.0);
+    System *q1 = ModelFactory::createSystem("Q1", 100.0);
+    System *q2 = ModelFactory::createSystem("Q2", 0.0);
+    System *q3 = ModelFactory::createSystem("Q3", 100.0);
+    System *q4 = ModelFactory::createSystem("Q4", 0.0);
+    System *q5 = ModelFactory::createSystem("Q5", 0.0);
 
-    FlowComplex *f = new FlowComplex("f");
+    Flow *f = ModelFactory::createFlowComplex("f");
     f->setSource(q1);
     f->setTarget(q2);
-    FlowComplex *g = new FlowComplex("g");
+
+    Flow *g = ModelFactory::createFlowComplex("g");
     g->setSource(q1);
     g->setTarget(q3);
-    FlowComplex *r = new FlowComplex("r");
+
+    Flow *r = ModelFactory::createFlowComplex("r");
     r->setSource(q2);
     r->setTarget(q5);
-    FlowComplex *t = new FlowComplex("t");
+
+    Flow *t = ModelFactory::createFlowComplex("t");
     t->setSource(q2);
     t->setTarget(q3);
-    FlowComplex *u = new FlowComplex("u");
+
+    Flow *u = ModelFactory::createFlowComplex("u");
     u->setSource(q3);
     u->setTarget(q4);
-    FlowComplex *v = new FlowComplex("v");
+
+    Flow *v = ModelFactory::createFlowComplex("v");
     v->setSource(q4);
     v->setTarget(q1);
 
-    Model *m = new ModelImpl("Complex Model Q");
+    Model *m = ModelFactory::createModel("Complex Model Q");
     m->add(q1);
     m->add(q2);
     m->add(q3);

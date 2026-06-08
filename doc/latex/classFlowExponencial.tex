@@ -2,7 +2,7 @@
 \hypertarget{classFlowExponencial}{}\label{classFlowExponencial}\index{FlowExponencial@{FlowExponencial}}
 
 
-Classe que implementa o tipo de Fluxo Exponencial. Herda de \doxylink{classFlowImpl}{Flow\+Impl} e implementa a equação de comportamento exponencial.  
+Fluxo com equação de crescimento/decaimento exponencial.  
 
 
 
@@ -33,30 +33,30 @@ Collaboration diagram for Flow\+Exponencial\+:
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classFlowExponencial_adcfa957b23dd248a40e2dbb8d061a975}{Flow\+Exponencial}} ()
-\begin{DoxyCompactList}\small\item\em Construtor padrão do fluxo exponencial. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Construtor padrão. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classFlowExponencial_ae61577a074d9faec6fada56a1096dee0}{Flow\+Exponencial}} (const \mbox{\hyperlink{classFlowExponencial}{Flow\+Exponencial}} \&f)
-\begin{DoxyCompactList}\small\item\em Construtor de cópia do fluxo exponencial. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Construtor de cópia. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classFlowExponencial_a7718731955602a499112c9c6cdc11431}{\texorpdfstring{$\sim$}{\string~}\+Flow\+Exponencial}} ()
-\begin{DoxyCompactList}\small\item\em Destrutor virtual do fluxo exponencial. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Destrutor virtual. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classFlowExponencial}{Flow\+Exponencial}} \& \mbox{\hyperlink{classFlowExponencial_a93bf6a46ef07b19eb2673d240418ca7b}{operator=}} (const \mbox{\hyperlink{classFlowExponencial}{Flow\+Exponencial}} \&f)
-\begin{DoxyCompactList}\small\item\em Operador de atribuição por cópia para o fluxo exponencial. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Operador de atribuição por cópia. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classFlowExponencial_aed6932d9990243bbaa866abc0d8bbdaf}{Flow\+Exponencial}} (std\+::string \mbox{\hyperlink{classFlowImpl_afcc3f687245c4a6fa3d26ac386c8221b}{name}})
-\begin{DoxyCompactList}\small\item\em Construtor parametrizado do fluxo exponencial. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Construtor parametrizado. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classFlowExponencial_ae68b39789d77bb7474b883d659c9552c}{execute}} () override
-\begin{DoxyCompactList}\small\item\em Executa o cálculo exponencial do fluxo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Executa o cálculo exponencial. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classFlowImpl}{Flow\+Impl}}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classFlowImpl_aa835ccb3c368c683aa95d660175a298b}{Flow\+Impl}} ()
-\begin{DoxyCompactList}\small\item\em Operação a ser realizada pelo fluxo. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Construtor padrão. Inicializa name como vazio, source e target como nullptr. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classFlowImpl_a34b906caaf8a339eb02915472a50cca2}{Flow\+Impl}} (const \mbox{\hyperlink{classFlowImpl}{Flow\+Impl}} \&fl)
-\begin{DoxyCompactList}\small\item\em Construtor de cópia de \doxylink{classFlowImpl}{Flow\+Impl}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Construtor de cópia. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classFlowImpl_a2d91539593b336aee4a19048f8a82e8c}{\texorpdfstring{$\sim$}{\string~}\+Flow\+Impl}} ()
-\begin{DoxyCompactList}\small\item\em Destrutor virtual de \doxylink{classFlowImpl}{Flow\+Impl}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Destrutor virtual. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classFlowImpl}{Flow\+Impl}} \& \mbox{\hyperlink{classFlowImpl_a323251bc0282f0f6e395add4b69d74fa}{operator=}} (const \mbox{\hyperlink{classFlowImpl}{Flow\+Impl}} \&fl)
-\begin{DoxyCompactList}\small\item\em Operador de atribuição por cópia (Sobrecarga de operador =). \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Operador de atribuição por cópia. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classFlowImpl_a1a3855f88e93d7c682af82fcfd61b12f}{Flow\+Impl}} (std\+::string \mbox{\hyperlink{classFlowImpl_afcc3f687245c4a6fa3d26ac386c8221b}{name}})
-\begin{DoxyCompactList}\small\item\em Construtor parametrizado de \doxylink{classFlowImpl}{Flow\+Impl}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Construtor parametrizado. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classFlowImpl_a47bbb64941fde986da1198b4af443c16}{set\+Source}} (\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}s) override
 \begin{DoxyCompactList}\small\item\em Define o sistema de origem (fonte) da transferência. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classFlowImpl_a48a3c5a8425ce7deb3ae041f46f07368}{set\+Target}} (\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}t) override
@@ -87,7 +87,11 @@ std\+::string \mbox{\hyperlink{classFlowImpl_afcc3f687245c4a6fa3d26ac386c8221b}{
 
 
 \doxysubsection{Detailed Description}
-Classe que implementa o tipo de Fluxo Exponencial. Herda de \doxylink{classFlowImpl}{Flow\+Impl} e implementa a equação de comportamento exponencial. 
+Fluxo com equação de crescimento/decaimento exponencial. 
+
+Equação\+: {\ttfamily \doxylink{classFlowExponencial_ae68b39789d77bb7474b883d659c9552c}{execute()} = 0.\+01 \texorpdfstring{$\ast$}{*} source-\/\texorpdfstring{$>$}{>}get\+Value()}
+
+Criado exclusivamente via \doxylink{classModelFactory_adfe0c0e08035911957b3f8c52c971bc1}{Model\+Factory\+::create\+Flow\+Exponencial}. 
 
 \label{doc-constructors}
 \Hypertarget{classFlowExponencial_doc-constructors}
@@ -100,7 +104,7 @@ Flow\+Exponencial\+::\+Flow\+Exponencial (\begin{DoxyParamCaption}{}{}\end{DoxyP
 
 
 
-Construtor padrão do fluxo exponencial. 
+Construtor padrão. 
 
 \Hypertarget{classFlowExponencial_ae61577a074d9faec6fada56a1096dee0}\index{FlowExponencial@{FlowExponencial}!FlowExponencial@{FlowExponencial}}
 \index{FlowExponencial@{FlowExponencial}!FlowExponencial@{FlowExponencial}}
@@ -110,7 +114,7 @@ Flow\+Exponencial\+::\+Flow\+Exponencial (\begin{DoxyParamCaption}\item[{const \
 
 
 
-Construtor de cópia do fluxo exponencial. 
+Construtor de cópia. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -125,7 +129,7 @@ Flow\+Exponencial\+::\texorpdfstring{$\sim$}{\string~}\+Flow\+Exponencial (\begi
 
 
 
-Destrutor virtual do fluxo exponencial. 
+Destrutor virtual. 
 
 \Hypertarget{classFlowExponencial_aed6932d9990243bbaa866abc0d8bbdaf}\index{FlowExponencial@{FlowExponencial}!FlowExponencial@{FlowExponencial}}
 \index{FlowExponencial@{FlowExponencial}!FlowExponencial@{FlowExponencial}}
@@ -135,7 +139,7 @@ Flow\+Exponencial\+::\+Flow\+Exponencial (\begin{DoxyParamCaption}\item[{std\+::
 
 
 
-Construtor parametrizado do fluxo exponencial. 
+Construtor parametrizado. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -155,10 +159,10 @@ double Flow\+Exponencial\+::execute (\begin{DoxyParamCaption}{}{}\end{DoxyParamC
 
 
 
-Executa o cálculo exponencial do fluxo. 
+Executa o cálculo exponencial. 
 
 \begin{DoxyReturn}{Returns}
-double O resultado da equação. Retorna 0.\+0 se a fonte for nula. 
+double Resultado de {\ttfamily 0.\+01 \texorpdfstring{$\ast$}{*} source-\/\texorpdfstring{$>$}{>}get\+Value()}, ou 0.\+0 se source for nulo. 
 \end{DoxyReturn}
 
 
@@ -172,7 +176,7 @@ Implements \mbox{\hyperlink{classFlowImpl_a88d14f759988f1dcf393b83a93aea1f1}{Flo
 
 
 
-Operador de atribuição por cópia para o fluxo exponencial. 
+Operador de atribuição por cópia. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -186,5 +190,5 @@ Operador de atribuição por cópia para o fluxo exponencial.
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-src/\mbox{\hyperlink{flow__types_8h}{flow\+\_\+types.\+h}}\item 
-src/\mbox{\hyperlink{flow__types_8cpp}{flow\+\_\+types.\+cpp}}\end{DoxyCompactItemize}
+src/impl/\mbox{\hyperlink{flow__types_8h}{flow\+\_\+types.\+h}}\item 
+src/impl/\mbox{\hyperlink{flow__types_8cpp}{flow\+\_\+types.\+cpp}}\end{DoxyCompactItemize}

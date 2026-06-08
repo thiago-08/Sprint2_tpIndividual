@@ -1,30 +1,35 @@
-<map id="src/flow.h" name="src/flow.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="535,5,617,33"/>
-<area shape="rect" id="Node000002" href="$flowImpl_8h.html" title=" " alt="" coords="316,81,428,109"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="523,40,409,83,407,78,528,38"/>
-<area shape="rect" id="Node000006" href="$funcional__tests_8cpp.html" title=" " alt="" coords="537,232,711,277"/>
-<area shape="poly" id="edge15_Node000001_Node000006" title=" " alt="" coords="580,46,590,110,604,184,618,233,613,231,599,185,584,111,577,50"/>
-<area shape="rect" id="Node000010" href="$model_8h.html" title=" " alt="" coords="627,81,724,109"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="606,40,661,81,655,80,605,45"/>
-<area shape="rect" id="Node000003" href="$flowImpl_8cpp.html" title=" " alt="" coords="72,157,200,184"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="313,115,179,159,177,154,317,112"/>
-<area shape="rect" id="Node000004" href="$flow__types_8h.html" title=" " alt="" coords="223,157,350,184"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="347,118,303,158,300,154,343,120"/>
-<area shape="rect" id="Node000009" href="$unit__flow_8cpp.html" title=" " alt="" coords="374,157,538,184"/>
-<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="399,117,444,157,438,156,398,122"/>
-<area shape="rect" id="Node000005" href="$flow__types_8cpp.html" title=" " alt="" coords="168,241,309,268"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="273,197,248,243,244,239,269,199"/>
-<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="356,186,539,232,534,233,355,191"/>
-<area shape="rect" id="Node000007" href="$unit__flow__types_8cpp.html" title=" " alt="" coords="5,232,144,277"/>
-<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="241,190,132,234,130,229,236,191"/>
-<area shape="rect" id="Node000008" href="$unit__model_8cpp.html" title=" " alt="" coords="333,241,512,268"/>
-<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="322,190,403,240,398,240,321,195"/>
-<area shape="rect" id="Node000011" href="$src_2main_8cpp.html" title=" " alt="" coords="764,157,868,184"/>
-<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="715,114,794,156,788,156,714,119"/>
-<area shape="rect" id="Node000012" href="$modelImpl_8h.html" title=" " alt="" coords="613,157,739,184"/>
-<area shape="poly" id="edge11_Node000010_Node000012" title=" " alt="" coords="678,122,678,158,674,155,674,127"/>
-<area shape="poly" id="edge13_Node000012_Node000006" title=" " alt="" coords="662,196,639,234,636,229,657,199"/>
-<area shape="poly" id="edge14_Node000012_Node000008" title=" " alt="" coords="624,189,464,243,462,238,618,190"/>
-<area shape="rect" id="Node000013" href="$modelImpl_8cpp.html" title=" " alt="" coords="734,241,876,268"/>
-<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="710,190,787,241,782,240,709,195"/>
+<map id="src/api/flow.h" name="src/api/flow.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="243,5,350,33"/>
+<area shape="rect" id="Node000002" href="$model_8h.html" title=" " alt="" coords="186,81,308,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="281,44,258,82,254,79,277,48"/>
+<area shape="rect" id="Node000003" href="$model__factory_8h.html" title=" " alt="" coords="198,157,371,184"/>
+<area shape="poly" id="edge10_Node000001_Node000003" title=" " alt="" coords="312,45,324,76,323,109,312,136,297,158,293,154,307,134,318,108,318,77,310,50"/>
+<area shape="rect" id="Node000005" href="$funcional__tests_8cpp.html" title="Implementação dos testes funcionais do framework MyVensim." alt="" coords="5,232,180,277"/>
+<area shape="poly" id="edge19_Node000001_Node000005" title=" " alt="" coords="239,41,208,59,177,83,148,120,126,161,100,233,95,231,121,159,144,117,173,79,205,54,243,37"/>
+<area shape="rect" id="Node000009" href="$flowImpl_8h.html" title=" " alt="" coords="732,81,877,109"/>
+<area shape="poly" id="edge11_Node000001_Node000009" title=" " alt="" coords="365,28,733,81,729,85,365,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="262,120,280,157,275,156,260,125"/>
+<area shape="poly" id="edge9_Node000002_Node000005" title=" " alt="" coords="225,118,188,159,115,234,111,230,184,155,221,121"/>
+<area shape="rect" id="Node000006" href="$modelImpl_8h.html" title=" " alt="" coords="413,157,572,184"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="305,111,451,155,446,157,305,116"/>
+<area shape="rect" id="Node000004" href="$model__factory_8cpp.html" title="Implementação da ModelFactory." alt="" coords="204,241,400,268"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="292,198,301,242,297,239,289,202"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="242,190,144,234,142,229,237,191"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="451,190,333,243,332,238,445,191"/>
+<area shape="rect" id="Node000007" href="$modelImpl_8cpp.html" title=" " alt="" coords="424,241,598,268"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="501,198,511,242,506,239,497,202"/>
+<area shape="rect" id="Node000008" href="$unit__model_8cpp.html" title="Testes unitários da implementação concreta ModelImpl." alt="" coords="623,241,802,268"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="543,188,680,240,675,240,542,193"/>
+<area shape="rect" id="Node000010" href="$flowImpl_8cpp.html" title=" " alt="" coords="816,157,977,184"/>
+<area shape="poly" id="edge12_Node000009_Node000010" title=" " alt="" coords="833,116,883,157,878,156,832,121"/>
+<area shape="rect" id="Node000011" href="$flow__types_8h.html" title=" " alt="" coords="633,157,792,184"/>
+<area shape="poly" id="edge13_Node000009_Node000011" title=" " alt="" coords="779,117,730,159,728,154,774,119"/>
+<area shape="rect" id="Node000014" href="$unit__flow_8cpp.html" title="Testes unitários da implementação concreta FlowImpl." alt="" coords="1001,157,1165,184"/>
+<area shape="poly" id="edge18_Node000009_Node000014" title=" " alt="" coords="869,110,1036,156,1031,156,868,116"/>
+<area shape="poly" id="edge15_Node000011_Node000004" title=" " alt="" coords="634,188,368,243,368,238,629,188"/>
+<area shape="poly" id="edge17_Node000011_Node000008" title=" " alt="" coords="714,198,715,242,710,239,711,202"/>
+<area shape="rect" id="Node000012" href="$flow__types_8cpp.html" title=" " alt="" coords="827,241,1001,268"/>
+<area shape="poly" id="edge14_Node000011_Node000012" title=" " alt="" coords="759,188,884,241,879,240,758,193"/>
+<area shape="rect" id="Node000013" href="$unit__flow__types_8cpp.html" title="Testes unitários das equações matemáticas das subclasses de FlowImpl." alt="" coords="1025,232,1163,277"/>
+<area shape="poly" id="edge16_Node000011_Node000013" title=" " alt="" coords="798,185,1013,230,1027,235,1022,235,1012,235,798,190"/>
 </map>

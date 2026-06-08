@@ -7,7 +7,8 @@ var indexSectionsWithContent =
   4: "fnstv",
   5: "u",
   6: "m",
-  7: "acdefimopstu▶👨📁🔨🛠"
+  7: "acdfiopt",
+  8: "acdefimopstu▶👨📁🔨🛠"
 };
 
 var indexSectionNames =
@@ -19,7 +20,8 @@ var indexSectionNames =
   4: "variables",
   5: "related",
   6: "defines",
-  7: "pages"
+  7: "groups",
+  8: "pages"
 };
 
 var indexSectionLabels =
@@ -31,6 +33,7 @@ var indexSectionLabels =
   4: "Variables",
   5: "Friends",
   6: "Macros",
-  7: "Pages"
+  7: "Modules",
+  8: "Pages"
 };
 

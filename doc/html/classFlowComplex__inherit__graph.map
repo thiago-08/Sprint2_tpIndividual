@@ -1,6 +1,6 @@
 <map id="FlowComplex" name="FlowComplex">
-<area shape="rect" id="Node000001" title="Classe que implementa o tipo de Fluxo Complexo. Herda de FlowImpl, implementando o comportamento de v..." alt="" coords="5,693,142,877"/>
-<area shape="rect" id="Node000002" href="$classFlowImpl.html" title="Classe que implementa Fluxo (herda da interface). Armazena ponteiros para os sistemas de origem e des..." alt="" coords="20,282,128,645"/>
+<area shape="rect" id="Node000001" title="Fluxo com equação para cenários complexos de múltiplos sistemas." alt="" coords="5,693,142,877"/>
+<area shape="rect" id="Node000002" href="$classFlowImpl.html" title="Implementação base abstrata da interface Flow." alt="" coords="20,282,128,645"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="74,657,76,693,71,692,73,662"/>
 <area shape="rect" id="Node000003" href="$classFlow.html" title="Interface abstrata de especificação para um Fluxo." alt="" coords="23,5,125,234"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="74,246,76,282,71,282,74,252"/>
