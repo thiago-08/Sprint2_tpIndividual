@@ -1,40 +1,27 @@
-/**
- * @file unit_system.cpp
- * @brief Testes unitários da implementação concreta SystemImpl.
- *
- * Por tratar-se de testes de caixa-branca da camada de implementação,
- * este arquivo inclui diretamente `src/impl/systemImpl.h` para acessar
- * atributos protegidos e verificar o comportamento interno da classe.
- */
-
 #include "unit_system.h"
 #include <assert.h>
 #include "../../src/impl/systemImpl.h"
 
-void UnitSystem::unit_System_DefaultConstructor()
-{
+void UnitSystem::unit_System_DefaultConstructor(){
     SystemImpl s1;
     assert(s1.name  == "");
     assert(s1.value == 0.0);
 }
 
-void UnitSystem::unit_System_ParameterizedConstructor()
-{
+void UnitSystem::unit_System_ParameterizedConstructor(){
     SystemImpl s2("Test System", 10.5);
     assert(s2.name  == "Test System");
     assert(s2.value == 10.5);
 }
 
-void UnitSystem::unit_System_CopyConstructor()
-{
+void UnitSystem::unit_System_CopyConstructor(){
     SystemImpl s2("Test System", 10.5);
     SystemImpl s3(s2);
     assert(s3.name  == "Test System");
     assert(s3.value == 10.5);
 }
 
-void UnitSystem::unit_System_Operator()
-{
+void UnitSystem::unit_System_Operator(){
     SystemImpl s2("Test System", 10.5);
     SystemImpl s4;
     s4 = s2;
@@ -42,40 +29,34 @@ void UnitSystem::unit_System_Operator()
     assert(s4.value == 10.5);
 }
 
-void UnitSystem::unit_System_destructor()
-{
+void UnitSystem::unit_System_destructor(){
     SystemImpl *s1 = new SystemImpl("Sys", 10.0);
     delete s1;
 }
 
-void UnitSystem::unit_System_getName()
-{
+void UnitSystem::unit_System_getName(){
     SystemImpl s("Name", 100.0);
     assert(s.getName() == "Name");
 }
 
-void UnitSystem::unit_System_setName()
-{
+void UnitSystem::unit_System_setName(){
     SystemImpl s;
     s.setName("NewName");
     assert(s.name == "NewName");
 }
 
-void UnitSystem::unit_System_getValue()
-{
+void UnitSystem::unit_System_getValue(){
     SystemImpl s("Name", 150.0);
     assert(s.getValue() == 150.0);
 }
 
-void UnitSystem::unit_System_setValue()
-{
+void UnitSystem::unit_System_setValue(){
     SystemImpl s;
     s.setValue(25.5);
     assert(s.value == 25.5);
 }
 
-void run_unit_tests_System()
-{
+void run_unit_tests_System(){
     UnitSystem::unit_System_DefaultConstructor();
     UnitSystem::unit_System_ParameterizedConstructor();
     UnitSystem::unit_System_CopyConstructor();

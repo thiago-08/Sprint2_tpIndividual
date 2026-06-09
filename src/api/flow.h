@@ -5,16 +5,7 @@
 #include "system.h"
 
 /**
- * @addtogroup API
- * @{
- */
-
-/**
  * @brief Interface abstrata de especificação para um Fluxo.
- *
- * Representa a transferência de valor entre dois sistemas durante a simulação.
- * Cada fluxo possui uma equação matemática (método execute()) que determina
- * quanto valor é transferido do sistema de origem para o de destino a cada ciclo.
  */
 class Flow
 {
@@ -66,7 +57,5 @@ public:
      */
     virtual double execute() = 0;
 };
-
-/** @} */ // fim do grupo API
 
 #endif

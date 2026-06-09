@@ -5,19 +5,8 @@
 #include <vector>
 
 /**
- * @addtogroup Impl
- * @{
- */
-
-/**
- * @brief Implementação concreta da interface Model.
- *
- * Gerencia coleções de sistemas e fluxos, executando os ciclos da simulação
- * temporal. O destrutor é responsável por liberar a memória de todos os
- * sistemas e fluxos adicionados ao modelo.
- *
- * Instâncias desta classe são criadas exclusivamente pela
- * @ref ModelFactory::createModel.
+ * @brief Classe que implementa as funções de gerenciamento de múltiplos sistemas e fluxos.
+ * Responsável por executar os ciclos da simulação temporal atualizando os dados.
  */
 class ModelImpl : public Model
 {
@@ -59,15 +48,13 @@ public:
      */
     ModelImpl &operator=(const ModelImpl &mod);
 
-    void        add(System *s) override;
-    void        add(Flow *f) override;
-    void        run(int t_initial, int t_end) override;
+    void add(System *s) override;
+    void add(Flow *f) override;
+    void run(int t_initial, int t_end) override;
     std::string getName() const override;
-    void        setName(std::string name) override;
+    void setName(std::string name) override;
 
     friend class UnitModel;
 };
-
-/** @} */ // fim do grupo Impl
 
 #endif

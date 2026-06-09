@@ -4,21 +4,8 @@
 #include "../api/system.h"
 
 /**
- * @defgroup Impl Camada de Implementação
- * @brief Classes concretas que implementam as interfaces da camada API.
- *
- * Esta camada não deve ser incluída diretamente pelo código cliente.
- * O acesso deve ocorrer exclusivamente através das interfaces de `src/api/`
- * e da @ref ModelFactory.
- * @{
- */
-
-/**
- * @brief Implementação concreta da interface System.
- *
- * Gerencia o armazenamento do nome e do valor numérico de um compartimento
- * da simulação. Instâncias desta classe são criadas exclusivamente pela
- * @ref ModelFactory::createSystem.
+ * @brief Classe que implementa System (herda da interface).
+ * Herda da interface System e gerencia o armazenamento do nome e do valor numérico.
  */
 class SystemImpl : public System
 {
@@ -60,14 +47,12 @@ public:
     SystemImpl &operator=(const SystemImpl &sys);
 
     std::string getName() const override;
-    double      getValue() const override;
-    void        setValue(double value) override;
-    void        setName(std::string name) override;
+    double getValue() const override;
+    void setValue(double value) override;
+    void setName(std::string name) override;
 
     friend class UnitSystem;
     friend class UnitModel;
 };
-
-/** @} */ // fim do grupo Impl
 
 #endif

@@ -4,17 +4,10 @@
 #include "flowImpl.h"
 
 /**
- * @addtogroup Impl
- * @{
+ * @brief Classe que implementa o tipo de Fluxo Exponencial.
+ * Herda de FlowImpl e implementa a equação de comportamento exponencial.
  */
 
-/**
- * @brief Fluxo com equação de crescimento/decaimento exponencial.
- *
- * Equação: `execute() = 0.01 * source->getValue()`
- *
- * Criado exclusivamente via @ref ModelFactory::createFlowExponencial.
- */
 class FlowExponencial : public FlowImpl
 {
 public:
@@ -51,12 +44,8 @@ public:
 };
 
 /**
- * @brief Fluxo com equação de crescimento logístico.
- *
- * Equação: `execute() = 0.01 * target->getValue() * (1 - target->getValue() / 70.0)`
- *
- * Modela uma população com capacidade de suporte igual a 70 unidades.
- * Criado exclusivamente via @ref ModelFactory::createFlowLogistic.
+ * @brief Classe que implementa o tipo de Fluxo Logístico.
+ * Herda de FlowImpl e implementa uma equação logística baseada no valor do sistema alvo.
  */
 class FlowLogistic : public FlowImpl
 {
@@ -94,12 +83,8 @@ public:
 };
 
 /**
- * @brief Fluxo com equação para cenários complexos de múltiplos sistemas.
- *
- * Equação: `execute() = 0.01 * source->getValue()`
- *
- * Utilizado em modelos com vários reservatórios interligados.
- * Criado exclusivamente via @ref ModelFactory::createFlowComplex.
+ * @brief Classe que implementa o tipo de Fluxo Complexo.
+ * Herda de FlowImpl, implementando o comportamento de vários sistemas interligados.
  */
 class FlowComplex : public FlowImpl
 {
@@ -135,7 +120,5 @@ public:
      */
     double execute() override;
 };
-
-/** @} */ // fim do grupo Impl
 
 #endif

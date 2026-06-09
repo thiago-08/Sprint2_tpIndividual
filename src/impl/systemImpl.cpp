@@ -2,16 +2,14 @@
 
 SystemImpl::SystemImpl() : name(""), value(0.0) {}
 
-SystemImpl::SystemImpl(const SystemImpl &sys)
-{
+SystemImpl::SystemImpl(const SystemImpl &sys){
     this->name  = sys.name;
     this->value = sys.value;
 }
 
 SystemImpl::~SystemImpl() {}
 
-SystemImpl &SystemImpl::operator=(const SystemImpl &sys)
-{
+SystemImpl &SystemImpl::operator=(const SystemImpl &sys){
     if (this == &sys)
         return *this;
     this->name  = sys.name;
@@ -21,22 +19,18 @@ SystemImpl &SystemImpl::operator=(const SystemImpl &sys)
 
 SystemImpl::SystemImpl(std::string name, double value) : name(name), value(value) {}
 
-std::string SystemImpl::getName() const
-{
+std::string SystemImpl::getName() const{
     return name;
 }
 
-void SystemImpl::setName(std::string n)
-{
+void SystemImpl::setName(std::string n){
     name = n;
 }
 
-double SystemImpl::getValue() const
-{
+double SystemImpl::getValue() const{
     return value;
 }
 
-void SystemImpl::setValue(double v)
-{
+void SystemImpl::setValue(double v){
     value = v;
 }

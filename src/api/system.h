@@ -4,22 +4,7 @@
 #include <string>
 
 /**
- * @defgroup API Camada de Interface Pública (API)
- * @brief Interfaces abstratas que definem o contrato público do framework MyVensim.
- *
- * Esta camada expõe apenas as interfaces puras (sem detalhes de implementação).
- * Todo código cliente — testes funcionais, aplicações externas e a função main —
- * deve incluir apenas os cabeçalhos desta camada e usar a @ref ModelFactory para
- * instanciar objetos, nunca incluir headers de `src/impl/` diretamente.
- * @{
- */
-
-/**
  * @brief Interface abstrata de especificação para um Sistema.
- *
- * Representa um compartimento ou reservatório no modelo de simulação.
- * Armazena um valor numérico que pode ser modificado pelos fluxos durante
- * a execução da simulação.
  */
 class System
 {
@@ -53,7 +38,5 @@ public:
      */
     virtual void setName(std::string name) = 0;
 };
-
-/** @} */ // fim do grupo API
 
 #endif

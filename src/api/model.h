@@ -6,15 +6,7 @@
 #include "flow.h"
 
 /**
- * @addtogroup API
- * @{
- */
-
-/**
  * @brief Interface abstrata de especificação para um Modelo de Simulação.
- *
- * Gerencia coleções de sistemas e fluxos, orquestrando a execução da simulação
- * ao longo de intervalos de tempo definidos pelo usuário.
  */
 class Model
 {
@@ -56,7 +48,5 @@ public:
      */
     virtual void setName(std::string name) = 0;
 };
-
-/** @} */ // fim do grupo API
 
 #endif

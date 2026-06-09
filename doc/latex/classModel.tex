@@ -12,17 +12,10 @@ Interface abstrata de especificação para um Modelo de Simulação.
 
 
 Inheritance diagram for Model\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=168pt]{classModel__inherit__graph}
-\end{center}
-\end{figure}
+% FIG 0
 
 
-Collaboration diagram for Model\+:
-\nopagebreak
+Collaboration diagram for Model\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -49,16 +42,12 @@ virtual void \mbox{\hyperlink{classModel_ab01f68499cf9c680d64d07c7160b4cf7}{set\
 \doxysubsection{Detailed Description}
 Interface abstrata de especificação para um Modelo de Simulação. 
 
-Gerencia coleções de sistemas e fluxos, orquestrando a execução da simulação ao longo de intervalos de tempo definidos pelo usuário. 
-
-\label{doc-constructors}
-\Hypertarget{classModel_doc-constructors}
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classModel_af032d8433c87a0a3a431faf6563a1f03}\index{Model@{Model}!````~Model@{\texorpdfstring{$\sim$}{\string~}Model}}
+\Hypertarget{classModel_af032d8433c87a0a3a431faf6563a1f03}\label{classModel_af032d8433c87a0a3a431faf6563a1f03} 
+\index{Model@{Model}!````~Model@{\texorpdfstring{$\sim$}{\string~}Model}}
 \index{````~Model@{\texorpdfstring{$\sim$}{\string~}Model}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Model()}{\string~Model()}}
-{\footnotesize\ttfamily \label{classModel_af032d8433c87a0a3a431faf6563a1f03} 
-virtual Model\+::\texorpdfstring{$\sim$}{\string~}\+Model (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual Model\+::\texorpdfstring{$\sim$}{\string~}\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 
 
@@ -66,14 +55,12 @@ Destrutor virtual padrão.
 
 
 
-\label{doc-func-members}
-\Hypertarget{classModel_doc-func-members}
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classModel_ad248b54040ab38124af621cbc4c7c2e6}\index{Model@{Model}!add@{add}}
+\Hypertarget{classModel_ad248b54040ab38124af621cbc4c7c2e6}\label{classModel_ad248b54040ab38124af621cbc4c7c2e6} 
+\index{Model@{Model}!add@{add}}
 \index{add@{add}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily \label{classModel_ad248b54040ab38124af621cbc4c7c2e6} 
-virtual void Model\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFlow}{Flow}} \texorpdfstring{$\ast$}{*}}]{f}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual void Model\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFlow}{Flow}} \texorpdfstring{$\ast$}{*}}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -88,11 +75,11 @@ Registra e adiciona um Fluxo ao escopo do modelo.
 
 Implemented in \mbox{\hyperlink{classModelImpl_aca3d3c64275deb96f4180618279b0825}{Model\+Impl}}.
 
-\Hypertarget{classModel_a1c57f13b17e1fd598fa7ebe1fa55a7df}\index{Model@{Model}!add@{add}}
+\Hypertarget{classModel_a1c57f13b17e1fd598fa7ebe1fa55a7df}\label{classModel_a1c57f13b17e1fd598fa7ebe1fa55a7df} 
+\index{Model@{Model}!add@{add}}
 \index{add@{add}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \label{classModel_a1c57f13b17e1fd598fa7ebe1fa55a7df} 
-virtual void Model\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}}]{s}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual void Model\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -107,11 +94,11 @@ Registra e adiciona um Sistema ao escopo do modelo.
 
 Implemented in \mbox{\hyperlink{classModelImpl_a1f3286251acdf80ed0b79aad3afc3b5c}{Model\+Impl}}.
 
-\Hypertarget{classModel_a17e89ca8d15af46d074423a47d3c6802}\index{Model@{Model}!getName@{getName}}
+\Hypertarget{classModel_a17e89ca8d15af46d074423a47d3c6802}\label{classModel_a17e89ca8d15af46d074423a47d3c6802} 
+\index{Model@{Model}!getName@{getName}}
 \index{getName@{getName}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{getName()}{getName()}}
-{\footnotesize\ttfamily \label{classModel_a17e89ca8d15af46d074423a47d3c6802} 
-virtual std\+::string Model\+::get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual std\+::string Model\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -124,11 +111,11 @@ std\+::string contendo o nome.
 
 Implemented in \mbox{\hyperlink{classModelImpl_a6d6ef8f72413650749d9ca9850226a6b}{Model\+Impl}}.
 
-\Hypertarget{classModel_a8fced9263616fdd102fa0cf54a51462e}\index{Model@{Model}!run@{run}}
+\Hypertarget{classModel_a8fced9263616fdd102fa0cf54a51462e}\label{classModel_a8fced9263616fdd102fa0cf54a51462e} 
+\index{Model@{Model}!run@{run}}
 \index{run@{run}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{run()}{run()}}
-{\footnotesize\ttfamily \label{classModel_a8fced9263616fdd102fa0cf54a51462e} 
-virtual void Model\+::run (\begin{DoxyParamCaption}\item[{int}]{t\+\_\+initial}{, }\item[{int}]{t\+\_\+end}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual void Model\+::run (\begin{DoxyParamCaption}\item[{int}]{t\+\_\+initial,  }\item[{int}]{t\+\_\+end }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -145,11 +132,11 @@ Executa a simulação, processando os fluxos e atualizando os sistemas para cada
 
 Implemented in \mbox{\hyperlink{classModelImpl_ac8a62e544938f2de54a4e722d65927fa}{Model\+Impl}}.
 
-\Hypertarget{classModel_ab01f68499cf9c680d64d07c7160b4cf7}\index{Model@{Model}!setName@{setName}}
+\Hypertarget{classModel_ab01f68499cf9c680d64d07c7160b4cf7}\label{classModel_ab01f68499cf9c680d64d07c7160b4cf7} 
+\index{Model@{Model}!setName@{setName}}
 \index{setName@{setName}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{setName()}{setName()}}
-{\footnotesize\ttfamily \label{classModel_ab01f68499cf9c680d64d07c7160b4cf7} 
-virtual void Model\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual void Model\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 

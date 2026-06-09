@@ -4,19 +4,8 @@
 #include "../api/flow.h"
 
 /**
- * @addtogroup Impl
- * @{
- */
-
-/**
- * @brief Implementação base abstrata da interface Flow.
- *
- * Armazena os ponteiros para os sistemas de origem e destino e o nome do
- * fluxo. A equação de execução (execute()) permanece virtual pura, sendo
- * definida pelas subclasses de tipo concreto em flow_types.h.
- *
- * Instâncias nunca são criadas diretamente; use as subclasses por meio da
- * @ref ModelFactory.
+ * @brief Classe que implementa Fluxo (herda da interface). 
+ * Armazena ponteiros para os sistemas de origem e destino, além do nome do fluxo.
  */
 class FlowImpl : public Flow
 {
@@ -58,11 +47,11 @@ public:
      */
     FlowImpl(std::string name);
 
-    void     setSource(System *s) override;
-    void     setTarget(System *t) override;
-    void     setName(std::string n) override;
-    System  *getSource() const override;
-    System  *getTarget() const override;
+    void setSource(System *s) override;
+    void setTarget(System *t) override;
+    void setName(std::string n) override;
+    System *getSource() const override;
+    System *getTarget() const override;
     std::string getName() const override;
 
     /**
@@ -84,6 +73,5 @@ public:
     friend class UnitModel;
 };
 
-/** @} */ // fim do grupo Impl
 
 #endif

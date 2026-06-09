@@ -7,8 +7,8 @@ var indexSectionsWithContent =
   4: "fnstv",
   5: "u",
   6: "m",
-  7: "acdfiopt",
-  8: "acdefimopstu▶👨📁🔨🛠"
+  7: "adfot",
+  8: "cdfmps"
 };
 
 var indexSectionNames =

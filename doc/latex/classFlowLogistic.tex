@@ -2,7 +2,7 @@
 \hypertarget{classFlowLogistic}{}\label{classFlowLogistic}\index{FlowLogistic@{FlowLogistic}}
 
 
-Fluxo com equação de crescimento logístico.  
+Classe que implementa o tipo de Fluxo Logístico. Herda de \doxylink{classFlowImpl}{Flow\+Impl} e implementa uma equação logística baseada no valor do sistema alvo.  
 
 
 
@@ -12,23 +12,11 @@ Fluxo com equação de crescimento logístico.
 
 
 Inheritance diagram for Flow\+Logistic\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[height=550pt]{classFlowLogistic__inherit__graph}
-\end{center}
-\end{figure}
+% FIG 0
 
 
 Collaboration diagram for Flow\+Logistic\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[height=550pt]{classFlowLogistic__coll__graph}
-\end{center}
-\end{figure}
+% FIG 1
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -87,30 +75,24 @@ std\+::string \mbox{\hyperlink{classFlowImpl_afcc3f687245c4a6fa3d26ac386c8221b}{
 
 
 \doxysubsection{Detailed Description}
-Fluxo com equação de crescimento logístico. 
+Classe que implementa o tipo de Fluxo Logístico. Herda de \doxylink{classFlowImpl}{Flow\+Impl} e implementa uma equação logística baseada no valor do sistema alvo. 
 
-Equação\+: {\ttfamily \doxylink{classFlowLogistic_a9b25e905a9501d4b4bcc32183cccc4c5}{execute()} = 0.\+01 \texorpdfstring{$\ast$}{*} target-\/\texorpdfstring{$>$}{>}get\+Value() \texorpdfstring{$\ast$}{*} (1 -\/ target-\/\texorpdfstring{$>$}{>}get\+Value() / 70.\+0)}
-
-Modela uma população com capacidade de suporte igual a 70 unidades. Criado exclusivamente via \doxylink{classModelFactory_ab28e93c2366319ff5264047c36c84552}{Model\+Factory\+::create\+Flow\+Logistic}. 
-
-\label{doc-constructors}
-\Hypertarget{classFlowLogistic_doc-constructors}
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classFlowLogistic_a8a0c7a4f52f7571d26022374ee0f3779}\index{FlowLogistic@{FlowLogistic}!FlowLogistic@{FlowLogistic}}
+\Hypertarget{classFlowLogistic_a8a0c7a4f52f7571d26022374ee0f3779}\label{classFlowLogistic_a8a0c7a4f52f7571d26022374ee0f3779} 
+\index{FlowLogistic@{FlowLogistic}!FlowLogistic@{FlowLogistic}}
 \index{FlowLogistic@{FlowLogistic}!FlowLogistic@{FlowLogistic}}
 \doxysubsubsection{\texorpdfstring{FlowLogistic()}{FlowLogistic()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
-{\footnotesize\ttfamily \label{classFlowLogistic_a8a0c7a4f52f7571d26022374ee0f3779} 
-Flow\+Logistic\+::\+Flow\+Logistic (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Flow\+Logistic\+::\+Flow\+Logistic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 Construtor padrão. 
 
-\Hypertarget{classFlowLogistic_aeb042bb05ed79bda2ca1ac75853784af}\index{FlowLogistic@{FlowLogistic}!FlowLogistic@{FlowLogistic}}
+\Hypertarget{classFlowLogistic_aeb042bb05ed79bda2ca1ac75853784af}\label{classFlowLogistic_aeb042bb05ed79bda2ca1ac75853784af} 
+\index{FlowLogistic@{FlowLogistic}!FlowLogistic@{FlowLogistic}}
 \index{FlowLogistic@{FlowLogistic}!FlowLogistic@{FlowLogistic}}
 \doxysubsubsection{\texorpdfstring{FlowLogistic()}{FlowLogistic()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
-{\footnotesize\ttfamily \label{classFlowLogistic_aeb042bb05ed79bda2ca1ac75853784af} 
-Flow\+Logistic\+::\+Flow\+Logistic (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classFlowLogistic}{Flow\+Logistic}} \&}]{f}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Flow\+Logistic\+::\+Flow\+Logistic (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classFlowLogistic}{Flow\+Logistic}} \&}]{f }\end{DoxyParamCaption})}
 
 
 
@@ -121,21 +103,21 @@ Construtor de cópia.
 {\em f} & Objeto \doxylink{classFlowLogistic}{Flow\+Logistic} de origem. \\
 \hline
 \end{DoxyParams}
-\Hypertarget{classFlowLogistic_acffaaf74e8683e574bc9e06a1357d665}\index{FlowLogistic@{FlowLogistic}!````~FlowLogistic@{\texorpdfstring{$\sim$}{\string~}FlowLogistic}}
+\Hypertarget{classFlowLogistic_acffaaf74e8683e574bc9e06a1357d665}\label{classFlowLogistic_acffaaf74e8683e574bc9e06a1357d665} 
+\index{FlowLogistic@{FlowLogistic}!````~FlowLogistic@{\texorpdfstring{$\sim$}{\string~}FlowLogistic}}
 \index{````~FlowLogistic@{\texorpdfstring{$\sim$}{\string~}FlowLogistic}!FlowLogistic@{FlowLogistic}}
 \doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}FlowLogistic()}{\string~FlowLogistic()}}
-{\footnotesize\ttfamily \label{classFlowLogistic_acffaaf74e8683e574bc9e06a1357d665} 
-Flow\+Logistic\+::\texorpdfstring{$\sim$}{\string~}\+Flow\+Logistic (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily Flow\+Logistic\+::\texorpdfstring{$\sim$}{\string~}\+Flow\+Logistic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
 Destrutor virtual. 
 
-\Hypertarget{classFlowLogistic_a506c7733119f036b01ef5267f7e8188d}\index{FlowLogistic@{FlowLogistic}!FlowLogistic@{FlowLogistic}}
+\Hypertarget{classFlowLogistic_a506c7733119f036b01ef5267f7e8188d}\label{classFlowLogistic_a506c7733119f036b01ef5267f7e8188d} 
+\index{FlowLogistic@{FlowLogistic}!FlowLogistic@{FlowLogistic}}
 \index{FlowLogistic@{FlowLogistic}!FlowLogistic@{FlowLogistic}}
 \doxysubsubsection{\texorpdfstring{FlowLogistic()}{FlowLogistic()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily \label{classFlowLogistic_a506c7733119f036b01ef5267f7e8188d} 
-Flow\+Logistic\+::\+Flow\+Logistic (\begin{DoxyParamCaption}\item[{std\+::string}]{name}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Flow\+Logistic\+::\+Flow\+Logistic (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
 
 
 
@@ -148,14 +130,12 @@ Construtor parametrizado.
 \end{DoxyParams}
 
 
-\label{doc-func-members}
-\Hypertarget{classFlowLogistic_doc-func-members}
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classFlowLogistic_a9b25e905a9501d4b4bcc32183cccc4c5}\index{FlowLogistic@{FlowLogistic}!execute@{execute}}
+\Hypertarget{classFlowLogistic_a9b25e905a9501d4b4bcc32183cccc4c5}\label{classFlowLogistic_a9b25e905a9501d4b4bcc32183cccc4c5} 
+\index{FlowLogistic@{FlowLogistic}!execute@{execute}}
 \index{execute@{execute}!FlowLogistic@{FlowLogistic}}
 \doxysubsubsection{\texorpdfstring{execute()}{execute()}}
-{\footnotesize\ttfamily \label{classFlowLogistic_a9b25e905a9501d4b4bcc32183cccc4c5} 
-double Flow\+Logistic\+::execute (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily double Flow\+Logistic\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -168,11 +148,11 @@ double Resultado da equação logística, ou 0.\+0 se target for nulo.
 
 Implements \mbox{\hyperlink{classFlowImpl_a88d14f759988f1dcf393b83a93aea1f1}{Flow\+Impl}}.
 
-\Hypertarget{classFlowLogistic_a6014ea271c00ef014bdb22f788b4e964}\index{FlowLogistic@{FlowLogistic}!operator=@{operator=}}
+\Hypertarget{classFlowLogistic_a6014ea271c00ef014bdb22f788b4e964}\label{classFlowLogistic_a6014ea271c00ef014bdb22f788b4e964} 
+\index{FlowLogistic@{FlowLogistic}!operator=@{operator=}}
 \index{operator=@{operator=}!FlowLogistic@{FlowLogistic}}
 \doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
-{\footnotesize\ttfamily \label{classFlowLogistic_a6014ea271c00ef014bdb22f788b4e964} 
-\mbox{\hyperlink{classFlowLogistic}{Flow\+Logistic}} \& Flow\+Logistic\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classFlowLogistic}{Flow\+Logistic}} \&}]{f}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classFlowLogistic}{Flow\+Logistic}} \& Flow\+Logistic\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classFlowLogistic}{Flow\+Logistic}} \&}]{f }\end{DoxyParamCaption})}
 
 
 
