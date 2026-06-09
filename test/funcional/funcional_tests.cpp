@@ -25,7 +25,7 @@ void exponentialFuncionalTest(){
     exp->setSource(pop1);
     exp->setTarget(pop2);
 
-    ModelImpl *m = new ModelImpl("Exponencial Model");
+    Model *m = new ModelImpl("Exponencial Model");
     m->add(pop1);
     m->add(pop2);
     m->add(exp);
