@@ -16,36 +16,34 @@ protected:
     System *source;
     /** @brief Ponteiro para o sistema de destino. */
     System *target;
-    /** @brief Operação a ser realizada pelo fluxo. */
-public:
     /**
      * @brief Construtor padrão de FlowImpl.
      */
     FlowImpl();
-
     /**
      * @brief Construtor de cópia de FlowImpl.
      * @param fl Objeto FlowImpl de origem a ser copiado.
      */
     FlowImpl(const FlowImpl &fl);
-
-    /**
-     * @brief Destrutor virtual de FlowImpl.
-     */
-    virtual ~FlowImpl();
-
     /**
      * @brief Operador de atribuição por cópia (Sobrecarga de operador =).
      * @param fl Objeto FlowImpl de origem.
      * @return FlowImpl& Referência para o próprio fluxo atualizado.
      */
     FlowImpl &operator=(const FlowImpl &fl);
-
     /**
      * @brief Construtor parametrizado de FlowImpl.
      * @param name Nome a ser atribuído ao fluxo.
+     * @param source Ponteiro do sistema inicial
+     * @param target Ponteiro do sistema final
      */
-    FlowImpl(std::string name);
+    FlowImpl(std::string name, System *source = nullptr, System *target = nullptr);
+    
+public:
+    /**
+     * @brief Destrutor virtual de FlowImpl.
+     */
+    virtual ~FlowImpl();
 
     void setSource(System *s) override;
     void setTarget(System *t) override;

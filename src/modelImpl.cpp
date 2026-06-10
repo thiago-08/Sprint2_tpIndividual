@@ -1,4 +1,8 @@
 #include "modelImpl.h"
+#include "systemImpl.h"
+
+//global variable
+std::vector<Model*> ModelImpl::models;
 
 ModelImpl::ModelImpl() : name("") {}
 
@@ -11,12 +15,14 @@ ModelImpl::ModelImpl(const ModelImpl &mod){
 }
 
 ModelImpl::~ModelImpl() {
-    for(System* s : systems){
-        delete s;
+    for (std::vector<System*>::iterator it = systems.begin(); it != systems.end(); ++it) {
+        delete *it; 
     }
-    for(Flow* f : flows){
-        delete f;
+    for (std::vector<Flow*>::iterator it = flows.begin(); it != flows.end(); ++it) {
+        delete *it;
     }
+    systems.clear();
+    flows.clear();
 }
 
 ModelImpl &ModelImpl::operator=(const ModelImpl &mod){
@@ -29,20 +35,66 @@ ModelImpl &ModelImpl::operator=(const ModelImpl &mod){
     return *this;
 }
 
-std::string ModelImpl::getName() const{
-    return name;
+Model* Model::createModel(std::string name) {
+    Model* m = new ModelImpl(name);
+    ModelImpl::models.push_back(m);
+    return m;
 }
 
-void ModelImpl::setName(std::string n){
-    name = n;
+System* ModelImpl::createSystem(std::string name, double value) {
+    System* s = new SystemImpl(name, value);
+    systems.push_back(s);
+    return s;
+}
+
+bool Model::deleteModel(std::string name) {
+    for (auto it = ModelImpl::models.begin(); it != ModelImpl::models.end(); ++it) {
+        if ((*it)->getName() == name) {
+            Model* m = *it;
+            ModelImpl::models.erase(it);
+            delete m; 
+            return true;
+        }
+    }
+    return false;
+}
+
+bool ModelImpl::deleteSystem(System* s) {
+    for (auto it = systems.begin(); it != systems.end(); ++it) {
+        if (*it == s) {
+            systems.erase(it);
+            delete s;
+            return true;
+        }
+    }
+    return false;
+}
+
+bool ModelImpl::deleteFlow(Flow* f) {
+    for (auto it = flows.begin(); it != flows.end(); ++it) {
+        if (*it == f) {
+            flows.erase(it);
+            delete f;
+            return true;
+        }
+    }
+    return false;
+}
+
+void ModelImpl::add(Flow* f) {
+    flows.push_back(f);
 }
 
 void ModelImpl::add(System *s){
     systems.push_back(s);
 }
 
-void ModelImpl::add(Flow *f){
-    flows.push_back(f);
+std::string ModelImpl::getName() const{
+    return name;
+}
+
+void ModelImpl::setName(std::string n){
+    name = n;
 }
 
 void ModelImpl::run(int t_initial, int t_end){

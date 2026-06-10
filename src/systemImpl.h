@@ -13,8 +13,7 @@ protected:
     std::string name;
     /** @brief Valor numérico atual do sistema. */
     double value;
-
-public:
+    
     /**
      * @brief Construtor padrão de SystemImpl.
      * Inicializa os atributos com valores nulos/vazios.
@@ -35,17 +34,18 @@ public:
     SystemImpl(std::string name, double value);
 
     /**
-     * @brief Destrutor virtual de SystemImpl.
-     */
-    virtual ~SystemImpl();
-
-    /**
      * @brief Operador de atribuição por cópia (Sobrecarga de operador =).
      * @param sys Objeto SystemImpl de origem para clonagem.
      * @return SystemImpl& Referência para o próprio objeto atualizado.
      */
     SystemImpl &operator=(const SystemImpl &sys);
 
+public:
+    /**
+     * @brief Destrutor virtual de SystemImpl.
+    */
+    virtual ~SystemImpl();
+    
     std::string getName() const override;
     double getValue() const override;
     void setValue(double value) override;
@@ -53,6 +53,9 @@ public:
 
     friend class UnitSystem;
     friend class UnitModel;
+    friend class ModelImpl;
+    friend class UnitFlow;    
+    friend class UnitFlowTypes;
 };
 
 #endif

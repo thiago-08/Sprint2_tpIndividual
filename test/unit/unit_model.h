@@ -33,11 +33,19 @@ public:
     /** @brief Testa a inserção de fluxos no modelo. */
     static void unit_Model_addFlow();
 
+    static void unit_Model_createModel();
+    static void unit_Model_createSystem();
+    static void unit_Model_createFlow();
+
+    static void unit_Model_deleteModel();
+    static void unit_Model_deleteSystem();
+    static void unit_Model_deleteFlow();
+
     /** @brief Testa a execução da simulação (método run). */
     static void unit_Model_run();
 };
 
 /** @brief Executa todos os testes unitários de Model. */
-void run_unit_tests_Model();
+void run_unit_tests_Model(); 
 
 #endif

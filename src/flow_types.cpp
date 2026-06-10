@@ -4,7 +4,8 @@
 
 FlowExponencial::FlowExponencial() : FlowImpl() {}
 
-FlowExponencial::FlowExponencial(std::string name) : FlowImpl(name) {}
+FlowExponencial::FlowExponencial(std::string name, System *source, System *target) 
+    : FlowImpl(name, source, target) {}
 
 FlowExponencial::FlowExponencial(const FlowExponencial& f) : FlowImpl(f) {}
 
@@ -27,7 +28,8 @@ double FlowExponencial::execute() {
 
 FlowLogistic::FlowLogistic() : FlowImpl() {}
 
-FlowLogistic::FlowLogistic(std::string name) : FlowImpl(name) {}
+FlowLogistic::FlowLogistic(std::string name, System *source, System *target) 
+    : FlowImpl(name, source, target) {}
 
 FlowLogistic::FlowLogistic(const FlowLogistic& f) : FlowImpl(f) {}
 
@@ -51,7 +53,8 @@ double FlowLogistic::execute() {
 
 FlowComplex::FlowComplex() : FlowImpl() {}
 
-FlowComplex::FlowComplex(std::string name) : FlowImpl(name) {}
+FlowComplex::FlowComplex(std::string name, System *source, System *target) 
+    : FlowImpl(name, source, target) {}
 
 FlowComplex::FlowComplex(const FlowComplex& f) : FlowImpl(f) {}
 

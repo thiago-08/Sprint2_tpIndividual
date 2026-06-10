@@ -7,54 +7,69 @@
 \DoxyCodeLine{00003\ }
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{flowImpl_8h}{flowImpl.h}}"{}}}
 \DoxyCodeLine{00005\ }
-\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classFlowExponencial_adcfa957b23dd248a40e2dbb8d061a975}{FlowExponencial}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classFlowImpl_aa835ccb3c368c683aa95d660175a298b}{FlowImpl}}}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classFlowExponencial}{FlowExponencial}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classFlowImpl}{FlowImpl}}}
 \DoxyCodeLine{00011\ \{}
-\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ \textcolor{keyword}{protected}:}
 \DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{classFlowExponencial_adcfa957b23dd248a40e2dbb8d061a975}{FlowExponencial}}();}
 \DoxyCodeLine{00017\ }
-\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{classFlowExponencial_adcfa957b23dd248a40e2dbb8d061a975}{FlowExponencial}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classFlowExponencial_adcfa957b23dd248a40e2dbb8d061a975}{FlowExponencial}}\ \&f);}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{classFlowExponencial_adcfa957b23dd248a40e2dbb8d061a975}{FlowExponencial}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classFlowExponencial}{FlowExponencial}}\ \&f);}
 \DoxyCodeLine{00023\ }
-\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classFlowExponencial_a7718731955602a499112c9c6cdc11431}{\string~FlowExponencial}}();}
-\DoxyCodeLine{00028\ }
-\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{classFlowExponencial_adcfa957b23dd248a40e2dbb8d061a975}{FlowExponencial}}\ \&\mbox{\hyperlink{classFlowExponencial_a93bf6a46ef07b19eb2673d240418ca7b}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classFlowExponencial_adcfa957b23dd248a40e2dbb8d061a975}{FlowExponencial}}\ \&f);}
-\DoxyCodeLine{00035\ }
-\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{classFlowExponencial_adcfa957b23dd248a40e2dbb8d061a975}{FlowExponencial}}(std::string\ \mbox{\hyperlink{classFlowImpl_afcc3f687245c4a6fa3d26ac386c8221b}{name}});}
-\DoxyCodeLine{00041\ }
-\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classFlowExponencial_ae68b39789d77bb7474b883d659c9552c}{execute}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00047\ \};}
-\DoxyCodeLine{00048\ }
-\DoxyCodeLine{00053\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classFlowLogistic_a8a0c7a4f52f7571d26022374ee0f3779}{FlowLogistic}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classFlowImpl_aa835ccb3c368c683aa95d660175a298b}{FlowImpl}}}
-\DoxyCodeLine{00054\ \{}
-\DoxyCodeLine{00055\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{classFlowLogistic_a8a0c7a4f52f7571d26022374ee0f3779}{FlowLogistic}}();}
-\DoxyCodeLine{00060\ }
-\DoxyCodeLine{00065\ \ \ \ \ \mbox{\hyperlink{classFlowLogistic_a8a0c7a4f52f7571d26022374ee0f3779}{FlowLogistic}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classFlowLogistic_a8a0c7a4f52f7571d26022374ee0f3779}{FlowLogistic}}\ \&f);}
-\DoxyCodeLine{00066\ }
-\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classFlowLogistic_acffaaf74e8683e574bc9e06a1357d665}{\string~FlowLogistic}}();}
-\DoxyCodeLine{00071\ }
-\DoxyCodeLine{00077\ \ \ \ \ \mbox{\hyperlink{classFlowLogistic_a8a0c7a4f52f7571d26022374ee0f3779}{FlowLogistic}}\ \&\mbox{\hyperlink{classFlowLogistic_a6014ea271c00ef014bdb22f788b4e964}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classFlowLogistic_a8a0c7a4f52f7571d26022374ee0f3779}{FlowLogistic}}\ \&f);}
-\DoxyCodeLine{00078\ }
-\DoxyCodeLine{00083\ \ \ \ \ \mbox{\hyperlink{classFlowLogistic_a8a0c7a4f52f7571d26022374ee0f3779}{FlowLogistic}}(std::string\ \mbox{\hyperlink{classFlowImpl_afcc3f687245c4a6fa3d26ac386c8221b}{name}});}
-\DoxyCodeLine{00084\ }
-\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classFlowLogistic_a9b25e905a9501d4b4bcc32183cccc4c5}{execute}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00090\ \};}
-\DoxyCodeLine{00091\ }
-\DoxyCodeLine{00096\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classFlowComplex_ac4f82f013048ecb46bd51268d8c66eea}{FlowComplex}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classFlowImpl_aa835ccb3c368c683aa95d660175a298b}{FlowImpl}}}
-\DoxyCodeLine{00097\ \{}
-\DoxyCodeLine{00098\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00102\ \ \ \ \ \mbox{\hyperlink{classFlowComplex_ac4f82f013048ecb46bd51268d8c66eea}{FlowComplex}}();}
-\DoxyCodeLine{00103\ }
-\DoxyCodeLine{00108\ \ \ \ \ \mbox{\hyperlink{classFlowComplex_ac4f82f013048ecb46bd51268d8c66eea}{FlowComplex}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classFlowComplex_ac4f82f013048ecb46bd51268d8c66eea}{FlowComplex}}\ \&f);}
-\DoxyCodeLine{00109\ }
-\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classFlowComplex_ab56a0e5042dc252f8053945cf069148e}{\string~FlowComplex}}();}
-\DoxyCodeLine{00114\ }
-\DoxyCodeLine{00120\ \ \ \ \ \mbox{\hyperlink{classFlowComplex_ac4f82f013048ecb46bd51268d8c66eea}{FlowComplex}}\ \&\mbox{\hyperlink{classFlowComplex_a3b749a57cd7a680b51ac752bd6a2ebb5}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classFlowComplex_ac4f82f013048ecb46bd51268d8c66eea}{FlowComplex}}\ \&f);}
-\DoxyCodeLine{00121\ }
-\DoxyCodeLine{00126\ \ \ \ \ \mbox{\hyperlink{classFlowComplex_ac4f82f013048ecb46bd51268d8c66eea}{FlowComplex}}(std::string\ \mbox{\hyperlink{classFlowImpl_afcc3f687245c4a6fa3d26ac386c8221b}{name}});}
-\DoxyCodeLine{00127\ }
-\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classFlowComplex_a3b541e9032dad40b9d013835887b97f6}{execute}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00133\ \};}
-\DoxyCodeLine{00134\ }
-\DoxyCodeLine{00135\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{classFlowExponencial}{FlowExponencial}}\ \&\mbox{\hyperlink{classFlowExponencial_a93bf6a46ef07b19eb2673d240418ca7b}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classFlowExponencial}{FlowExponencial}}\ \&f);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{classFlowExponencial_adcfa957b23dd248a40e2dbb8d061a975}{FlowExponencial}}(std::string\ \mbox{\hyperlink{classFlowImpl_afcc3f687245c4a6fa3d26ac386c8221b}{name}},\ \mbox{\hyperlink{classSystem}{System}}\ *\mbox{\hyperlink{classFlowImpl_a950987351656a518a1057b64c5f85af8}{source}}\ =\ \textcolor{keyword}{nullptr},\ \mbox{\hyperlink{classSystem}{System}}\ *\mbox{\hyperlink{classFlowImpl_af97039b649da65573e5582edbeb287b5}{target}}\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classFlowExponencial_a7718731955602a499112c9c6cdc11431}{\string~FlowExponencial}}();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classFlowExponencial_ae68b39789d77bb7474b883d659c9552c}{execute}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classModel}{Model}};}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classUnitFlowTypes}{UnitFlowTypes}};}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classUnitModel}{UnitModel}};}
+\DoxyCodeLine{00054\ \};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00060\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classFlowLogistic}{FlowLogistic}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classFlowImpl}{FlowImpl}}}
+\DoxyCodeLine{00061\ \{}
+\DoxyCodeLine{00062\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00066\ \ \ \ \ \mbox{\hyperlink{classFlowLogistic_a8a0c7a4f52f7571d26022374ee0f3779}{FlowLogistic}}();}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00072\ \ \ \ \ \mbox{\hyperlink{classFlowLogistic_a8a0c7a4f52f7571d26022374ee0f3779}{FlowLogistic}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classFlowLogistic}{FlowLogistic}}\ \&f);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00079\ \ \ \ \ \mbox{\hyperlink{classFlowLogistic}{FlowLogistic}}\ \&\mbox{\hyperlink{classFlowLogistic_a6014ea271c00ef014bdb22f788b4e964}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classFlowLogistic}{FlowLogistic}}\ \&f);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00087\ \ \ \ \ \mbox{\hyperlink{classFlowLogistic_a8a0c7a4f52f7571d26022374ee0f3779}{FlowLogistic}}(std::string\ \mbox{\hyperlink{classFlowImpl_afcc3f687245c4a6fa3d26ac386c8221b}{name}},\ \mbox{\hyperlink{classSystem}{System}}\ *\mbox{\hyperlink{classFlowImpl_a950987351656a518a1057b64c5f85af8}{source}}\ =\ \textcolor{keyword}{nullptr},\ \mbox{\hyperlink{classSystem}{System}}\ *\mbox{\hyperlink{classFlowImpl_af97039b649da65573e5582edbeb287b5}{target}}\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classFlowLogistic_acffaaf74e8683e574bc9e06a1357d665}{\string~FlowLogistic}}();}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classFlowLogistic_a9b25e905a9501d4b4bcc32183cccc4c5}{execute}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classModel}{Model}};}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classUnitFlowTypes}{UnitFlowTypes}};}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classUnitModel}{UnitModel}};}
+\DoxyCodeLine{00104\ \};}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00110\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classFlowComplex}{FlowComplex}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classFlowImpl}{FlowImpl}}}
+\DoxyCodeLine{00111\ \{}
+\DoxyCodeLine{00112\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00116\ \ \ \ \ \mbox{\hyperlink{classFlowComplex_ac4f82f013048ecb46bd51268d8c66eea}{FlowComplex}}();}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00122\ \ \ \ \ \mbox{\hyperlink{classFlowComplex_ac4f82f013048ecb46bd51268d8c66eea}{FlowComplex}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classFlowComplex}{FlowComplex}}\ \&f);}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00129\ \ \ \ \ \mbox{\hyperlink{classFlowComplex}{FlowComplex}}\ \&\mbox{\hyperlink{classFlowComplex_a3b749a57cd7a680b51ac752bd6a2ebb5}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classFlowComplex}{FlowComplex}}\ \&f);}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00137\ \ \ \ \ \mbox{\hyperlink{classFlowComplex_ac4f82f013048ecb46bd51268d8c66eea}{FlowComplex}}(std::string\ \mbox{\hyperlink{classFlowImpl_afcc3f687245c4a6fa3d26ac386c8221b}{name}},\ \mbox{\hyperlink{classSystem}{System}}\ *\mbox{\hyperlink{classFlowImpl_a950987351656a518a1057b64c5f85af8}{source}}\ =\ \textcolor{keyword}{nullptr},\ \mbox{\hyperlink{classSystem}{System}}\ *\mbox{\hyperlink{classFlowImpl_af97039b649da65573e5582edbeb287b5}{target}}\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classFlowComplex_ab56a0e5042dc252f8053945cf069148e}{\string~FlowComplex}}();}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classFlowComplex_a3b541e9032dad40b9d013835887b97f6}{execute}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classModel}{Model}};}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classUnitFlowTypes}{UnitFlowTypes}};}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classUnitModel}{UnitModel}};}
+\DoxyCodeLine{00154\ \};}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

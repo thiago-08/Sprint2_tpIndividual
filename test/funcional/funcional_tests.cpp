@@ -18,17 +18,11 @@ bool compareRounded(double result, double expected){
 void exponentialFuncionalTest(){
     cout << "Starting Exponential Funcional Test..." << endl;
 
-    System *pop1 = new SystemImpl("pop1", 100.0);
-    System *pop2 = new SystemImpl("pop2", 0.0);
-    FlowExponencial *exp = new FlowExponencial("exponencial");
+    Model *m = Model::createModel("Exponencial Model");
 
-    exp->setSource(pop1);
-    exp->setTarget(pop2);
-
-    Model *m = new ModelImpl("Exponencial Model");
-    m->add(pop1);
-    m->add(pop2);
-    m->add(exp);
+    System *pop1 = m->createSystem("pop1", 100.0);
+    System *pop2 = m->createSystem("pop2", 0.0);
+    Flow *exp = m->createFlow<FlowExponencial>("exponencial", pop1, pop2);
 
     m->run(0, 100);
 
@@ -37,23 +31,18 @@ void exponentialFuncionalTest(){
 
     cout << "Exponencial Test OK!" << endl;
 
-    delete m;
+    Model::deleteModel("Exponencial Model");
 }
 
 void logisticalFuncionalTest(){
     cout << "Starting Logistical Funcional Test..." << endl;
 
-    System *p1 = new SystemImpl("p1", 100.0);
-    System *p2 = new SystemImpl("p2", 10.0);
-    FlowLogistic *log = new FlowLogistic("logistical");
+    Model *m = Model::createModel("Logistical Model");
 
-    log->setSource(p1);
-    log->setTarget(p2);
+    System *p1 = m->createSystem("p1", 100.0);
+    System *p2 = m->createSystem("p2", 10.0);
 
-    Model *m = new ModelImpl("Logistical Model");
-    m->add(p1);
-    m->add(p2);
-    m->add(log);
+    Flow *log = m->createFlow<FlowLogistic>("logistical", p1, p2);
 
     m->run(0, 100);
 
@@ -62,49 +51,26 @@ void logisticalFuncionalTest(){
 
     cout << "Logistical Test OK!" << endl;
 
-    delete m;
+    Model::deleteModel("Logistical Model");
 }
 
 void complexFuncionalTest(){
     cout << "Starting Complex Funcional Test..." << endl;
 
-    System *q1 = new SystemImpl("Q1", 100.0);
-    System *q2 = new SystemImpl("Q2", 0.0);
-    System *q3 = new SystemImpl("Q3", 100.0);
-    System *q4 = new SystemImpl("Q4", 0.0);
-    System *q5 = new SystemImpl("Q5", 0.0);
+    Model *m = Model::createModel("Complex Model Q");
 
-    FlowComplex *f = new FlowComplex("f");
-    f->setSource(q1);
-    f->setTarget(q2);
-    FlowComplex *g = new FlowComplex("g");
-    g->setSource(q1);
-    g->setTarget(q3);
-    FlowComplex *r = new FlowComplex("r");
-    r->setSource(q2);
-    r->setTarget(q5);
-    FlowComplex *t = new FlowComplex("t");
-    t->setSource(q2);
-    t->setTarget(q3);
-    FlowComplex *u = new FlowComplex("u");
-    u->setSource(q3);
-    u->setTarget(q4);
-    FlowComplex *v = new FlowComplex("v");
-    v->setSource(q4);
-    v->setTarget(q1);
+    System *q1 = m->createSystem("Q1", 100.0);
+    System *q2 = m->createSystem("Q2", 0.0);
+    System *q3 = m->createSystem("Q3", 100.0);
+    System *q4 = m->createSystem("Q4", 0.0);
+    System *q5 = m->createSystem("Q5", 0.0);
 
-    Model *m = new ModelImpl("Complex Model Q");
-    m->add(q1);
-    m->add(q2);
-    m->add(q3);
-    m->add(q4);
-    m->add(q5);
-    m->add(f);
-    m->add(g);
-    m->add(r);
-    m->add(t);
-    m->add(u);
-    m->add(v);
+    Flow *f = m->createFlow<FlowComplex>("f", q1, q2);
+    Flow *g = m->createFlow<FlowComplex>("g", q1, q3);
+    Flow *r = m->createFlow<FlowComplex>("r", q2, q5);
+    Flow *t = m->createFlow<FlowComplex>("t", q2, q3);
+    Flow *u = m->createFlow<FlowComplex>("u", q3, q4);
+    Flow *v = m->createFlow<FlowComplex>("v", q4, q1);
 
     m->run(0, 100);
 
@@ -116,5 +82,5 @@ void complexFuncionalTest(){
 
     cout << "Complex Test OK!" << endl;
 
-    delete m;
+    Model::deleteModel("Complex Model Q");
 }

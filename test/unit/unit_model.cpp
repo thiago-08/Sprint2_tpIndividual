@@ -10,7 +10,7 @@ void UnitModel::unit_Model_DefaultConstructor() {
     assert(m1.systems.empty());
     assert(m1.flows.empty());
 }
-
+ 
 void UnitModel::unit_Model_ParameterizedConstructor() {
     ModelImpl m2("Model Test");
     assert(m2.name == "Model Test");
@@ -85,6 +85,71 @@ void UnitModel::unit_Model_addFlow() {
     m.add(f);
     assert(m.flows.size() == 1);
     assert(m.flows[0] == f);
+}
+
+void UnitModel::unit_Model_createModel() {
+    size_t pastSize = ModelImpl::models.size();
+    Model* m = Model::createModel("Factory Model");
+    
+    assert(m->getName() == "Factory Model");
+    assert(ModelImpl::models.size() == pastSize + 1); 
+    
+    Model::deleteModel("Factory Model"); 
+}
+
+void UnitModel::unit_Model_createSystem() {
+    ModelImpl m("Test Create System");
+    System* s = m.createSystem("Sys", 10.0);
+    
+    assert(s->getName() == "Sys");
+    assert(s->getValue() == 10.0);
+    assert(m.systems.size() == 1);
+    assert(m.systems[0] == s); 
+}
+
+void UnitModel::unit_Model_createFlow() {
+    ModelImpl m("Test Create Flow");
+    SystemImpl s1("s1", 10);
+    SystemImpl s2("s2", 20);
+    
+    Flow* f = m.createFlow<FlowExponencial>("FlowExp", &s1, &s2);
+    
+    assert(f->getName() == "FlowExp");
+    assert(f->getSource() == &s1);
+    assert(f->getTarget() == &s2);
+    assert(m.flows.size() == 1);
+    assert(m.flows[0] == f); 
+}
+
+
+void UnitModel::unit_Model_deleteModel() {
+    Model* m = Model::createModel("Model To Delete");
+    size_t pastSize = ModelImpl::models.size();
+    
+    bool deletado = Model::deleteModel("Model To Delete");
+    
+    assert(deletado == true);
+    assert(ModelImpl::models.size() == pastSize - 1); 
+}
+
+void UnitModel::unit_Model_deleteSystem() {
+    ModelImpl m("Test Delete System");
+    System* s = m.createSystem("Sys", 10.0);
+    
+    bool deletado = m.deleteSystem(s);
+    
+    assert(deletado == true);
+    assert(m.systems.empty()); 
+}
+
+void UnitModel::unit_Model_deleteFlow() {
+    ModelImpl m("Test Delete Flow");
+    Flow* f = m.createFlow<FlowExponencial>("FlowExp");
+    
+    bool deletado = m.deleteFlow(f);
+    
+    assert(deletado == true);
+    assert(m.flows.empty()); 
 }
 
 void UnitModel::unit_Model_run() {

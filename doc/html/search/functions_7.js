@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['operator_3d_0',['operator=',['../classFlowExponencial.html#a93bf6a46ef07b19eb2673d240418ca7b',1,'FlowExponencial::operator=()'],['../classFlowLogistic.html#a6014ea271c00ef014bdb22f788b4e964',1,'FlowLogistic::operator=()'],['../classFlowComplex.html#a3b749a57cd7a680b51ac752bd6a2ebb5',1,'FlowComplex::operator=()'],['../classFlowImpl.html#a323251bc0282f0f6e395add4b69d74fa',1,'FlowImpl::operator=()'],['../classModelImpl.html#a79d60302c81ec105619d7336bda77483',1,'ModelImpl::operator=()'],['../classSystemImpl.html#aa90a45b567f1d915a6c2cadb578e3deb',1,'SystemImpl::operator=()'],['../classAbstractFlow.html#a589914960c9224f7c584336a3087d6d9',1,'AbstractFlow::operator=()']]]
+  ['main_0',['main',['../src_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;main.cpp'],['../test_2funcional_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;main.cpp'],['../test_2unit_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;main.cpp']]],
+  ['modelimpl_1',['modelimpl',['../classModelImpl.html#a081505846c37ce9928f2176d77db4bc8',1,'ModelImpl::ModelImpl()'],['../classModelImpl.html#aebabc55ab626035b06fc8c9bbe3397c4',1,'ModelImpl::ModelImpl(const ModelImpl &amp;mod)'],['../classModelImpl.html#a9d64c1d4710e51d348c3efa7a3953757',1,'ModelImpl::ModelImpl(std::string name)']]]
 ];

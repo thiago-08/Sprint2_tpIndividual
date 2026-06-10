@@ -9,7 +9,7 @@
  */
 class FlowExponencial : public FlowImpl
 {
-public:
+protected:
     /**
      * @brief Construtor padrão do fluxo exponencial.
      */
@@ -22,11 +22,6 @@ public:
     FlowExponencial(const FlowExponencial &f);
 
     /**
-     * @brief Destrutor virtual do fluxo exponencial.
-     */
-    virtual ~FlowExponencial();
-
-    /**
      * @brief Operador de atribuição por cópia para o fluxo exponencial.
      * @param f Objeto FlowExponencial de origem.
      * @return FlowExponencial& Referência para o objeto atualizado.
@@ -36,14 +31,26 @@ public:
     /**
      * @brief Construtor parametrizado do fluxo exponencial.
      * @param name Nome do fluxo exponencial.
+     * @param source Ponteiro do sistema inicial
+     * @param target Ponteiro do sistema final
      */
-    FlowExponencial(std::string name);
+    FlowExponencial(std::string name, System *source = nullptr, System *target = nullptr);
+
+public:
+    /**
+     * @brief Destrutor virtual do fluxo exponencial.
+     */
+    virtual ~FlowExponencial();
 
     /**
      * @brief Executa o cálculo exponencial do fluxo.
      * @return double O resultado da equação. Retorna 0.0 se a fonte for nula.
      */
     double execute() override;
+
+    friend class Model;
+    friend class UnitFlowTypes;
+    friend class UnitModel;
 };
 
 /**
@@ -52,7 +59,7 @@ public:
  */
 class FlowLogistic : public FlowImpl
 {
-public:
+protected:
     /**
      * @brief Construtor padrão do fluxo logístico.
      */
@@ -65,11 +72,6 @@ public:
     FlowLogistic(const FlowLogistic &f);
 
     /**
-     * @brief Destrutor virtual do fluxo logístico.
-     */
-    virtual ~FlowLogistic();
-
-    /**
      * @brief Operador de atribuição por cópia para o fluxo logístico.
      * @param f Objeto FlowLogistic de origem.
      * @return FlowLogistic& Referência para o objeto atualizado.
@@ -79,14 +81,26 @@ public:
     /**
      * @brief Construtor parametrizado do fluxo logístico.
      * @param name Nome do fluxo logístico.
+     * @param source Ponteiro do sistema inicial
+     * @param target Ponteiro do sistema final
      */
-    FlowLogistic(std::string name);
+    FlowLogistic(std::string name, System *source = nullptr, System *target = nullptr);
+
+public:
+    /**
+     * @brief Destrutor virtual do fluxo logístico.
+     */
+    virtual ~FlowLogistic();
 
     /**
      * @brief Executa o cálculo logístico do fluxo.
      * @return double O resultado da equação. Retorna 0.0 se o alvo for nulo.
      */
     double execute() override;
+
+    friend class Model;
+    friend class UnitFlowTypes;
+    friend class UnitModel;
 };
 
 /**
@@ -95,7 +109,7 @@ public:
  */
 class FlowComplex : public FlowImpl
 {
-public:
+protected:
     /**
      * @brief Construtor padrão do fluxo complexo.
      */
@@ -108,11 +122,6 @@ public:
     FlowComplex(const FlowComplex &f);
 
     /**
-     * @brief Destrutor virtual do fluxo complexo.
-     */
-    virtual ~FlowComplex();
-
-    /**
      * @brief Operador de atribuição por cópia para o fluxo complexo.
      * @param f Objeto FlowComplex de origem.
      * @return FlowComplex& Referência para o objeto atualizado.
@@ -122,14 +131,26 @@ public:
     /**
      * @brief Construtor parametrizado do fluxo complexo.
      * @param name Nome do fluxo complexo.
+     * @param source Ponteiro do sistema inicial
+     * @param target Ponteiro do sistema final
      */
-    FlowComplex(std::string name);
+    FlowComplex(std::string name, System *source = nullptr, System *target = nullptr);
+
+public:
+    /**
+     * @brief Destrutor virtual do fluxo complexo.
+     */
+    virtual ~FlowComplex();
 
     /**
      * @brief Executa o cálculo complexo do fluxo.
      * @return double O resultado da equação.
      */
     double execute() override;
+
+    friend class Model;
+    friend class UnitFlowTypes;
+    friend class UnitModel;
 };
 
 #endif

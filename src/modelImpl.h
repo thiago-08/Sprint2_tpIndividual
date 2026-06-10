@@ -17,8 +17,9 @@ protected:
     std::vector<System *> systems;
     /** @brief Vetor de ponteiros contendo todos os fluxos adicionados ao modelo. */
     std::vector<Flow *> flows;
+    /** @brief Vetor de ponteiros contendo todos os modelos. */
+    static std::vector<Model*> models; 
 
-public:
     /**
      * @brief Construtor padrão de ModelImpl.
      */
@@ -37,25 +38,44 @@ public:
     ModelImpl(std::string name);
 
     /**
-     * @brief Destrutor virtual de ModelImpl.
-     */
-    virtual ~ModelImpl();
-
-    /**
      * @brief Operador de atribuição por cópia (Sobrecarga de operador =).
      * @param mod Objeto ModelImpl de origem.
      * @return ModelImpl& Referência para o próprio modelo atualizado.
      */
     ModelImpl &operator=(const ModelImpl &mod);
 
-    void add(System *s) override;
-    void add(Flow *f) override;
+
+public:
+    /**
+     * @brief Destrutor virtual de ModelImpl.
+     */
+    virtual ~ModelImpl();
+
     void run(int t_initial, int t_end) override;
-    
     std::string getName() const override;
     void setName(std::string name) override;
 
+    /**
+     * @brief Cria e adiciona um novo Sistema à implementação do modelo.
+     */
+    System* createSystem(std::string name, double value) override;
+
+    /**
+     * @brief Remove o sistema do vetor interno e o destrói da memória
+     */
+    bool deleteSystem(System* s) override;
+
+    /**
+     * @brief Remove o fluxo do vetor interno e o destrói da memória.
+     */
+    bool deleteFlow(Flow* f) override;
+
+    friend class Model; //to have acess to models
     friend class UnitModel;
+
+private:
+    void add(System *s) override;
+    void add(Flow *f) override;
 };
 
 #endif
