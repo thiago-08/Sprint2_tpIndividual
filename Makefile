@@ -1,7 +1,10 @@
+SRC_FILES = $(filter-out src/main.cpp, $(wildcard src/*.cpp))
+
 all:
 	mkdir -p bin
-	g++ $(filter-out src/main.cpp, $(wildcard src/*.cpp)) test/funcional/*.cpp -o bin/funcional_tests
-	g++ $(filter-out src/main.cpp, $(wildcard src/*.cpp)) test/unit/*.cpp -o bin/unit_tests
+	g++ -fPIC -shared $(SRC_FILES) -o bin/libmyvensim.so
+	g++ test/funcional/*.cpp -Lbin -lmyvensim -Wl,-rpath,bin -o bin/funcional_tests
+	g++ test/unit/*.cpp -Lbin -lmyvensim -Wl,-rpath,bin -o bin/unit_tests
 
 run: all
 	./bin/funcional_tests
