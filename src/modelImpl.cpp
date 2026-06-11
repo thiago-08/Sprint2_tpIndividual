@@ -1,5 +1,6 @@
 #include "modelImpl.h"
 #include "systemImpl.h"
+#include "flowImpl.h"
 
 //global variable
 std::vector<Model*> ModelImpl::models;

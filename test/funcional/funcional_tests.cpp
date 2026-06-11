@@ -1,8 +1,7 @@
 #include "funcional_tests.h"
-#include "../../src/systemImpl.h"
-#include "../../src/flow.h"
+#include "../../src/model.h"
+#include "../../src/system.h"
 #include "../../src/flow_types.h"
-#include "../../src/modelImpl.h"
 #include <cassert>
 #include <cmath>
 #include <iostream>

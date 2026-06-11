@@ -1,5 +1,5 @@
 #include "flow_types.h"
-
+#include "system.h"
 //Implementação do FlowExponencial
 
 FlowExponencial::FlowExponencial() : FlowImpl() {}

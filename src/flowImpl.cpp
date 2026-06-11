@@ -1,4 +1,5 @@
 #include "flowImpl.h"
+#include "system.h"
 
 FlowImpl::FlowImpl() : name(""), source(nullptr), target(nullptr) {}
 

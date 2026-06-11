@@ -2,8 +2,8 @@
 #define MODEL_H
 
 #include <string>
-#include "system.h"
-#include "flow.h"
+class System;
+class Flow;
 
 
 /**

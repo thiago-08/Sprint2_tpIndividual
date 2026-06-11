@@ -2,6 +2,7 @@
 #define FLOW_IMPL_H
 
 #include "flow.h"
+class System;
 
 /**
  * @brief Classe que implementa Fluxo (herda da interface). 

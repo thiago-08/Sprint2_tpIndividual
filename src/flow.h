@@ -2,7 +2,7 @@
 #define FLOW_H
 
 #include <string>
-#include "system.h"
+class System;
 
 /**
  * @brief Interface abstrata de especificação para um Fluxo.
