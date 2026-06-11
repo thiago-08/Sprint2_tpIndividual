@@ -1,6 +1,8 @@
 #ifndef FUNCIONAL_TESTS_H
 #define FUNCIONAL_TESTS_H
-
+#include "../../src/model.h"
+#include "../../src/system.h"
+#include "../../src/flow_types.h"
 /**
  * @brief Executa o teste funcional para o Fluxo Exponencial.
  * * Cria dois sistemas e um fluxo exponencial ligando-os, e testa com assert.
