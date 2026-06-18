@@ -11,23 +11,23 @@ bool compareRounded(double result, double expected){
 }
 
 void UnitFlowTypes::unit_FlowExponencial_execute() {
-    SystemImpl s1("s1", 100.0);
-    FlowExponencial fExp("Exp");
-    fExp.source = &s1; 
+    SystemHandle s1("s1", 100.0);
+    FlowHandle<FlowExponencial> fExp("Exp");
+    fExp.setSource(&s1); 
     assert(compareRounded(fExp.execute(), 1.0));
 }
 
 void UnitFlowTypes::unit_FlowLogistic_execute() {
-    SystemImpl s1("s1", 10.0);
-    FlowLogistic fLog("Log");
-    fLog.target = &s1; 
+    SystemHandle s1("s1", 10.0);
+    FlowHandle<FlowLogistic> fLog("Log");
+    fLog.setTarget(&s1); 
     assert(compareRounded(fLog.execute(), 0.0857)); 
 }
 
 void UnitFlowTypes::unit_FlowComplex_execute() {
-    SystemImpl s1("s1", 100.0);
-    FlowComplex fComp("Comp");
-    fComp.source = &s1; 
+    SystemHandle s1("s1", 100.0);
+    FlowHandle<FlowComplex> fComp("Comp");
+    fComp.setSource(&s1); 
     assert(compareRounded(fComp.execute(), 1.0));
 }
 

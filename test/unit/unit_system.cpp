@@ -3,57 +3,57 @@
 #include "../../src/systemImpl.h"
 
 void UnitSystem::unit_System_DefaultConstructor() {
-    SystemImpl s1;
-    assert(s1.name == "");
-    assert(s1.value == 0.0);
+    SystemHandle s1;
+    assert(s1.getName() == "");
+    assert(s1.getValue() == 0.0);
 }
 
 void UnitSystem::unit_System_ParameterizedConstructor() {
-    SystemImpl s2("Test System", 10.5);
-    assert(s2.name == "Test System");
-    assert(s2.value == 10.5);
+    SystemHandle s2("Test System", 10.5);
+    assert(s2.getName() == "Test System");
+    assert(s2.getValue() == 10.5);
 }
 
 void UnitSystem::unit_System_CopyConstructor() {
-    SystemImpl s2("Test System", 10.5);
-    SystemImpl s3(s2);
-    assert(s3.name == "Test System");
-    assert(s3.value == 10.5);
+    SystemHandle s2("Test System", 10.5);
+    SystemHandle s3(s2); // Testa a cópia do Handle
+    assert(s3.getName() == "Test System");
+    assert(s3.getValue() == 10.5);
 }
 
 void UnitSystem::unit_System_Operator() {
-    SystemImpl s2("Test System", 10.5);
-    SystemImpl s4;
-    s4 = s2;
-    assert(s4.name == "Test System");
-    assert(s4.value == 10.5);
+    SystemHandle s2("Test System", 10.5);
+    SystemHandle s4;
+    s4 = s2; // Testa a atribuição do Handle
+    assert(s4.getName() == "Test System");
+    assert(s4.getValue() == 10.5);
 }
 
 void UnitSystem::unit_System_destructor() {
-    SystemImpl* s1 = new SystemImpl("Sys", 10.0);
+    SystemHandle* s1 = new SystemHandle("Sys", 10.0);
     delete s1;
 }
 
 void UnitSystem::unit_System_getName() {
-    SystemImpl s("Name", 100.0);
+    SystemHandle s("Name", 100.0);
     assert(s.getName() == "Name");
 }
 
 void UnitSystem:: unit_System_setName() {
-    SystemImpl s;
+    SystemHandle s;
     s.setName("NewName");
-    assert(s.name == "NewName");
+    assert(s.getName() == "NewName");
 }
 
 void UnitSystem::unit_System_getValue() {
-    SystemImpl s("Name", 150.0);
+    SystemHandle s("Name", 150.0);
     assert(s.getValue() == 150.0);
 }
 
 void UnitSystem::unit_System_setValue() {
-    SystemImpl s;
+    SystemHandle s;
     s.setValue(25.5);
-    assert(s.value == 25.5);
+    assert(s.getValue() == 25.5);
 }
 
 void run_unit_tests_System() {

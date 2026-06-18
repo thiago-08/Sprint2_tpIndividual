@@ -4,12 +4,12 @@
 #include "../../src/systemImpl.h"
 #include "../../test/funcional/flow_types.h" 
 #include "../../src/flowImpl.h"
-
+/*
 int numHandleCreated = 0;
 int numHandleDeleted = 0;
 int numBodyCreated = 0;
 int numBodyDeleted = 0;
-
+*/
 /*!
  * @brief Class used exclusively to instantiate and test System (Body).
  */
@@ -161,9 +161,13 @@ void UnitModel::unit_Model_createFlow() {
 }
 
 void UnitModel::unit_Model_deleteModel() {
-    Model* m = new ModelHandle;
+    // Usamos a fábrica para que o modelo seja nomeado e registrado corretamente no vetor interno
+    Model::createModel("Model To Delete");
+    
+    // Agora o deleteModel vai encontrar e deletar com sucesso
     bool deleted = Model::deleteModel("Model To Delete");
-    assert(deleted == true);; 
+    
+    assert(deleted == true);
 }
 
 void UnitModel::unit_Model_deleteSystem() {

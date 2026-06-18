@@ -3,108 +3,100 @@
 #include "../../src/flowImpl.h" 
 #include "../../src/systemImpl.h" 
 
-// Classe Abstract criada para testar a base abstrata FlowImpl
-class AbstractFlow : public FlowImpl {
+// Mock Body para testar a base Flow
+class AbstractFlowBody : public FlowBody {
+protected:
+    AbstractFlowBody() : FlowBody() {}
+    AbstractFlowBody(std::string name) : FlowBody(name) {}
 public:
-    AbstractFlow() : FlowImpl() {}
-    AbstractFlow(std::string name) : FlowImpl(name) {}
-    AbstractFlow(const AbstractFlow &f) : FlowImpl(f) {} 
-    AbstractFlow& operator=(const AbstractFlow& f) {    
-        if (this == &f) return *this;
-        FlowImpl::operator=(f);
-        return *this;
-    }
     double execute() override { return 0.0; } 
+    friend class Handle<AbstractFlowBody>;
 };
 
 void UnitFlow::unit_Flow_DefaultConstructor() {
-    //teste construtor padrão
-    AbstractFlow f1;
-    assert(f1.name == "");
-    assert(f1.source == nullptr);
-    assert(f1.target == nullptr);
+    FlowHandle<AbstractFlowBody> f1;
+    assert(f1.getName() == "");
+    assert(f1.getSource() == nullptr);
+    assert(f1.getTarget() == nullptr);
 }
 
 void UnitFlow::unit_Flow_ParameterizedConstructor() {
-    //teste construtor parametrizado
-    AbstractFlow f2("Test Flow");
-    assert(f2.name == "Test Flow");
-    assert(f2.source == nullptr);
-    assert(f2.target == nullptr);
+    FlowHandle<AbstractFlowBody> f2("Test Flow");
+    assert(f2.getName() == "Test Flow");
+    assert(f2.getSource() == nullptr);
+    assert(f2.getTarget() == nullptr);
 }
 
 void UnitFlow::unit_Flow_CopyConstructor(){
-    AbstractFlow f2("Test Flow");
-
-    //teste construtor de cópia
-    SystemImpl s1("Source", 10.0);
-    SystemImpl s2("Target", 20.0);
+    FlowHandle<AbstractFlowBody> f2("Test Flow");
+    SystemHandle s1("Source", 10.0);
+    SystemHandle s2("Target", 20.0);
     f2.setSource(&s1);
     f2.setTarget(&s2);
-    AbstractFlow f3(f2);
-    assert(f3.name == "Test Flow");
-    assert(f3.source == &s1);
-    assert(f3.target == &s2);
+    
+    FlowHandle<AbstractFlowBody> f3(f2);
+    assert(f3.getName() == "Test Flow");
+    assert(f3.getSource() == &s1);
+    assert(f3.getTarget() == &s2);
 }
 
 void UnitFlow::unit_Flow_Operator(){
-    AbstractFlow f2("Test Flow");
-    SystemImpl s1("Source", 10.0);
-    SystemImpl s2("Target", 20.0);
+    FlowHandle<AbstractFlowBody> f2("Test Flow");
+    SystemHandle s1("Source", 10.0);
+    SystemHandle s2("Target", 20.0);
     f2.setSource(&s1);
     f2.setTarget(&s2);
 
-    //teste operador de atribuição
-    AbstractFlow f4;
+    FlowHandle<AbstractFlowBody> f4;
     f4 = f2;
-    assert(f4.name == "Test Flow");
-    assert(f4.source == &s1);
-    assert(f4.target == &s2);
+    assert(f4.getName() == "Test Flow");
+    assert(f4.getSource() == &s1);
+    assert(f4.getTarget() == &s2);
 }
 
 void UnitFlow::unit_Flow_destructor() {
-    AbstractFlow* f = new AbstractFlow("flow");
+    FlowHandle<AbstractFlowBody>* f = new FlowHandle<AbstractFlowBody>("flow");
     delete f;
 }
 
 void UnitFlow::unit_Flow_getName() {
-    AbstractFlow f;
-    f.name = "Name";
+    FlowHandle<AbstractFlowBody> f;
+    f.setName("Name");
     assert(f.getName() == "Name");
 }
 
 void UnitFlow::unit_Flow_setName() {
-    AbstractFlow f;
+    FlowHandle<AbstractFlowBody> f;
     f.setName("NewName");
-    assert(f.name == "NewName");
+    assert(f.getName() == "NewName");
 }
 
 void UnitFlow::unit_Flow_getSource() {
-    AbstractFlow f;
-    SystemImpl s("Sys1", 10.0);
-    f.source = &s; 
+    FlowHandle<AbstractFlowBody> f;
+    SystemHandle s("Sys1", 10.0);
+    f.setSource(&s); 
     assert(f.getSource() == &s);
 }
 
 void UnitFlow::unit_Flow_setSource() {
-    AbstractFlow f;
-    SystemImpl s("Sys1", 10.0);
+    FlowHandle<AbstractFlowBody> f;
+    SystemHandle s("Sys1", 10.0);
     f.setSource(&s);
-    assert(f.source == &s);
+    assert(f.getSource() == &s);
 }
 
 void UnitFlow::unit_Flow_getTarget() {
-    AbstractFlow f;
-    SystemImpl s("Sys2", 20.0);
-    f.target = &s; 
+    FlowHandle<AbstractFlowBody> f;
+    SystemHandle s("Sys2", 20.0);
+    f.setTarget(&s); 
     assert(f.getTarget() == &s);
 }
 
 void UnitFlow::unit_Flow_setTarget() {
-    AbstractFlow f;
-    SystemImpl s("Sys2", 20.0);
+    FlowHandle<AbstractFlowBody> f;
+    SystemHandle s("Sys2", 20.0);
     f.setTarget(&s);
-    assert(f.target == &s);
+    assert(f.getTarget() == &s);
 }
 
 void run_unit_tests_Flow() {

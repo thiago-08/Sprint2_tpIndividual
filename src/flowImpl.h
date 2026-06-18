@@ -60,23 +60,25 @@ public:
     friend class Handle<FlowBody>;
 };
 
-class FlowHandle : public Flow, public Handle<FlowBody> {
+template <typename T_BODY>
+class FlowHandle : public Flow, public Handle<T_BODY> {
     friend class UnitFlow;
     friend class UnitModel;
 public:
     FlowHandle(std::string name = "", System* source = nullptr, System* target = nullptr) {
-        pImpl_->setName(name);
-        pImpl_->setSource(source);
-        pImpl_->setTarget(target);
+        this->pImpl_->setName(name);
+        this->pImpl_->setSource(source);
+        this->pImpl_->setTarget(target);
     }
     virtual ~FlowHandle() {}
-    void setSource(System *s) override { pImpl_->setSource(s); }
-    void setTarget(System *t) override { pImpl_->setTarget(t); }
-    System *getSource() const override { return pImpl_->getSource(); }
-    System *getTarget() const override { return pImpl_->getTarget(); }
-    std::string getName() const override { return pImpl_->getName(); }
-    void setName(std::string name) override { pImpl_->setName(name); }
-    double execute() override { return pImpl_->execute(); }
+    
+    void setSource(System *s) override { this->pImpl_->setSource(s); }
+    void setTarget(System *t) override { this->pImpl_->setTarget(t); }
+    System *getSource() const override { return this->pImpl_->getSource(); }
+    System *getTarget() const override { return this->pImpl_->getTarget(); }
+    std::string getName() const override { return this->pImpl_->getName(); }
+    void setName(std::string name) override { this->pImpl_->setName(name); }
+    double execute() override { return this->pImpl_->execute(); }
 };
 
 #endif

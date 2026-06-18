@@ -48,6 +48,7 @@ public:
      */
     double execute() override;
 
+    friend class Handle<FlowExponencial>;
     friend class Model;
     friend class UnitFlowTypes;
     friend class UnitModel;
@@ -98,6 +99,7 @@ public:
      */
     double execute() override;
 
+    friend class Handle<FlowLogistic>;
     friend class Model;
     friend class UnitFlowTypes;
     friend class UnitModel;
@@ -148,6 +150,7 @@ public:
      */
     double execute() override;
 
+    friend class Handle<FlowComplex>;
     friend class Model;
     friend class UnitFlowTypes;
     friend class UnitModel;
