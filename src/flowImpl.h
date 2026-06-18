@@ -68,7 +68,7 @@ public:
         this->pImpl_->setTarget(target);
     }
     virtual ~FlowHandle() {}
-    
+    virtual double execute()=0;
     void setSource(System *s) override { this->pImpl_->setSource(s); }
     void setTarget(System *t) override { this->pImpl_->setTarget(t); }
     System *getSource() const override { return this->pImpl_->getSource(); }
