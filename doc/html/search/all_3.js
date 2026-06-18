@@ -1,10 +1,16 @@
 var searchData=
 [
-  ['e_20padrões_20de_20projeto_0',['🛠️ Detalhes da Arquitetura e Padrões de Projeto',['../index.html#autotoc_md4',1,'']]],
-  ['estrutura_20do_20diretório_1',['📁 Estrutura do Diretório',['../index.html#autotoc_md2',1,'']]],
-  ['execução_20dos_20testes_2',['▶️ Execução dos Testes',['../index.html#autotoc_md13',1,'']]],
-  ['executar_20testes_20funcionais_3',['Executar Testes Funcionais',['../index.html#autotoc_md14',1,'']]],
-  ['executar_20testes_20unitários_4',['Executar Testes Unitários',['../index.html#autotoc_md15',1,'']]],
-  ['execute_5',['execute',['../classFlow.html#a619be0b590c78202127bc6ac7fb04029',1,'Flow::execute()'],['../classFlowExponencial.html#ae68b39789d77bb7474b883d659c9552c',1,'FlowExponencial::execute()'],['../classFlowLogistic.html#a9b25e905a9501d4b4bcc32183cccc4c5',1,'FlowLogistic::execute()'],['../classFlowComplex.html#a3b541e9032dad40b9d013835887b97f6',1,'FlowComplex::execute()'],['../classFlowImpl.html#a88d14f759988f1dcf393b83a93aea1f1',1,'FlowImpl::execute()'],['../classAbstractFlow.html#aa1ceeefd1b75a6a85967deefb1ebf2b7',1,'AbstractFlow::execute()']]],
-  ['exponentialfuncionaltest_6',['exponentialfuncionaltest',['../funcional__tests_8cpp.html#a2c448ffaffdff4b03c825a01dffa6f27',1,'exponentialFuncionalTest():&#160;funcional_tests.cpp'],['../funcional__tests_8h.html#a2c448ffaffdff4b03c825a01dffa6f27',1,'exponentialFuncionalTest():&#160;funcional_tests.cpp']]]
+  ['da_20arquitetura_20e_20padrões_20de_20projeto_0',['🛠️ Detalhes da Arquitetura e Padrões de Projeto',['../index.html#autotoc_md4',1,'']]],
+  ['de_20dinâmica_20de_20sistemas_1',['MyVensim - Framework C++ para Simulação de Dinâmica de Sistemas',['../index.html',1,'']]],
+  ['de_20projeto_2',['🛠️ Detalhes da Arquitetura e Padrões de Projeto',['../index.html#autotoc_md4',1,'']]],
+  ['debuging_3',['DEBUGING',['../handleBody_8h.html#aeff79046387df0de04e7de11061a704b',1,'handleBody.h']]],
+  ['deleteflow_4',['deleteflow',['../classModelBody.html#a3a666148979632404ae9ac0d7ebc5ce9',1,'ModelBody::deleteFlow()'],['../classModelHandle.html#ac58e07ec77dab979ed23dfd428903695',1,'ModelHandle::deleteFlow()'],['../classModel.html#a6861382c7bc53f745ed3f8fd83ea0bba',1,'Model::deleteFlow(Flow *f)=0']]],
+  ['deletemodel_5',['deleteModel',['../classModel.html#aceca7cbc17c9a465845b4173ff670570',1,'Model']]],
+  ['deletesystem_6',['deletesystem',['../classModelBody.html#a533cad8b8cbb96e4b0e1f2a514067584',1,'ModelBody::deleteSystem()'],['../classModelHandle.html#a6d876e6dfe551c6ccfc2ebfeca836536',1,'ModelHandle::deleteSystem()'],['../classModel.html#a4500fe8eb178caffac2ba97e44d024bc',1,'Model::deleteSystem()']]],
+  ['detach_7',['detach',['../classBody.html#ad481d0c8368db318795c9a0a8fdd3717',1,'Body::detach()'],['../classBody.html#ad481d0c8368db318795c9a0a8fdd3717',1,'Body::detach()']]],
+  ['detalhes_20da_20arquitetura_20e_20padrões_20de_20projeto_8',['🛠️ Detalhes da Arquitetura e Padrões de Projeto',['../index.html#autotoc_md4',1,'']]],
+  ['dinâmica_20de_20sistemas_9',['MyVensim - Framework C++ para Simulação de Dinâmica de Sistemas',['../index.html',1,'']]],
+  ['diretório_10',['📁 Estrutura do Diretório',['../index.html#autotoc_md2',1,'']]],
+  ['do_20diretório_11',['📁 Estrutura do Diretório',['../index.html#autotoc_md2',1,'']]],
+  ['dos_20testes_12',['▶️ Execução dos Testes',['../index.html#autotoc_md13',1,'']]]
 ];

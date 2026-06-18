@@ -3,7 +3,7 @@
 
 #include "handleBody.h"
 #include "flow.h"
-class System;
+#include "system.h"
 
 /**
  * @brief Classe que Bodyementa Fluxo (herda da interface). 
@@ -44,16 +44,7 @@ public:
     System *getTarget() const;
     std::string getName() const;
 
-    friend void unit_Flow_constructor();
-    friend void unit_Flow_getName();
-    friend void unit_Flow_setName();
-    friend void unit_Flow_getSource();
-    friend void unit_Flow_setSource();
-    friend void unit_Flow_getTarget();
-    friend void unit_Flow_setTarget();
-
     friend class UnitFlow;
-    friend class UnitFlowTypes;
     friend class UnitModel;
     friend class Handle<FlowBody>;
 };

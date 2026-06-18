@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['models_0',['models',['../classModelImpl.html#a05dd760c9313cac8caefd2b944ac5748',1,'ModelImpl']]]
+  ['models_0',['models',['../classModelBody.html#a9777af6f2cff1ead431b0b6c90914779',1,'ModelBody']]]
 ];

@@ -32,6 +32,8 @@ public:
 
     /** @brief Testa o método setValue. */
     static void unit_System_setValue();
+
+    static void unit_System_handle();
 };
 
 /** @brief Executa todos os testes unitários de System. */

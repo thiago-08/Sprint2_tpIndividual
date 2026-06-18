@@ -38,6 +38,8 @@ public:
 
     /** @brief Testa o método setTarget. */
     static void unit_Flow_setTarget();
+
+    static void unit_Flow_handle();
 };
 
 /** @brief Executa todos os testes unitários de Flow. */

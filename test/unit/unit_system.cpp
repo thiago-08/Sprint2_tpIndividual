@@ -63,6 +63,64 @@ void UnitSystem::unit_System_setValue() {
     assert(s.pImpl_->value == 25.5);
 }
 
+void UnitSystem::unit_System_handle(){
+
+    #ifdef DEBUGING
+        numHandleCreated = 0;
+        numHandleDeleted = 0;
+        numBodyCreated = 0;
+        numBodyDeleted = 0;
+    #endif
+
+    {
+        SystemHandle s1("Sys 1", 10.0);
+        SystemHandle s2("Sys 2", 20.0);
+        assert(numBodyCreated == 2);
+        assert(numBodyDeleted == 0);
+        assert(numHandleCreated == 2);
+        assert(numHandleDeleted == 0);
+        
+        s1 = s2; 
+        assert(numBodyDeleted == 1);
+        
+        SystemHandle s3(s1); 
+        assert(numHandleCreated == 3); 
+        assert(numBodyCreated == 2);
+    }
+
+    assert(numBodyCreated == 2);
+    assert(numBodyDeleted == 2);
+    assert(numHandleCreated == 3);
+    assert(numHandleDeleted == 3);
+
+    #ifdef DEBUGING
+        numHandleCreated = 0;
+        numHandleDeleted = 0;
+        numBodyCreated = 0;
+        numBodyDeleted = 0;
+    #endif
+
+    {
+        SystemHandle* s1 = new SystemHandle("Sys 1", 10.0);
+        SystemHandle* s2 = new SystemHandle("Sys 2", 20.0);
+        assert(numBodyCreated == 2);
+        assert(numBodyDeleted == 0);
+        assert(numHandleCreated == 2);
+        assert(numHandleDeleted == 0);
+        
+        *s1 = *s2; 
+        assert(numBodyDeleted == 1);
+        
+        delete s1; 
+        delete s2; 
+    }
+
+    assert(numBodyCreated == 2);
+    assert(numBodyDeleted == 2); 
+    assert(numHandleCreated == 2);
+    assert(numHandleDeleted == 2);
+}
+
 void run_unit_tests_System() {
     UnitSystem::unit_System_DefaultConstructor();
     UnitSystem::unit_System_ParameterizedConstructor();
@@ -73,4 +131,5 @@ void run_unit_tests_System() {
     UnitSystem::unit_System_setName();
     UnitSystem::unit_System_getValue();
     UnitSystem::unit_System_setValue();
+    UnitSystem::unit_System_handle();
 }

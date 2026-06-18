@@ -42,9 +42,6 @@ public:
     friend class Handle<SystemBody>;
     friend class UnitSystem;
     friend class UnitModel;
-    friend class ModelBody;
-    friend class UnitFlow;    
-    friend class UnitFlowTypes;
 };
 
 class SystemHandle : public System, public Handle<SystemBody>{

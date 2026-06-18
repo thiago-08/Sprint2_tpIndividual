@@ -1,7 +1,6 @@
 #include "unit_flow.h"
 #include <assert.h>
 #include "../../src/flowImpl.h" 
-#include "../../src/systemImpl.h" 
 
 #ifdef DEBUGING
     extern int numHandleCreated;
@@ -117,6 +116,64 @@ void UnitFlow::unit_Flow_setTarget() {
     assert(f.pImpl_->target == &s);
 }
 
+void UnitFlow::unit_Flow_handle(){
+
+    #ifdef DEBUGING
+        numHandleCreated = 0;
+        numHandleDeleted = 0;
+        numBodyCreated = 0;
+        numBodyDeleted = 0;
+    #endif
+
+    {
+        FlowMock f1("Flow1", nullptr, nullptr);
+        FlowMock f2("Flow2", nullptr, nullptr);
+        assert(numBodyCreated == 2);
+        assert(numBodyDeleted == 0);
+        assert(numHandleCreated == 2);
+        assert(numHandleDeleted == 0);
+        
+        f1 = f2; 
+        assert(numBodyDeleted == 1);
+        
+        FlowMock f3(f1); 
+        assert(numHandleCreated == 3); 
+        assert(numBodyCreated == 2);
+    }
+    
+    assert(numBodyCreated == 2);
+    assert(numBodyDeleted == 2);
+    assert(numHandleCreated == 3);
+    assert(numHandleDeleted == 3);
+
+    #ifdef DEBUGING
+        numHandleCreated = 0;
+        numHandleDeleted = 0;
+        numBodyCreated = 0;
+        numBodyDeleted = 0;
+    #endif
+
+    {
+        FlowMock* f1 = new FlowMock("Flow 1", nullptr, nullptr);
+        FlowMock* f2 = new FlowMock("Flow 2", nullptr, nullptr);
+        assert(numBodyCreated == 2);
+        assert(numBodyDeleted == 0);
+        assert(numHandleCreated == 2);
+        assert(numHandleDeleted == 0);
+        
+        *f1 = *f2; 
+        assert(numBodyDeleted == 1);
+        
+        delete f1; 
+        delete f2; 
+    }
+
+    assert(numBodyCreated == 2);
+    assert(numBodyDeleted == 2); 
+    assert(numHandleCreated == 2);
+    assert(numHandleDeleted == 2);
+}
+
 void run_unit_tests_Flow() {
     UnitFlow::unit_Flow_DefaultConstructor();
     UnitFlow::unit_Flow_ParameterizedConstructor();
@@ -129,4 +186,5 @@ void run_unit_tests_Flow() {
     UnitFlow::unit_Flow_setSource();
     UnitFlow::unit_Flow_getTarget();
     UnitFlow::unit_Flow_setTarget();
+    UnitFlow::unit_Flow_handle();
 }

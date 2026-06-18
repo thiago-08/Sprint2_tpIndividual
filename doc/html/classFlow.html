@@ -85,17 +85,19 @@ Inheritance diagram for Flow:</div>
 <div class="dyncontent">
 <div class="center"><img src="classFlow__inherit__graph.png" border="0" usemap="#aFlow_inherit__map" alt="Inheritance graph"/></div>
 <map name="aFlow_inherit__map" id="aFlow_inherit__map">
-<area shape="rect" title="Interface abstrata de especificação para um Fluxo." alt="" coords="258,5,362,211"/>
-<area shape="rect" href="classFlowImpl.html" title="Classe que implementa Fluxo (herda da interface). Armazena ponteiros para os sistemas de origem e des..." alt="" coords="255,259,365,584"/>
-<area shape="poly" title=" " alt="" coords="313,224,313,258,307,258,307,224"/>
-<area shape="rect" href="classAbstractFlow.html" title=" " alt="" coords="5,642,129,787"/>
-<area shape="poly" title=" " alt="" coords="249,500,129,644,125,640,244,497"/>
-<area shape="rect" href="classFlowComplex.html" title="Classe que implementa o tipo de Fluxo Complexo. Herda de FlowImpl, implementando o comportamento de v..." alt="" coords="154,632,293,797"/>
-<area shape="poly" title=" " alt="" coords="261,598,250,633,245,631,255,596"/>
-<area shape="rect" href="classFlowExponencial.html" title="Classe que implementa o tipo de Fluxo Exponencial. Herda de FlowImpl e implementa a equação de compor..." alt="" coords="317,632,477,797"/>
-<area shape="poly" title=" " alt="" coords="365,596,375,631,370,633,359,598"/>
-<area shape="rect" href="classFlowLogistic.html" title="Classe que implementa o tipo de Fluxo Logístico. Herda de FlowImpl e implementa uma equação logística..." alt="" coords="501,632,631,797"/>
-<area shape="poly" title=" " alt="" coords="376,494,502,637,498,640,372,497"/>
+<area shape="rect" title="Interface abstrata de especificação para um Fluxo." alt="" coords="361,5,465,211"/>
+<area shape="rect" href="classFlowHandle.html" title=" " alt="" coords="269,259,395,484"/>
+<area shape="poly" title=" " alt="" coords="380,225,369,259,364,258,375,223"/>
+<area shape="rect" href="classFlowTestHandle.html" title="Class used exclusively to instantiate and test Flow (Handle)." alt="" coords="419,259,573,484"/>
+<area shape="poly" title=" " alt="" coords="452,223,463,258,458,259,447,225"/>
+<area shape="rect" href="classFlowComplex.html" title="Classe que implementa o tipo de Fluxo Complexo. Herda de FlowImpl, implementando o comportamento de v..." alt="" coords="5,532,144,697"/>
+<area shape="poly" title=" " alt="" coords="260,440,158,534,146,545,142,542,154,530,257,436"/>
+<area shape="rect" href="classFlowExponencial.html" title="Classe que implementa o tipo de Fluxo Exponencial. Herda de FlowImpl e implementa a equação de compor..." alt="" coords="168,532,328,697"/>
+<area shape="poly" title=" " alt="" coords="291,498,279,533,274,531,286,496"/>
+<area shape="rect" href="classFlowLogistic.html" title="Classe que implementa o tipo de Fluxo Logístico. Herda de FlowImpl e implementa uma equação logística..." alt="" coords="352,532,483,697"/>
+<area shape="poly" title=" " alt="" coords="379,496,391,531,386,533,374,498"/>
+<area shape="rect" href="classFlowMock.html" title=" " alt="" coords="507,552,623,677"/>
+<area shape="poly" title=" " alt="" coords="407,479,410,482,432,498,452,506,472,515,496,530,518,550,514,554,493,534,470,519,450,511,429,502,406,486,403,483"/>
 </map>
 </div>
 <div class="dynheader">
@@ -109,28 +111,28 @@ Collaboration diagram for Flow:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a325d284a50ca3274b126b21f5c39b9af" id="r_a325d284a50ca3274b126b21f5c39b9af"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#a325d284a50ca3274b126b21f5c39b9af">~Flow</a> ()</td></tr>
+<tr class="memitem:a325d284a50ca3274b126b21f5c39b9af" id="r_a325d284a50ca3274b126b21f5c39b9af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classHandle.html">virtual</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#a325d284a50ca3274b126b21f5c39b9af">~Flow</a> ()</td></tr>
 <tr class="memdesc:a325d284a50ca3274b126b21f5c39b9af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor virtual padrão.  <br /></td></tr>
 <tr class="separator:a325d284a50ca3274b126b21f5c39b9af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d756236982858350e7bf80a465926a7" id="r_a4d756236982858350e7bf80a465926a7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#a4d756236982858350e7bf80a465926a7">setSource</a> (<a class="el" href="classSystem.html">System</a> *s)=0</td></tr>
+<tr class="memitem:a4d756236982858350e7bf80a465926a7" id="r_a4d756236982858350e7bf80a465926a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classHandle.html">virtual</a> <a class="el" href="classHandle.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#a4d756236982858350e7bf80a465926a7">setSource</a> (<a class="el" href="classSystem.html">System</a> *<a class="el" href="classHandle.html">s</a>)=0</td></tr>
 <tr class="memdesc:a4d756236982858350e7bf80a465926a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define o sistema de origem (fonte) da transferência.  <br /></td></tr>
 <tr class="separator:a4d756236982858350e7bf80a465926a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abacc363985e28905dcc10c9fab7c4328" id="r_abacc363985e28905dcc10c9fab7c4328"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#abacc363985e28905dcc10c9fab7c4328">setTarget</a> (<a class="el" href="classSystem.html">System</a> *t)=0</td></tr>
+<tr class="memitem:abacc363985e28905dcc10c9fab7c4328" id="r_abacc363985e28905dcc10c9fab7c4328"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classHandle.html">virtual</a> <a class="el" href="classHandle.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#abacc363985e28905dcc10c9fab7c4328">setTarget</a> (<a class="el" href="classSystem.html">System</a> *<a class="el" href="classHandle.html">t</a>)=0</td></tr>
 <tr class="memdesc:abacc363985e28905dcc10c9fab7c4328"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define o sistema de destino (alvo) da transferência.  <br /></td></tr>
 <tr class="separator:abacc363985e28905dcc10c9fab7c4328"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf0f3dbb285fe82e5ba6449de06b97c8" id="r_abf0f3dbb285fe82e5ba6449de06b97c8"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classSystem.html">System</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#abf0f3dbb285fe82e5ba6449de06b97c8">getSource</a> () const =0</td></tr>
+<tr class="memitem:abf0f3dbb285fe82e5ba6449de06b97c8" id="r_abf0f3dbb285fe82e5ba6449de06b97c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classHandle.html">virtual</a> <a class="el" href="classSystem.html">System</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#abf0f3dbb285fe82e5ba6449de06b97c8">getSource</a> () <a class="el" href="classHandle.html">const</a> =0</td></tr>
 <tr class="memdesc:abf0f3dbb285fe82e5ba6449de06b97c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o ponteiro para o sistema de origem atual.  <br /></td></tr>
 <tr class="separator:abf0f3dbb285fe82e5ba6449de06b97c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb9b8d93ea0fc81868b8e02dd382a787" id="r_afb9b8d93ea0fc81868b8e02dd382a787"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classSystem.html">System</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#afb9b8d93ea0fc81868b8e02dd382a787">getTarget</a> () const =0</td></tr>
+<tr class="memitem:afb9b8d93ea0fc81868b8e02dd382a787" id="r_afb9b8d93ea0fc81868b8e02dd382a787"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classHandle.html">virtual</a> <a class="el" href="classSystem.html">System</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#afb9b8d93ea0fc81868b8e02dd382a787">getTarget</a> () <a class="el" href="classHandle.html">const</a> =0</td></tr>
 <tr class="memdesc:afb9b8d93ea0fc81868b8e02dd382a787"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o ponteiro para o sistema de destino atual.  <br /></td></tr>
 <tr class="separator:afb9b8d93ea0fc81868b8e02dd382a787"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d0340d844ab2d275222938234e44169" id="r_a2d0340d844ab2d275222938234e44169"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#a2d0340d844ab2d275222938234e44169">getName</a> () const =0</td></tr>
+<tr class="memitem:a2d0340d844ab2d275222938234e44169" id="r_a2d0340d844ab2d275222938234e44169"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classHandle.html">virtual</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#a2d0340d844ab2d275222938234e44169">getName</a> () <a class="el" href="classHandle.html">const</a> =0</td></tr>
 <tr class="memdesc:a2d0340d844ab2d275222938234e44169"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o nome identificador do fluxo.  <br /></td></tr>
 <tr class="separator:a2d0340d844ab2d275222938234e44169"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af83353015d9841e35c972625f450efe5" id="r_af83353015d9841e35c972625f450efe5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#af83353015d9841e35c972625f450efe5">setName</a> (std::string name)=0</td></tr>
+<tr class="memitem:af83353015d9841e35c972625f450efe5" id="r_af83353015d9841e35c972625f450efe5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classHandle.html">virtual</a> <a class="el" href="classHandle.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#af83353015d9841e35c972625f450efe5">setName</a> (std::string name)=0</td></tr>
 <tr class="memdesc:af83353015d9841e35c972625f450efe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define um nome identificador para o fluxo.  <br /></td></tr>
 <tr class="separator:af83353015d9841e35c972625f450efe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a619be0b590c78202127bc6ac7fb04029" id="r_a619be0b590c78202127bc6ac7fb04029"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#a619be0b590c78202127bc6ac7fb04029">execute</a> ()=0</td></tr>
+<tr class="memitem:a619be0b590c78202127bc6ac7fb04029" id="r_a619be0b590c78202127bc6ac7fb04029"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classHandle.html">virtual</a> <a class="el" href="classHandle.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#a619be0b590c78202127bc6ac7fb04029">execute</a> ()=0</td></tr>
 <tr class="memdesc:a619be0b590c78202127bc6ac7fb04029"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método virtual puro que executa a equação matemática do fluxo.  <br /></td></tr>
 <tr class="separator:a619be0b590c78202127bc6ac7fb04029"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -147,7 +149,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual Flow::~Flow </td>
+          <td class="memname"><a class="el" href="classHandle.html">virtual</a> Flow::~Flow </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -175,7 +177,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual double Flow::execute </td>
+          <td class="memname"><a class="el" href="classHandle.html">virtual</a> <a class="el" href="classHandle.html">double</a> Flow::execute </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -191,7 +193,7 @@ Public Member Functions</h2></td></tr>
 <p>Método virtual puro que executa a equação matemática do fluxo. </p>
 <dl class="section return"><dt>Returns</dt><dd>double O valor calculado a ser debitado da origem e creditado no destino. </dd></dl>
 
-<p>Implemented in <a class="el" href="classFlowExponencial.html#ae68b39789d77bb7474b883d659c9552c">FlowExponencial</a>, <a class="el" href="classFlowLogistic.html#a9b25e905a9501d4b4bcc32183cccc4c5">FlowLogistic</a>, <a class="el" href="classFlowComplex.html#a3b541e9032dad40b9d013835887b97f6">FlowComplex</a>, <a class="el" href="classAbstractFlow.html#aa1ceeefd1b75a6a85967deefb1ebf2b7">AbstractFlow</a>, and <a class="el" href="classFlowImpl.html#a88d14f759988f1dcf393b83a93aea1f1">FlowImpl</a>.</p>
+<p>Implemented in <a class="el" href="classFlowExponencial.html#ac56afcfed928e9b12fbf693eb37ec679">FlowExponencial</a>, <a class="el" href="classFlowLogistic.html#a0e1cd18e73d89b19d6b8ed2fa6eeb604">FlowLogistic</a>, <a class="el" href="classFlowComplex.html#ad9b47eebc0d8b5ae969aa3f358543990">FlowComplex</a>, <a class="el" href="classFlowMock.html#a6f0e62e6111d0314fe986e78f531ca43">FlowMock</a>, <a class="el" href="classFlowTestHandle.html#a45348eb62d74f2e3544be1ecccef7c66">FlowTestHandle</a>, and <a class="el" href="classFlowHandle.html#a4af8a4a490953bf061cf21d73528dc70">FlowHandle</a>.</p>
 
 </div>
 </div>
@@ -205,7 +207,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual std::string Flow::getName </td>
+          <td class="memname"><a class="el" href="classHandle.html">virtual</a> std::string Flow::getName </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -221,7 +223,7 @@ Public Member Functions</h2></td></tr>
 <p>Retorna o nome identificador do fluxo. </p>
 <dl class="section return"><dt>Returns</dt><dd>std::string contendo o nome do fluxo. </dd></dl>
 
-<p>Implemented in <a class="el" href="classFlowImpl.html#aa6e5ff35bd2f7cc2b8eb8a6fa20ce464">FlowImpl</a>.</p>
+<p>Implemented in <a class="el" href="classFlowHandle.html#a2445723abbc8ae3123e3589c6d590ec1">FlowHandle</a>, and <a class="el" href="classFlowTestHandle.html#a0026b40464e6c3e457a4eb38dc8b9f54">FlowTestHandle</a>.</p>
 
 </div>
 </div>
@@ -235,7 +237,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classSystem.html">System</a> * Flow::getSource </td>
+          <td class="memname"><a class="el" href="classHandle.html">virtual</a> <a class="el" href="classSystem.html">System</a> * Flow::getSource </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -251,7 +253,7 @@ Public Member Functions</h2></td></tr>
 <p>Retorna o ponteiro para o sistema de origem atual. </p>
 <dl class="section return"><dt>Returns</dt><dd>System* Ponteiro do sistema fonte. </dd></dl>
 
-<p>Implemented in <a class="el" href="classFlowImpl.html#a06c8ffdcfd36b04ddad091d2c043f5d0">FlowImpl</a>.</p>
+<p>Implemented in <a class="el" href="classFlowHandle.html#a9ced76b3e7b67f47c8651dd4e8e6ff17">FlowHandle</a>, and <a class="el" href="classFlowTestHandle.html#a003a48eea7a7f873ff9c05f01b5e9d3f">FlowTestHandle</a>.</p>
 
 </div>
 </div>
@@ -265,7 +267,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classSystem.html">System</a> * Flow::getTarget </td>
+          <td class="memname"><a class="el" href="classHandle.html">virtual</a> <a class="el" href="classSystem.html">System</a> * Flow::getTarget </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -281,7 +283,7 @@ Public Member Functions</h2></td></tr>
 <p>Retorna o ponteiro para o sistema de destino atual. </p>
 <dl class="section return"><dt>Returns</dt><dd>System* Ponteiro do sistema alvo. </dd></dl>
 
-<p>Implemented in <a class="el" href="classFlowImpl.html#adb35e3574470e91207c631fda3cdc9bd">FlowImpl</a>.</p>
+<p>Implemented in <a class="el" href="classFlowHandle.html#a660808cc3bcc0ecc404e5e43ee2df5d9">FlowHandle</a>, and <a class="el" href="classFlowTestHandle.html#abfacc9fcbf5098c7c5c070b805a104ea">FlowTestHandle</a>.</p>
 
 </div>
 </div>
@@ -295,7 +297,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void Flow::setName </td>
+          <td class="memname"><a class="el" href="classHandle.html">virtual</a> <a class="el" href="classHandle.html">void</a> Flow::setName </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>name</em></td><td>)</td>
@@ -317,7 +319,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classFlowImpl.html#adbb6fd57222e5021290d07aed97c38f0">FlowImpl</a>.</p>
+<p>Implemented in <a class="el" href="classFlowTestHandle.html#aff4d80e1aab92e506f865c12f65210a0">FlowTestHandle</a>, and <a class="el" href="classFlowHandle.html#ab695ddf76ff4e9872ead3672fd46510b">FlowHandle</a>.</p>
 
 </div>
 </div>
@@ -331,7 +333,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void Flow::setSource </td>
+          <td class="memname"><a class="el" href="classHandle.html">virtual</a> <a class="el" href="classHandle.html">void</a> Flow::setSource </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classSystem.html">System</a> *&#160;</td>
           <td class="paramname"><em>s</em></td><td>)</td>
@@ -353,7 +355,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classFlowImpl.html#a47bbb64941fde986da1198b4af443c16">FlowImpl</a>.</p>
+<p>Implemented in <a class="el" href="classFlowHandle.html#a24bd92b9d17cc644b9a6ef890592ef70">FlowHandle</a>, and <a class="el" href="classFlowTestHandle.html#ac3506ca82d2b5e12d237c01d6d471626">FlowTestHandle</a>.</p>
 
 </div>
 </div>
@@ -367,7 +369,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void Flow::setTarget </td>
+          <td class="memname"><a class="el" href="classHandle.html">virtual</a> <a class="el" href="classHandle.html">void</a> Flow::setTarget </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classSystem.html">System</a> *&#160;</td>
           <td class="paramname"><em>t</em></td><td>)</td>
@@ -389,7 +391,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classFlowImpl.html#a48a3c5a8425ce7deb3ae041f46f07368">FlowImpl</a>.</p>
+<p>Implemented in <a class="el" href="classFlowHandle.html#a01b989d7d723d221c4da641fa3266f44">FlowHandle</a>, and <a class="el" href="classFlowTestHandle.html#a6326347978247240268ecff350ebe4a5">FlowTestHandle</a>.</p>
 
 </div>
 </div>

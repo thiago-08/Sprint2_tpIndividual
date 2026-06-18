@@ -48,10 +48,8 @@ public:
      */
     double execute();
 
-    friend class Handle<FlowExponencial>;
     friend class Model;
     friend class UnitFlowTypes;
-    friend class UnitModel;
 };
 
 /**
@@ -99,10 +97,8 @@ public:
      */
     double execute();
 
-    friend class Handle<FlowLogistic>;
     friend class Model;
     friend class UnitFlowTypes;
-    friend class UnitModel;
 };
 
 /**
@@ -149,11 +145,10 @@ public:
      * @return double O resultado da equação.
      */
     double execute();
-
-    friend class Handle<FlowComplex>;
+    
     friend class Model;
     friend class UnitFlowTypes;
-    friend class UnitModel;
+
 };
 
 #endif

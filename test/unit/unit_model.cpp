@@ -2,7 +2,6 @@
 #include <assert.h>
 #include "../../src/modelImpl.h"
 #include "../../src/systemImpl.h"
-#include "../../test/funcional/flow_types.h" 
 #include "../../src/flowImpl.h"
 
 #ifdef DEBUGING

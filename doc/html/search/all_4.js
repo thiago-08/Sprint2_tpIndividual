@@ -1,22 +1,10 @@
 var searchData=
 [
-  ['flow_0',['Flow',['../classFlow.html',1,'']]],
-  ['flow_2eh_1',['flow.h',['../flow_8h.html',1,'']]],
-  ['flow_5ftypes_2ecpp_2',['flow_types.cpp',['../flow__types_8cpp.html',1,'']]],
-  ['flow_5ftypes_2eh_3',['flow_types.h',['../flow__types_8h.html',1,'']]],
-  ['flowcomplex_4',['flowcomplex',['../classFlowComplex.html',1,'FlowComplex'],['../classFlowComplex.html#aefddb7d9b187580ff932438c08cc1ba1',1,'FlowComplex::FlowComplex(std::string name, System *source=nullptr, System *target=nullptr)'],['../classFlowComplex.html#a67b868fba873dc698f3f1e1e2e9a48af',1,'FlowComplex::FlowComplex(const FlowComplex &amp;f)'],['../classFlowComplex.html#ac4f82f013048ecb46bd51268d8c66eea',1,'FlowComplex::FlowComplex()']]],
-  ['flowcomplexo_20tt_5',['&lt;tt&gt;FlowComplexo&lt;/tt&gt;',['../index.html#autotoc_md8',1,'']]],
-  ['flowexponencial_6',['flowexponencial',['../classFlowExponencial.html#adcfa957b23dd248a40e2dbb8d061a975',1,'FlowExponencial::FlowExponencial()'],['../classFlowExponencial.html#afd144495866e42251e285098511b1aa8',1,'FlowExponencial::FlowExponencial(std::string name, System *source=nullptr, System *target=nullptr)'],['../classFlowExponencial.html#ae61577a074d9faec6fada56a1096dee0',1,'FlowExponencial::FlowExponencial(const FlowExponencial &amp;f)'],['../classFlowExponencial.html',1,'FlowExponencial']]],
-  ['flowexponencial_20tt_7',['&lt;tt&gt;FlowExponencial&lt;/tt&gt;',['../index.html#autotoc_md6',1,'']]],
-  ['flowimpl_8',['flowimpl',['../classFlowImpl.html#a3a1b2da7d0cd6d767b6b7404c1ffd29a',1,'FlowImpl::FlowImpl(std::string name, System *source=nullptr, System *target=nullptr)'],['../classFlowImpl.html#a34b906caaf8a339eb02915472a50cca2',1,'FlowImpl::FlowImpl(const FlowImpl &amp;fl)'],['../classFlowImpl.html#aa835ccb3c368c683aa95d660175a298b',1,'FlowImpl::FlowImpl()'],['../classFlowImpl.html',1,'FlowImpl']]],
-  ['flowimpl_2ecpp_9',['flowImpl.cpp',['../flowImpl_8cpp.html',1,'']]],
-  ['flowimpl_2eh_10',['flowImpl.h',['../flowImpl_8h.html',1,'']]],
-  ['flowlogistic_11',['flowlogistic',['../classFlowLogistic.html',1,'FlowLogistic'],['../classFlowLogistic.html#a8a0c7a4f52f7571d26022374ee0f3779',1,'FlowLogistic::FlowLogistic()'],['../classFlowLogistic.html#aeb042bb05ed79bda2ca1ac75853784af',1,'FlowLogistic::FlowLogistic(const FlowLogistic &amp;f)'],['../classFlowLogistic.html#a39b7b90da8c0cab89ae45c6626fc54e3',1,'FlowLogistic::FlowLogistic(std::string name, System *source=nullptr, System *target=nullptr)']]],
-  ['flowlogistico_20tt_12',['&lt;tt&gt;FlowLogistico&lt;/tt&gt;',['../index.html#autotoc_md7',1,'']]],
-  ['flows_13',['flows',['../classModelImpl.html#a8e3dec4a99bfc45397fdd3da92d3fff0',1,'ModelImpl']]],
-  ['fluxos_20implementados_14',['Fluxos implementados',['../index.html#autotoc_md5',1,'']]],
-  ['framework_20c_20para_20simulação_20de_20dinâmica_20de_20sistemas_15',['MyVensim - Framework C++ para Simulação de Dinâmica de Sistemas',['../index.html',1,'']]],
-  ['funcionais_16',['Executar Testes Funcionais',['../index.html#autotoc_md14',1,'']]],
-  ['funcional_5ftests_2ecpp_17',['funcional_tests.cpp',['../funcional__tests_8cpp.html',1,'']]],
-  ['funcional_5ftests_2eh_18',['funcional_tests.h',['../funcional__tests_8h.html',1,'']]]
+  ['e_20padrões_20de_20projeto_0',['🛠️ Detalhes da Arquitetura e Padrões de Projeto',['../index.html#autotoc_md4',1,'']]],
+  ['estrutura_20do_20diretório_1',['📁 Estrutura do Diretório',['../index.html#autotoc_md2',1,'']]],
+  ['execução_20dos_20testes_2',['▶️ Execução dos Testes',['../index.html#autotoc_md13',1,'']]],
+  ['executar_20testes_20funcionais_3',['Executar Testes Funcionais',['../index.html#autotoc_md14',1,'']]],
+  ['executar_20testes_20unitários_4',['Executar Testes Unitários',['../index.html#autotoc_md15',1,'']]],
+  ['execute_5',['execute',['../classFlow.html#a619be0b590c78202127bc6ac7fb04029',1,'Flow::execute()'],['../classFlowHandle.html#a4af8a4a490953bf061cf21d73528dc70',1,'FlowHandle::execute()'],['../classFlowExponencial.html#ac56afcfed928e9b12fbf693eb37ec679',1,'FlowExponencial::execute()'],['../classFlowLogistic.html#a0e1cd18e73d89b19d6b8ed2fa6eeb604',1,'FlowLogistic::execute()'],['../classFlowComplex.html#ad9b47eebc0d8b5ae969aa3f358543990',1,'FlowComplex::execute()'],['../classFlowMock.html#a6f0e62e6111d0314fe986e78f531ca43',1,'FlowMock::execute()'],['../classFlowTestBody.html#afafa7a4bc1733619d048afd3e93af5e8',1,'FlowTestBody::execute()'],['../classFlowTestHandle.html#a45348eb62d74f2e3544be1ecccef7c66',1,'FlowTestHandle::execute()']]],
+  ['exponentialfuncionaltest_6',['exponentialfuncionaltest',['../funcional__tests_8cpp.html#a2c448ffaffdff4b03c825a01dffa6f27',1,'exponentialFuncionalTest():&#160;funcional_tests.cpp'],['../funcional__tests_8h.html#a2c448ffaffdff4b03c825a01dffa6f27',1,'exponentialFuncionalTest():&#160;funcional_tests.cpp']]]
 ];

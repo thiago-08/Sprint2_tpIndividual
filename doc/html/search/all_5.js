@@ -1,7 +1,26 @@
 var searchData=
 [
-  ['getname_0',['getname',['../classFlow.html#a2d0340d844ab2d275222938234e44169',1,'Flow::getName()'],['../classFlowImpl.html#aa6e5ff35bd2f7cc2b8eb8a6fa20ce464',1,'FlowImpl::getName()'],['../classModel.html#a17e89ca8d15af46d074423a47d3c6802',1,'Model::getName()'],['../classModelImpl.html#a6d6ef8f72413650749d9ca9850226a6b',1,'ModelImpl::getName()'],['../classSystem.html#a3bc2509274e6c346e07b0bf1151378c5',1,'System::getName()'],['../classSystemImpl.html#ad3843b49bbde11738f395c5fbeae4633',1,'SystemImpl::getName()']]],
-  ['getsource_1',['getsource',['../classFlow.html#abf0f3dbb285fe82e5ba6449de06b97c8',1,'Flow::getSource()'],['../classFlowImpl.html#a06c8ffdcfd36b04ddad091d2c043f5d0',1,'FlowImpl::getSource()']]],
-  ['gettarget_2',['gettarget',['../classFlow.html#afb9b8d93ea0fc81868b8e02dd382a787',1,'Flow::getTarget()'],['../classFlowImpl.html#adb35e3574470e91207c631fda3cdc9bd',1,'FlowImpl::getTarget()']]],
-  ['getvalue_3',['getvalue',['../classSystem.html#a41b673faa6c199eb8e4f204639fab4f2',1,'System::getValue()'],['../classSystemImpl.html#abd3ff91586d4474c0a747dc5dd6e0268',1,'SystemImpl::getValue()']]]
+  ['flow_0',['Flow',['../classFlow.html',1,'']]],
+  ['flow_2eh_1',['flow.h',['../flow_8h.html',1,'']]],
+  ['flow_5ftypes_2ecpp_2',['flow_types.cpp',['../flow__types_8cpp.html',1,'']]],
+  ['flow_5ftypes_2eh_3',['flow_types.h',['../flow__types_8h.html',1,'']]],
+  ['flowbody_4',['flowbody',['../classFlowBody.html',1,'FlowBody'],['../classFlowBody.html#a05ce331fc4bac0b62150231b294c9ca3',1,'FlowBody::FlowBody(std::string name, System *source=nullptr, System *target=nullptr)'],['../classFlowBody.html#af7c4dc7b257284ba66176985df9ad544',1,'FlowBody::FlowBody()']]],
+  ['flowcomplex_5',['flowcomplex',['../classFlowComplex.html#a67b868fba873dc698f3f1e1e2e9a48af',1,'FlowComplex::FlowComplex(const FlowComplex &amp;f)'],['../classFlowComplex.html#aefddb7d9b187580ff932438c08cc1ba1',1,'FlowComplex::FlowComplex(std::string name, System *source=nullptr, System *target=nullptr)'],['../classFlowComplex.html#ac4f82f013048ecb46bd51268d8c66eea',1,'FlowComplex::FlowComplex()'],['../classFlowComplex.html',1,'FlowComplex']]],
+  ['flowcomplexo_20tt_6',['&lt;tt&gt;FlowComplexo&lt;/tt&gt;',['../index.html#autotoc_md8',1,'']]],
+  ['flowexponencial_7',['flowexponencial',['../classFlowExponencial.html#afd144495866e42251e285098511b1aa8',1,'FlowExponencial::FlowExponencial(std::string name, System *source=nullptr, System *target=nullptr)'],['../classFlowExponencial.html#ae61577a074d9faec6fada56a1096dee0',1,'FlowExponencial::FlowExponencial(const FlowExponencial &amp;f)'],['../classFlowExponencial.html#adcfa957b23dd248a40e2dbb8d061a975',1,'FlowExponencial::FlowExponencial()'],['../classFlowExponencial.html',1,'FlowExponencial']]],
+  ['flowexponencial_20tt_8',['&lt;tt&gt;FlowExponencial&lt;/tt&gt;',['../index.html#autotoc_md6',1,'']]],
+  ['flowhandle_9',['flowhandle',['../classFlowHandle.html#a19151e0b6705968b3550625185ac3e67',1,'FlowHandle::FlowHandle()'],['../classFlowHandle.html',1,'FlowHandle']]],
+  ['flowimpl_2ecpp_10',['flowImpl.cpp',['../flowImpl_8cpp.html',1,'']]],
+  ['flowimpl_2eh_11',['flowImpl.h',['../flowImpl_8h.html',1,'']]],
+  ['flowlogistic_12',['flowlogistic',['../classFlowLogistic.html',1,'FlowLogistic'],['../classFlowLogistic.html#a8a0c7a4f52f7571d26022374ee0f3779',1,'FlowLogistic::FlowLogistic()'],['../classFlowLogistic.html#aeb042bb05ed79bda2ca1ac75853784af',1,'FlowLogistic::FlowLogistic(const FlowLogistic &amp;f)'],['../classFlowLogistic.html#a39b7b90da8c0cab89ae45c6626fc54e3',1,'FlowLogistic::FlowLogistic(std::string name, System *source=nullptr, System *target=nullptr)']]],
+  ['flowlogistico_20tt_13',['&lt;tt&gt;FlowLogistico&lt;/tt&gt;',['../index.html#autotoc_md7',1,'']]],
+  ['flowmock_14',['flowmock',['../classFlowMock.html',1,'FlowMock'],['../classFlowMock.html#aee9a1f72f6f224a222dd525595af0bc9',1,'FlowMock::FlowMock(std::string name, System *source, System *target)'],['../classFlowMock.html#a80d36c4a617ae4519d72e8fa59518143',1,'FlowMock::FlowMock()']]],
+  ['flows_15',['flows',['../classModelBody.html#ae6b056114a74e45d789bb14a4259a21f',1,'ModelBody']]],
+  ['flowtestbody_16',['FlowTestBody',['../classFlowTestBody.html',1,'']]],
+  ['flowtesthandle_17',['flowtesthandle',['../classFlowTestHandle.html#ad2991f31ca4a6d56688816aae59303d5',1,'FlowTestHandle::FlowTestHandle()'],['../classFlowTestHandle.html',1,'FlowTestHandle']]],
+  ['fluxos_20implementados_18',['Fluxos implementados',['../index.html#autotoc_md5',1,'']]],
+  ['framework_20c_20para_20simulação_20de_20dinâmica_20de_20sistemas_19',['MyVensim - Framework C++ para Simulação de Dinâmica de Sistemas',['../index.html',1,'']]],
+  ['funcionais_20',['Executar Testes Funcionais',['../index.html#autotoc_md14',1,'']]],
+  ['funcional_5ftests_2ecpp_21',['funcional_tests.cpp',['../funcional__tests_8cpp.html',1,'']]],
+  ['funcional_5ftests_2eh_22',['funcional_tests.h',['../funcional__tests_8h.html',1,'']]]
 ];
