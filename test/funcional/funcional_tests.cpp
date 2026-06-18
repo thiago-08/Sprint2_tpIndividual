@@ -19,7 +19,7 @@ void exponentialFuncionalTest(){
 
     System *pop1 = m->createSystem("pop1", 100.0);
     System *pop2 = m->createSystem("pop2", 0.0);
-    Flow *exp = m->createFlow<FlowHandle<FlowExponencial>>("exponencial", pop1, pop2);
+    Flow *exp = m->createFlow<FlowExponencial>("exponencial", pop1, pop2);
 
     m->run(0, 100);
 
@@ -39,7 +39,7 @@ void logisticalFuncionalTest(){
     System *p1 = m->createSystem("p1", 100.0);
     System *p2 = m->createSystem("p2", 10.0);
 
-    Flow *log = m->createFlow<FlowHandle<FlowLogistic>>("logistical", p1, p2);
+    Flow *log = m->createFlow<FlowLogistic>("logistical", p1, p2);
 
     m->run(0, 100);
 
@@ -62,12 +62,12 @@ void complexFuncionalTest(){
     System *q4 = m->createSystem("Q4", 0.0);
     System *q5 = m->createSystem("Q5", 0.0);
 
-    Flow *f = m->createFlow<FlowHandle<FlowComplex>>("f", q1, q2);
-    Flow *g = m->createFlow<FlowHandle<FlowComplex>>("g", q1, q3);
-    Flow *r = m->createFlow<FlowHandle<FlowComplex>>("r", q2, q5);
-    Flow *t = m->createFlow<FlowHandle<FlowComplex>>("t", q2, q3);
-    Flow *u = m->createFlow<FlowHandle<FlowComplex>>("u", q3, q4);
-    Flow *v = m->createFlow<FlowHandle<FlowComplex>>("v", q4, q1);
+    Flow *f = m->createFlow<FlowComplex>("f", q1, q2);
+    Flow *g = m->createFlow<FlowComplex>("g", q1, q3);
+    Flow *r = m->createFlow<FlowComplex>("r", q2, q5);
+    Flow *t = m->createFlow<FlowComplex>("t", q2, q3);
+    Flow *u = m->createFlow<FlowComplex>("u", q3, q4);
+    Flow *v = m->createFlow<FlowComplex>("v", q4, q1);
 
     m->run(0, 100);
 

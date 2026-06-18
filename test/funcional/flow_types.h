@@ -7,7 +7,7 @@
  * @brief Classe que implementa o tipo de Fluxo Exponencial.
  * Herda de FlowImpl e implementa a equação de comportamento exponencial.
  */
-class FlowExponencial : public FlowBody
+class FlowExponencial : public FlowHandle
 {
 protected:
     /**
@@ -46,7 +46,7 @@ public:
      * @brief Executa o cálculo exponencial do fluxo.
      * @return double O resultado da equação. Retorna 0.0 se a fonte for nula.
      */
-    double execute() override;
+    double execute();
 
     friend class Handle<FlowExponencial>;
     friend class Model;
@@ -58,7 +58,7 @@ public:
  * @brief Classe que implementa o tipo de Fluxo Logístico.
  * Herda de FlowImpl e implementa uma equação logística baseada no valor do sistema alvo.
  */
-class FlowLogistic : public FlowBody
+class FlowLogistic : public FlowHandle
 {
 protected:
     /**
@@ -97,7 +97,7 @@ public:
      * @brief Executa o cálculo logístico do fluxo.
      * @return double O resultado da equação. Retorna 0.0 se o alvo for nulo.
      */
-    double execute() override;
+    double execute();
 
     friend class Handle<FlowLogistic>;
     friend class Model;
@@ -109,7 +109,7 @@ public:
  * @brief Classe que implementa o tipo de Fluxo Complexo.
  * Herda de FlowImpl, implementando o comportamento de vários sistemas interligados.
  */
-class FlowComplex : public FlowBody
+class FlowComplex : public FlowHandle
 {
 protected:
     /**
@@ -148,7 +148,7 @@ public:
      * @brief Executa o cálculo complexo do fluxo.
      * @return double O resultado da equação.
      */
-    double execute() override;
+    double execute();
 
     friend class Handle<FlowComplex>;
     friend class Model;

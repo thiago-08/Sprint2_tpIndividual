@@ -2,6 +2,13 @@
 #include <assert.h>
 #include "../../src/systemImpl.h"
 
+#ifdef DEBUGING
+    extern int numHandleCreated;
+	extern int numHandleDeleted;
+	extern int numBodyCreated;
+	extern int  numBodyDeleted;
+#endif
+
 void UnitSystem::unit_System_DefaultConstructor() {
     SystemHandle s1;
     assert(s1.getName() == "");

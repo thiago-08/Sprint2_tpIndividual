@@ -44,8 +44,6 @@ public:
     System *getTarget() const;
     std::string getName() const;
 
-    virtual double execute() = 0;
-
     friend void unit_Flow_constructor();
     friend void unit_Flow_getName();
     friend void unit_Flow_setName();
@@ -60,8 +58,7 @@ public:
     friend class Handle<FlowBody>;
 };
 
-template <typename T_BODY>
-class FlowHandle : public Flow, public Handle<T_BODY> {
+class FlowHandle : public Flow, public Handle<FlowBody> {
     friend class UnitFlow;
     friend class UnitModel;
 public:
@@ -78,7 +75,6 @@ public:
     System *getTarget() const override { return this->pImpl_->getTarget(); }
     std::string getName() const override { return this->pImpl_->getName(); }
     void setName(std::string name) override { this->pImpl_->setName(name); }
-    double execute() override { return this->pImpl_->execute(); }
 };
 
 #endif

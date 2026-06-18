@@ -2,10 +2,10 @@
 #include "../../src/system.h"
 //Implementação do FlowExponencial
 
-FlowExponencial::FlowExponencial() : FlowBody() {}
+FlowExponencial::FlowExponencial() : FlowHandle() {}
 
 FlowExponencial::FlowExponencial(std::string name, System *source, System *target) 
-    : FlowBody(name, source, target) {}
+    : FlowHandle(name, source, target) {}
 
 FlowExponencial::~FlowExponencial() {}
 
@@ -18,10 +18,10 @@ double FlowExponencial::execute() {
 
 // Implementação do FlowLogistic
 
-FlowLogistic::FlowLogistic() : FlowBody() {}
+FlowLogistic::FlowLogistic() : FlowHandle() {}
 
 FlowLogistic::FlowLogistic(std::string name, System *source, System *target) 
-    : FlowBody(name, source, target) {}
+    : FlowHandle(name, source, target) {}
 
 FlowLogistic::~FlowLogistic() {}
 
@@ -35,10 +35,10 @@ double FlowLogistic::execute() {
 
 // Implementação do FlowComplex
 
-FlowComplex::FlowComplex() : FlowBody() {}
+FlowComplex::FlowComplex() : FlowHandle() {}
 
 FlowComplex::FlowComplex(std::string name, System *source, System *target) 
-    : FlowBody(name, source, target) {}
+    : FlowHandle(name, source, target) {}
 
 FlowComplex::~FlowComplex() {}
 

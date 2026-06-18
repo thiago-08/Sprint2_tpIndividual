@@ -4,12 +4,14 @@
 #include "../../src/systemImpl.h"
 #include "../../test/funcional/flow_types.h" 
 #include "../../src/flowImpl.h"
-/*
-int numHandleCreated = 0;
-int numHandleDeleted = 0;
-int numBodyCreated = 0;
-int numBodyDeleted = 0;
-*/
+
+#ifdef DEBUGING
+    extern int numHandleCreated;
+    extern int numHandleDeleted;
+    extern int numBodyCreated;
+    extern int numBodyDeleted;
+#endif
+
 /*!
  * @brief Class used exclusively to instantiate and test System (Body).
  */
