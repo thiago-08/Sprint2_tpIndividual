@@ -37,6 +37,8 @@ public:
 
     /** @brief Testa a execução da simulação (método run). */
     static void unit_Model_run();
+
+    //static void unit_Model_handle();
 };
 
 /** @brief Executa todos os testes unitários de Model. */

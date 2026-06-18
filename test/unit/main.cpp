@@ -13,6 +13,7 @@ using namespace std;
 #endif
 
 int main() {
+    cout << "--- STARTING UNIT TESTS ---" << endl;
     run_unit_tests_System();
     cout << "All System Tests were sucessful" << endl;
     run_unit_tests_Flow();

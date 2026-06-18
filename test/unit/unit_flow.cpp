@@ -10,107 +10,111 @@
 	extern int  numBodyDeleted;
 #endif
 
-// Mock Body para testar a base Flow
-class AbstractFlowBody : public FlowBody {
-protected:
-    AbstractFlowBody() : FlowBody() {}
-    AbstractFlowBody(std::string name) : FlowBody(name) {}
+class FlowMock : public FlowHandle {
 public:
-    friend class Handle<AbstractFlowBody>;
-};
-
-class FlowTest : public FlowHandle {
-public:
-    FlowTest() : FlowHandle() {}
-    FlowTest(std::string name, System* source, System* target) : FlowHandle(name, source, target) {}
-    virtual ~FlowTest() {}
+    FlowMock() : FlowHandle() {}
+    FlowMock(std::string name, System* source, System* target) : FlowHandle(name, source, target) {}
+    virtual ~FlowMock() {}
     virtual double execute() override { return 0.0; }
 };
 
+class SystemMock : public System{
+public:
+    virtual ~SystemMock() {}
+    virtual std::string getName() const override { return ""; }
+    virtual void setName(std::string) override {}
+    virtual double getValue() const override { return 0.0; }
+    virtual void setValue(double) override {}
+};
+
 void UnitFlow::unit_Flow_DefaultConstructor() {
-    FlowTest f1;
-    assert(f1.getName() == "");
-    assert(f1.getSource() == nullptr);
-    assert(f1.getTarget() == nullptr);
+    FlowMock f1;
+    assert(f1.pImpl_->name == "");
+    assert(f1.pImpl_->source == nullptr);
+    assert(f1.pImpl_->target == nullptr);
 }
 
 void UnitFlow::unit_Flow_ParameterizedConstructor() {
-    FlowTest f2;
-    assert(f2.getName() == "");
-    assert(f2.getSource() == nullptr);
-    assert(f2.getTarget() == nullptr);
+    SystemMock s1;
+    SystemMock s2;
+    FlowMock f2 ("Test Flow", &s1, &s2);
+    assert(f2.pImpl_->name == "Test Flow");
+    assert(f2.pImpl_->source == &s1);
+    assert(f2.pImpl_->target == &s2);
 }
 
 void UnitFlow::unit_Flow_CopyConstructor(){
-    FlowTest f2;
-    SystemHandle s1("Source", 10.0);
-    SystemHandle s2("Target", 20.0);
-    f2.setSource(&s1);
-    f2.setTarget(&s2);
+    FlowMock f2;
+    SystemMock s1;
+    SystemMock s2;
+    f2.pImpl_->name = "Flow";
+    f2.pImpl_->source = &s1;
+    f2.pImpl_->target = &s2;
     
-    FlowTest f3(f2);
-    assert(f3.getName() == "");
-    assert(f3.getSource() == &s1);
-    assert(f3.getTarget() == &s2);
+    FlowMock f3(f2);
+    assert(f3.pImpl_->name == "Flow");
+    assert(f3.pImpl_->source == &s1);
+    assert(f3.pImpl_->target == &s2);
 }
 
 void UnitFlow::unit_Flow_Operator(){
-    FlowTest f2;
-    SystemHandle s1("Source", 10.0);
-    SystemHandle s2("Target", 20.0);
-    f2.setSource(&s1);
-    f2.setTarget(&s2);
+    FlowMock f2;
+    SystemMock s1;
+    SystemMock s2;
+    f2.pImpl_->name = "Flow";
+    f2.pImpl_->source = &s1;
+    f2.pImpl_->target = &s2;
 
-    FlowTest f4;
+    FlowMock f4;
     f4 = f2;
-    assert(f4.getName() == "");
-    assert(f4.getSource() == &s1);
-    assert(f4.getTarget() == &s2);
+    assert(f4.pImpl_->name == "Flow");
+    assert(f4.pImpl_->source == &s1);
+    assert(f4.pImpl_->target == &s2);
 }
 
 void UnitFlow::unit_Flow_destructor() {
-    FlowTest* f = new FlowTest;
+    FlowMock* f = new FlowMock;
     delete f;
 }
 
 void UnitFlow::unit_Flow_getName() {
-    FlowTest f;
-    f.setName("Name");
+    FlowMock f;
+    f.pImpl_->name = "Name";
     assert(f.getName() == "Name");
 }
 
 void UnitFlow::unit_Flow_setName() {
-    FlowTest f;
+    FlowMock f;
     f.setName("NewName");
-    assert(f.getName() == "NewName");
+    assert(f.pImpl_->name == "NewName");
 }
 
 void UnitFlow::unit_Flow_getSource() {
-    FlowTest f;
-    SystemHandle s("Sys1", 10.0);
-    f.setSource(&s); 
+    FlowMock f;
+    SystemMock s;
+    f.pImpl_->source = &s; 
     assert(f.getSource() == &s);
 }
 
 void UnitFlow::unit_Flow_setSource() {
-    FlowTest f;
-    SystemHandle s("Sys1", 10.0);
+    FlowMock f;
+    SystemMock s;
     f.setSource(&s);
-    assert(f.getSource() == &s);
+    assert(f.pImpl_->source == &s);
 }
 
 void UnitFlow::unit_Flow_getTarget() {
-    FlowTest f;
-    SystemHandle s("Sys2", 20.0);
-    f.setTarget(&s); 
+    FlowMock f;
+    SystemMock s;
+    f.pImpl_->target = &s; 
     assert(f.getTarget() == &s);
 }
 
 void UnitFlow::unit_Flow_setTarget() {
-    FlowTest f;
-    SystemHandle s("Sys2", 20.0);
+    FlowMock f;
+    SystemMock s;
     f.setTarget(&s);
-    assert(f.getTarget() == &s);
+    assert(f.pImpl_->target == &s);
 }
 
 void run_unit_tests_Flow() {

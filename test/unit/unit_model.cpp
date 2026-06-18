@@ -94,7 +94,7 @@ void UnitModel::unit_Model_ParameterizedConstructor() {
 
 void UnitModel::unit_Model_destructor() {
     ModelHandle* m = new ModelHandle();
-    m->pImpl_->systems.push_back(new SystemHandle("Sys", 10.0));
+    m->pImpl_->systems.push_back(new SystemTestHandle("Sys", 10.0));
     delete m; 
 }
 
@@ -112,7 +112,7 @@ void UnitModel::unit_Model_setName() {
 
 void UnitModel::unit_Model_addSystem() {
     ModelHandle m;
-    System* s = new SystemHandle("Sys", 10.0); 
+    System* s = new SystemTestHandle("Sys", 10.0); 
     m.add(s);
     assert(m.pImpl_->systems.size() == 1);
     assert(m.pImpl_->systems[0] == s);
@@ -134,18 +134,21 @@ void UnitModel::unit_Model_createModel() {
     assert(mh->pImpl_->name == "Factory Model");
     assert(ModelBody::models.size() == pastSize + 1); 
     
-    Model::deleteModel("Factory Model");
+    ModelBody::models.pop_back(); 
+    delete m;
 }
 
 void UnitModel::unit_Model_createSystem() {
-    ModelHandle m("Test Create System");
-    System* s = m.createSystem("Sys", 10.0);
+    ModelHandle* m = new ModelHandle();
+    System* s = m->createSystem("Sys", 10.0);
     
     SystemHandle* sh = dynamic_cast<SystemHandle*>(s);
     assert(sh->pImpl_->name == "Sys");
     assert(sh->pImpl_->value == 10.0);
-    assert(m.pImpl_->systems.size() == 1);
-    assert(m.pImpl_->systems[0] == s);
+    assert(m->pImpl_->systems.size() == 1);
+    assert(m->pImpl_->systems[0] == s);
+
+    delete m;
 }
 
 void UnitModel::unit_Model_createFlow() {
@@ -164,12 +167,15 @@ void UnitModel::unit_Model_createFlow() {
 
 void UnitModel::unit_Model_deleteModel() {
     // Usamos a fábrica para que o modelo seja nomeado e registrado corretamente no vetor interno
-    Model::createModel("Model To Delete");
+    ModelHandle* m = new ModelHandle("Model To Delete");
+    ModelBody::models.push_back(m);
+    size_t sizeBefore = ModelBody::models.size();
     
     // Agora o deleteModel vai encontrar e deletar com sucesso
     bool deleted = Model::deleteModel("Model To Delete");
     
     assert(deleted == true);
+    assert(ModelBody::models.size() == sizeBefore - 1);
 }
 
 void UnitModel::unit_Model_deleteSystem() {
@@ -194,8 +200,8 @@ void UnitModel::unit_Model_deleteFlow() {
 
 void UnitModel::unit_Model_run() {
     ModelHandle m("Test Run");
-    SystemHandle* s1 = new SystemHandle("Source", 100.0);
-    SystemHandle* s2 = new SystemHandle("Target", 0.0);
+    SystemTestHandle* s1 = new SystemTestHandle("Source", 100.0);
+    SystemTestHandle* s2 = new SystemTestHandle("Target", 0.0);
    
     Flow* f = new FlowTestHandle("Flow", s1, s2);
     
@@ -208,6 +214,14 @@ void UnitModel::unit_Model_run() {
     assert(s1->pImpl_->value == 99.0);
     assert(s2->pImpl_->value == 1.0);
 }
+
+/*
+void UnitModel::unit_Model_handle(){
+    {
+
+    }
+}
+*/
 
 void run_unit_tests_Model() {
     UnitModel::unit_Model_DefaultConstructor();
