@@ -1,5 +1,5 @@
-#ifndef SYSTEM_Body_H
-#define SYSTEM_Body_H
+#ifndef SYSTEM_IMPL_H
+#define SYSTEM_IMPL_H
 
 #include "system.h"
 #include "handleBody.h"

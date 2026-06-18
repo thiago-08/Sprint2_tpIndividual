@@ -1,5 +1,5 @@
-#ifndef MODEL_Body_H
-#define MODEL_Body_H
+#ifndef MODEL_IMPL_H
+#define MODEL_IMPL_H
 
 #include "handleBody.h"
 #include "model.h"

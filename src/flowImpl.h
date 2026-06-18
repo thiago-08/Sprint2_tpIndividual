@@ -1,5 +1,5 @@
-#ifndef FLOW_Body_H
-#define FLOW_Body_H
+#ifndef FLOW_IMPL_H
+#define FLOW_IMPL_H
 
 #include "handleBody.h"
 #include "flow.h"
@@ -76,7 +76,6 @@ public:
     System *getTarget() const override { return pImpl_->getTarget(); }
     std::string getName() const override { return pImpl_->getName(); }
     void setName(std::string name) override { pImpl_->setName(name); }
-    double execute() override { return pImpl_->execute(); }
 };
 
 #endif
