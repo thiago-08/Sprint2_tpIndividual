@@ -16,7 +16,7 @@ Inheritance diagram for Model\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=550pt]{classModel__inherit__graph}
+\includegraphics[width=182pt]{classModel__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -31,49 +31,47 @@ Collaboration diagram for Model\+:\nopagebreak
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-virtual \mbox{\hyperlink{classModel_af032d8433c87a0a3a431faf6563a1f03}{\texorpdfstring{$\sim$}{\string~}\+Model}} ()
+\mbox{\hyperlink{classHandle}{virtual}} \mbox{\hyperlink{classModel_af032d8433c87a0a3a431faf6563a1f03}{\texorpdfstring{$\sim$}{\string~}\+Model}} ()
 \begin{DoxyCompactList}\small\item\em Destrutor virtual padrão. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classModel_afb83fc80a9aa5fb9ade329a726d65277}{create\+System}} (std\+::string name, double value)=0
+\mbox{\hyperlink{classHandle}{virtual}} \mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classModel_afb83fc80a9aa5fb9ade329a726d65277}{create\+System}} (std\+::string name, \mbox{\hyperlink{classHandle}{double}} value)=0
 \begin{DoxyCompactList}\small\item\em Cria, instancia e adiciona um novo sistema ao modelo. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T\+\_\+\+FLOW$>$ }\\\mbox{\hyperlink{classFlow}{Flow}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classModel_ac9bcfd3fc0b11c33a5a9c6aa46eaf503}{create\+Flow}} (std\+::string name, \mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}source=nullptr, \mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}target=nullptr)
+{\footnotesize template$<$\mbox{\hyperlink{classHandle}{typename}} \mbox{\hyperlink{classHandle}{T\+\_\+\+FLOW}} $>$ }\\\mbox{\hyperlink{classFlow}{Flow}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classModel_ac9bcfd3fc0b11c33a5a9c6aa46eaf503}{create\+Flow}} (std\+::string name, \mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}source=\mbox{\hyperlink{classHandle}{nullptr}}, \mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}target=\mbox{\hyperlink{classHandle}{nullptr}})
 \begin{DoxyCompactList}\small\item\em Cria, instancia e adiciona um novo Fluxo ao modelo através de template. \end{DoxyCompactList}\item 
-virtual bool \mbox{\hyperlink{classModel_a4500fe8eb178caffac2ba97e44d024bc}{delete\+System}} (\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}s)=0
+\mbox{\hyperlink{classHandle}{virtual}} \mbox{\hyperlink{classHandle}{bool}} \mbox{\hyperlink{classModel_a4500fe8eb178caffac2ba97e44d024bc}{delete\+System}} (\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classHandle}{s}})=0
 \begin{DoxyCompactList}\small\item\em Destrutor virtual de system. \end{DoxyCompactList}\item 
-virtual bool \mbox{\hyperlink{classModel_a6861382c7bc53f745ed3f8fd83ea0bba}{delete\+Flow}} (\mbox{\hyperlink{classFlow}{Flow}} \texorpdfstring{$\ast$}{*}f)=0
+\mbox{\hyperlink{classHandle}{virtual}} \mbox{\hyperlink{classHandle}{bool}} \mbox{\hyperlink{classModel_a6861382c7bc53f745ed3f8fd83ea0bba}{delete\+Flow}} (\mbox{\hyperlink{classFlow}{Flow}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classHandle}{f}})=0
 \begin{DoxyCompactList}\small\item\em Destrutor virtual de flow. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{classModel_a8fced9263616fdd102fa0cf54a51462e}{run}} (int t\+\_\+initial, int t\+\_\+end)=0
+\mbox{\hyperlink{classHandle}{virtual}} \mbox{\hyperlink{classHandle}{void}} \mbox{\hyperlink{classModel_a8fced9263616fdd102fa0cf54a51462e}{run}} (\mbox{\hyperlink{classHandle}{int}} \mbox{\hyperlink{classHandle}{t\+\_\+initial}}, \mbox{\hyperlink{classHandle}{int}} \mbox{\hyperlink{classHandle}{t\+\_\+end}})=0
 \begin{DoxyCompactList}\small\item\em Executa todo o sistema de simulação, processando os fluxos e atualizando os sistemas para cada ciclo temporal. \end{DoxyCompactList}\item 
-virtual std\+::string \mbox{\hyperlink{classModel_a17e89ca8d15af46d074423a47d3c6802}{get\+Name}} () const =0
+\mbox{\hyperlink{classHandle}{virtual}} std\+::string \mbox{\hyperlink{classModel_a17e89ca8d15af46d074423a47d3c6802}{get\+Name}} () \mbox{\hyperlink{classHandle}{const}} =0
 \begin{DoxyCompactList}\small\item\em Retorna o nome identificador do modelo. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{classModel_ab01f68499cf9c680d64d07c7160b4cf7}{set\+Name}} (std\+::string name)=0
+\mbox{\hyperlink{classHandle}{virtual}} \mbox{\hyperlink{classHandle}{void}} \mbox{\hyperlink{classModel_ab01f68499cf9c680d64d07c7160b4cf7}{set\+Name}} (std\+::string name)=0
 \begin{DoxyCompactList}\small\item\em Define um nome identificador para o modelo. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static \mbox{\hyperlink{classModel}{Model}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classModel_a51a7b3b82e35760309ff35991cc35f7e}{create\+Model}} (std\+::string name)
+\mbox{\hyperlink{classHandle}{static}} \mbox{\hyperlink{classModel}{Model}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classModel_a51a7b3b82e35760309ff35991cc35f7e}{create\+Model}} (std\+::string name)
 \begin{DoxyCompactList}\small\item\em Método estático da fábrica de model. \end{DoxyCompactList}\item 
-static bool \mbox{\hyperlink{classModel_aceca7cbc17c9a465845b4173ff670570}{delete\+Model}} (std\+::string name)
+\mbox{\hyperlink{classHandle}{static}} \mbox{\hyperlink{classHandle}{bool}} \mbox{\hyperlink{classModel_aceca7cbc17c9a465845b4173ff670570}{delete\+Model}} (std\+::string name)
 \begin{DoxyCompactList}\small\item\em Método estático da fábrica de model. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-virtual void \mbox{\hyperlink{classModel_a1c57f13b17e1fd598fa7ebe1fa55a7df}{add}} (\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}s)=0
+\mbox{\hyperlink{classHandle}{virtual}} \mbox{\hyperlink{classHandle}{void}} \mbox{\hyperlink{classModel_a1c57f13b17e1fd598fa7ebe1fa55a7df}{add}} (\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classHandle}{s}})=0
 \begin{DoxyCompactList}\small\item\em Registra e adiciona um Sistema ao escopo do modelo. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{classModel_ad248b54040ab38124af621cbc4c7c2e6}{add}} (\mbox{\hyperlink{classFlow}{Flow}} \texorpdfstring{$\ast$}{*}f)=0
+\mbox{\hyperlink{classHandle}{virtual}} \mbox{\hyperlink{classHandle}{void}} \mbox{\hyperlink{classModel_ad248b54040ab38124af621cbc4c7c2e6}{add}} (\mbox{\hyperlink{classFlow}{Flow}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classHandle}{f}})=0
 \begin{DoxyCompactList}\small\item\em Registra e adiciona um Fluxo ao escopo do modelo. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Interface abstrata de especificação para um Modelo de Simulação. 
 
-\label{doc-constructors}
-\Hypertarget{classModel_doc-constructors}
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classModel_af032d8433c87a0a3a431faf6563a1f03}\index{Model@{Model}!````~Model@{\texorpdfstring{$\sim$}{\string~}Model}}
+\Hypertarget{classModel_af032d8433c87a0a3a431faf6563a1f03}\label{classModel_af032d8433c87a0a3a431faf6563a1f03} 
+\index{Model@{Model}!````~Model@{\texorpdfstring{$\sim$}{\string~}Model}}
 \index{````~Model@{\texorpdfstring{$\sim$}{\string~}Model}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Model()}{\string~Model()}}
-{\footnotesize\ttfamily \label{classModel_af032d8433c87a0a3a431faf6563a1f03} 
-virtual Model\+::\texorpdfstring{$\sim$}{\string~}\+Model (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classHandle}{virtual}} Model\+::\texorpdfstring{$\sim$}{\string~}\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 
 
@@ -81,14 +79,12 @@ Destrutor virtual padrão.
 
 
 
-\label{doc-func-members}
-\Hypertarget{classModel_doc-func-members}
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classModel_ad248b54040ab38124af621cbc4c7c2e6}\index{Model@{Model}!add@{add}}
+\Hypertarget{classModel_ad248b54040ab38124af621cbc4c7c2e6}\label{classModel_ad248b54040ab38124af621cbc4c7c2e6} 
+\index{Model@{Model}!add@{add}}
 \index{add@{add}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily \label{classModel_ad248b54040ab38124af621cbc4c7c2e6} 
-virtual void Model\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFlow}{Flow}} \texorpdfstring{$\ast$}{*}}]{f}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classHandle}{virtual}} \mbox{\hyperlink{classHandle}{void}} Model\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFlow}{Flow}} \texorpdfstring{$\ast$}{*}}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
 
 
 
@@ -103,11 +99,11 @@ Registra e adiciona um Fluxo ao escopo do modelo.
 
 Implemented in \mbox{\hyperlink{classModelHandle_a2933227c778ebac15ec01ba83355b39a}{Model\+Handle}}.
 
-\Hypertarget{classModel_a1c57f13b17e1fd598fa7ebe1fa55a7df}\index{Model@{Model}!add@{add}}
+\Hypertarget{classModel_a1c57f13b17e1fd598fa7ebe1fa55a7df}\label{classModel_a1c57f13b17e1fd598fa7ebe1fa55a7df} 
+\index{Model@{Model}!add@{add}}
 \index{add@{add}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \label{classModel_a1c57f13b17e1fd598fa7ebe1fa55a7df} 
-virtual void Model\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}}]{s}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classHandle}{virtual}} \mbox{\hyperlink{classHandle}{void}} Model\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
 
 
 
@@ -122,12 +118,12 @@ Registra e adiciona um Sistema ao escopo do modelo.
 
 Implemented in \mbox{\hyperlink{classModelHandle_a8be4061afed9ea571e49e25c3e0e5f3d}{Model\+Handle}}.
 
-\Hypertarget{classModel_ac9bcfd3fc0b11c33a5a9c6aa46eaf503}\index{Model@{Model}!createFlow@{createFlow}}
+\Hypertarget{classModel_ac9bcfd3fc0b11c33a5a9c6aa46eaf503}\label{classModel_ac9bcfd3fc0b11c33a5a9c6aa46eaf503} 
+\index{Model@{Model}!createFlow@{createFlow}}
 \index{createFlow@{createFlow}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{createFlow()}{createFlow()}}
-{\footnotesize\ttfamily \label{classModel_ac9bcfd3fc0b11c33a5a9c6aa46eaf503} 
-template$<$typename T\+\_\+\+FLOW$>$ \\
-\mbox{\hyperlink{classFlow}{Flow}} \texorpdfstring{$\ast$}{*} Model\+::create\+Flow (\begin{DoxyParamCaption}\item[{std\+::string}]{name}{, }\item[{\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}}]{source}{ = {\ttfamily nullptr}, }\item[{\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}}]{target}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classHandle}{typename}} \mbox{\hyperlink{classHandle}{T\+\_\+\+FLOW}} $>$ \\
+\mbox{\hyperlink{classFlow}{Flow}} \texorpdfstring{$\ast$}{*} Model\+::create\+Flow (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}}]{source = {\ttfamily \mbox{\hyperlink{classHandle}{nullptr}}},  }\item[{\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}}]{target = {\ttfamily \mbox{\hyperlink{classHandle}{nullptr}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -141,21 +137,21 @@ Cria, instancia e adiciona um novo Fluxo ao modelo através de template.
 \begin{DoxyReturn}{Returns}
 Flow\texorpdfstring{$\ast$}{*} Ponteiro para o fluxo recém-\/criado 
 \end{DoxyReturn}
-\Hypertarget{classModel_a51a7b3b82e35760309ff35991cc35f7e}\index{Model@{Model}!createModel@{createModel}}
+\Hypertarget{classModel_a51a7b3b82e35760309ff35991cc35f7e}\label{classModel_a51a7b3b82e35760309ff35991cc35f7e} 
+\index{Model@{Model}!createModel@{createModel}}
 \index{createModel@{createModel}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{createModel()}{createModel()}}
-{\footnotesize\ttfamily \label{classModel_a51a7b3b82e35760309ff35991cc35f7e} 
-\mbox{\hyperlink{classModel}{Model}} \texorpdfstring{$\ast$}{*} Model\+::create\+Model (\begin{DoxyParamCaption}\item[{std\+::string}]{name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classModel}{Model}} \texorpdfstring{$\ast$}{*} Model\+::create\+Model (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
 Método estático da fábrica de model. 
 
-\Hypertarget{classModel_afb83fc80a9aa5fb9ade329a726d65277}\index{Model@{Model}!createSystem@{createSystem}}
+\Hypertarget{classModel_afb83fc80a9aa5fb9ade329a726d65277}\label{classModel_afb83fc80a9aa5fb9ade329a726d65277} 
+\index{Model@{Model}!createSystem@{createSystem}}
 \index{createSystem@{createSystem}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{createSystem()}{createSystem()}}
-{\footnotesize\ttfamily \label{classModel_afb83fc80a9aa5fb9ade329a726d65277} 
-virtual \mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*} Model\+::create\+System (\begin{DoxyParamCaption}\item[{std\+::string}]{name}{, }\item[{double}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classHandle}{virtual}} \mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*} Model\+::create\+System (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{classHandle}{double}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -168,11 +164,11 @@ System\texorpdfstring{$\ast$}{*} Ponteiro para o sistema recém-\/criado
 
 Implemented in \mbox{\hyperlink{classModelHandle_a0aac88c3ecd66c298662816c46f6c9e3}{Model\+Handle}}.
 
-\Hypertarget{classModel_a6861382c7bc53f745ed3f8fd83ea0bba}\index{Model@{Model}!deleteFlow@{deleteFlow}}
+\Hypertarget{classModel_a6861382c7bc53f745ed3f8fd83ea0bba}\label{classModel_a6861382c7bc53f745ed3f8fd83ea0bba} 
+\index{Model@{Model}!deleteFlow@{deleteFlow}}
 \index{deleteFlow@{deleteFlow}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{deleteFlow()}{deleteFlow()}}
-{\footnotesize\ttfamily \label{classModel_a6861382c7bc53f745ed3f8fd83ea0bba} 
-virtual bool Model\+::delete\+Flow (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFlow}{Flow}} \texorpdfstring{$\ast$}{*}}]{f}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classHandle}{virtual}} \mbox{\hyperlink{classHandle}{bool}} Model\+::delete\+Flow (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFlow}{Flow}} \texorpdfstring{$\ast$}{*}}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -182,21 +178,21 @@ Destrutor virtual de flow.
 
 Implemented in \mbox{\hyperlink{classModelHandle_ac58e07ec77dab979ed23dfd428903695}{Model\+Handle}}.
 
-\Hypertarget{classModel_aceca7cbc17c9a465845b4173ff670570}\index{Model@{Model}!deleteModel@{deleteModel}}
+\Hypertarget{classModel_aceca7cbc17c9a465845b4173ff670570}\label{classModel_aceca7cbc17c9a465845b4173ff670570} 
+\index{Model@{Model}!deleteModel@{deleteModel}}
 \index{deleteModel@{deleteModel}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{deleteModel()}{deleteModel()}}
-{\footnotesize\ttfamily \label{classModel_aceca7cbc17c9a465845b4173ff670570} 
-bool Model\+::delete\+Model (\begin{DoxyParamCaption}\item[{std\+::string}]{name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classHandle}{bool}} Model\+::delete\+Model (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
 Método estático da fábrica de model. 
 
-\Hypertarget{classModel_a4500fe8eb178caffac2ba97e44d024bc}\index{Model@{Model}!deleteSystem@{deleteSystem}}
+\Hypertarget{classModel_a4500fe8eb178caffac2ba97e44d024bc}\label{classModel_a4500fe8eb178caffac2ba97e44d024bc} 
+\index{Model@{Model}!deleteSystem@{deleteSystem}}
 \index{deleteSystem@{deleteSystem}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{deleteSystem()}{deleteSystem()}}
-{\footnotesize\ttfamily \label{classModel_a4500fe8eb178caffac2ba97e44d024bc} 
-virtual bool Model\+::delete\+System (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}}]{s}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classHandle}{virtual}} \mbox{\hyperlink{classHandle}{bool}} Model\+::delete\+System (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -206,11 +202,11 @@ Destrutor virtual de system.
 
 Implemented in \mbox{\hyperlink{classModelHandle_a6d876e6dfe551c6ccfc2ebfeca836536}{Model\+Handle}}.
 
-\Hypertarget{classModel_a17e89ca8d15af46d074423a47d3c6802}\index{Model@{Model}!getName@{getName}}
+\Hypertarget{classModel_a17e89ca8d15af46d074423a47d3c6802}\label{classModel_a17e89ca8d15af46d074423a47d3c6802} 
+\index{Model@{Model}!getName@{getName}}
 \index{getName@{getName}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{getName()}{getName()}}
-{\footnotesize\ttfamily \label{classModel_a17e89ca8d15af46d074423a47d3c6802} 
-virtual std\+::string Model\+::get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classHandle}{virtual}} std\+::string Model\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -223,11 +219,11 @@ std\+::string contendo o nome.
 
 Implemented in \mbox{\hyperlink{classModelHandle_a46c2e64955c7d0f2515a310155252962}{Model\+Handle}}.
 
-\Hypertarget{classModel_a8fced9263616fdd102fa0cf54a51462e}\index{Model@{Model}!run@{run}}
+\Hypertarget{classModel_a8fced9263616fdd102fa0cf54a51462e}\label{classModel_a8fced9263616fdd102fa0cf54a51462e} 
+\index{Model@{Model}!run@{run}}
 \index{run@{run}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{run()}{run()}}
-{\footnotesize\ttfamily \label{classModel_a8fced9263616fdd102fa0cf54a51462e} 
-virtual void Model\+::run (\begin{DoxyParamCaption}\item[{int}]{t\+\_\+initial}{, }\item[{int}]{t\+\_\+end}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classHandle}{virtual}} \mbox{\hyperlink{classHandle}{void}} Model\+::run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classHandle}{int}}}]{t\+\_\+initial,  }\item[{\mbox{\hyperlink{classHandle}{int}}}]{t\+\_\+end }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -244,11 +240,11 @@ Executa todo o sistema de simulação, processando os fluxos e atualizando os si
 
 Implemented in \mbox{\hyperlink{classModelHandle_a9b9cbe4c69b080d35bea3105cc48aa71}{Model\+Handle}}.
 
-\Hypertarget{classModel_ab01f68499cf9c680d64d07c7160b4cf7}\index{Model@{Model}!setName@{setName}}
+\Hypertarget{classModel_ab01f68499cf9c680d64d07c7160b4cf7}\label{classModel_ab01f68499cf9c680d64d07c7160b4cf7} 
+\index{Model@{Model}!setName@{setName}}
 \index{setName@{setName}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{setName()}{setName()}}
-{\footnotesize\ttfamily \label{classModel_ab01f68499cf9c680d64d07c7160b4cf7} 
-virtual void Model\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classHandle}{virtual}} \mbox{\hyperlink{classHandle}{void}} Model\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
