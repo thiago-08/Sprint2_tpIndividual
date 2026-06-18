@@ -97,10 +97,10 @@ public:
 	void detach (){	
 		if ( --refCount_ == 0 )	{ 
 			delete this; 
+			#ifdef DEBUGING
+            	numBodyDeleted++;
+        	#endif
 		}
-        #ifdef DEBUGING
-            numBodyDeleted++;
-        #endif
 	}
 
 	/// Returns the number of references to this object

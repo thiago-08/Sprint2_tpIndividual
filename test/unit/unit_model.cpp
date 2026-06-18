@@ -215,13 +215,64 @@ void UnitModel::unit_Model_run() {
     assert(s2->pImpl_->value == 1.0);
 }
 
-/*
-void UnitModel::unit_Model_handle(){
-    {
 
+void UnitModel::unit_Model_handle(){
+
+    #ifdef DEBUGING
+        numHandleCreated = 0;
+        numHandleDeleted = 0;
+        numBodyCreated = 0;
+        numBodyDeleted = 0;
+    #endif
+
+    {
+        ModelHandle m1("Test");
+        ModelHandle m2("Test2");
+        assert(numBodyCreated == 2);
+        assert(numBodyDeleted == 0);
+        assert(numHandleCreated == 2);
+        assert(numHandleDeleted == 0);
+        m1 = m2;
+        assert(numBodyDeleted == 1);
+        ModelHandle m3(m1); //construtor de cópia
+        // Cria um Handle novo, mas reaproveita o Body
+        assert(numHandleCreated == 3); 
+        assert(numBodyCreated == 2);
     }
+    assert(numBodyCreated == 2);
+    assert(numBodyDeleted == 2);
+    assert(numHandleCreated == 3);
+    assert(numHandleDeleted == 3);
+
+    
+    #ifdef DEBUGING
+        numHandleCreated = 0;
+        numHandleDeleted = 0;
+        numBodyCreated = 0;
+        numBodyDeleted = 0;
+    #endif
+
+    {
+        ModelHandle* m1 = new ModelHandle("Test");
+        ModelHandle* m2 = new ModelHandle("Test2");
+        assert(numBodyCreated == 2);
+        assert(numBodyDeleted == 0);
+        assert(numHandleCreated == 2);
+        assert(numHandleDeleted == 0);
+        *m1 = *m2;
+        assert(numBodyDeleted == 1);
+        //colocar delete pois usamos new
+        delete m1;
+        delete m2;
+    }
+
+    assert(numBodyCreated == 2);
+    assert(numBodyDeleted == 2);
+    assert(numHandleCreated == 2);
+    assert(numHandleDeleted == 2);
+
 }
-*/
+
 
 void run_unit_tests_Model() {
     UnitModel::unit_Model_DefaultConstructor();
@@ -238,4 +289,5 @@ void run_unit_tests_Model() {
     UnitModel::unit_Model_deleteSystem();
     UnitModel::unit_Model_deleteFlow();
     UnitModel::unit_Model_run();
+    UnitModel::unit_Model_handle();
 }
