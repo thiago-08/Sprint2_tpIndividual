@@ -63,48 +63,63 @@ public:
     friend class Handle<ModelBody>;
 
 private:
+
+    /** @brief Adiciona um sistema ao modelo. */
     void add(System *s);
+    
+    /** @brief Adiciona um fluxo ao modelo. */
     void add(Flow *f);
 };
 
+/** @brief Classe que representa um manipulador de modelo. */
 class ModelHandle : public Model, public Handle<ModelBody>{
 friend class UnitModel;
 public:
+    /** @brief Construtor de ModelHandle com parâmetro opcional. */ 
     ModelHandle(std::string name = "") {
         pImpl_->setName(name);
     }
 
+    /** @brief Destrutor virtual de ModelHandle. */
     virtual ~ModelHandle() {}
 
+    /** @brief Método para criar um novo sistema. */
     System* createSystem(std::string name, double value) override {
         return pImpl_->createSystem(name, value);
     }
 
+    /** @brief Método para remover um sistema do modelo. */
     bool deleteSystem(System* s) override {
         return pImpl_->deleteSystem(s);
     }
 
+    /** @brief Método para remover um fluxo do modelo. */
     bool deleteFlow(Flow* f) override {
         return pImpl_->deleteFlow(f);
     }
 
+    /** @brief Método para executar o modelo. */
     void run(int t_initial, int t_end) override {
         pImpl_->run(t_initial, t_end);
     }
 
+    /** @brief Método para obter o nome do modelo. */
     std::string getName() const override {
         return pImpl_->getName();
     }
 
+    /** @brief Método para definir o nome do modelo. */
     void setName(std::string name) override {
         pImpl_->setName(name);
     }
 
 protected:
+    /** @brief Método para adicionar um sistema ao modelo. */
     void add(System *s) override {
         pImpl_->add(s);
     }
 
+    /** @brief Método para adicionar um fluxo ao modelo. */
     void add(Flow *f) override {
         pImpl_->add(f);
     }

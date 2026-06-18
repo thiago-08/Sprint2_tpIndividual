@@ -39,6 +39,7 @@ public:
     /** @brief Testa o método setTarget. */
     static void unit_Flow_setTarget();
 
+    /** @brief Testa a integração entre os métodos de FlowImpl. */
     static void unit_Flow_handle();
 };
 

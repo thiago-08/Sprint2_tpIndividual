@@ -27,17 +27,28 @@ public:
     /** @brief Testa a inserção de fluxos no modelo. */
     static void unit_Model_addFlow();
 
+    /** @brief Testa a criação de um modelo. */
     static void unit_Model_createModel();
+
+    /** @brief Testa a criação de um sistema. */
     static void unit_Model_createSystem();
+    
+    /** @brief Testa a criação de um fluxo. */
     static void unit_Model_createFlow();
 
+    /** @brief Testa a remoção de um modelo. */
     static void unit_Model_deleteModel();
+
+    /** @brief Testa a remoção de um sistema. */
     static void unit_Model_deleteSystem();
+
+    /** @brief Testa a remoção de um fluxo. */
     static void unit_Model_deleteFlow();
 
     /** @brief Testa a execução da simulação (método run). */
     static void unit_Model_run();
 
+    /** @brief Testa o tratamento de eventos. */
     static void unit_Model_handle();
 };
 

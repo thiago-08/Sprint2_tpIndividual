@@ -34,9 +34,16 @@ public:
     */
     virtual ~SystemBody();
     
+    /** @brief Método para obter o nome do sistema. */
     std::string getName() const;
+    
+    /** @brief Método para obter o valor do sistema. */
     double getValue() const;
+    
+    /** @brief Método para definir o valor do sistema. */
     void setValue(double value);
+    
+    /** @brief Método para definir o nome do sistema. */
     void setName(std::string name);
 
     friend class Handle<SystemBody>;
@@ -48,14 +55,26 @@ class SystemHandle : public System, public Handle<SystemBody>{
     friend class UnitSystem;
     friend class UnitModel;
 public:
+    
+/** @brief Construtor de SystemHandle com parâmetros opcionais. */
     SystemHandle(std::string n = "", double v = 0.0) {
         pImpl_->setName(n);
         pImpl_->setValue(v);
     }
+
+    /** @brief Destrutor virtual de SystemHandle. */
     virtual ~SystemHandle() {}
+
+    /** @brief Método para obter o nome do sistema. */
     std::string getName() const override { return pImpl_->getName(); }
+    
+    /** @brief Método para definir o nome do sistema. */
     void setName(std::string n) override { pImpl_->setName(n); }
+    
+    /** @brief Método para obter o valor do sistema. */
     double getValue() const override { return pImpl_->getValue(); }
+    
+    /** @brief Método para definir o valor do sistema. */
     void setValue(double v) override { pImpl_->setValue(v); }
 };
 
