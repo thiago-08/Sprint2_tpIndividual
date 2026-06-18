@@ -1,61 +1,65 @@
-#ifndef SYSTEM_IMPL_H
-#define SYSTEM_IMPL_H
+#ifndef SYSTEM_Body_H
+#define SYSTEM_Body_H
 
 #include "system.h"
+#include "handleBody.h"
 
 /**
- * @brief Classe que implementa System (herda da interface).
+ * @brief Classe que Bodyementa System (herda da interface).
  * Herda da interface System e gerencia o armazenamento do nome e do valor numérico.
  */
-class SystemImpl : public System {
+class SystemBody : public Body {
 protected:
     /** @brief Nome do sistema. */
     std::string name;
     /** @brief Valor numérico atual do sistema. */
     double value;
-    
+
     /**
-     * @brief Construtor padrão de SystemImpl.
+     * @brief Construtor padrão de SystemBody.
      * Inicializa os atributos com valores nulos/vazios.
      */
-    SystemImpl();
+    SystemBody();
 
     /**
-     * @brief Construtor de cópia de SystemImpl.
-     * @param sys Objeto SystemImpl de origem a ser copiado.
-     */
-    SystemImpl(const SystemImpl &sys);
-
-    /**
-     * @brief Construtor parametrizado de SystemImpl.
+     * @brief Construtor parametrizado de SystemBody.
      * @param name Nome inicial a ser atribuído ao sistema.
      * @param value Valor inicial a ser atribuído ao sistema.
      */
-    SystemImpl(std::string name, double value);
-
-    /**
-     * @brief Operador de atribuição por cópia (Sobrecarga de operador =).
-     * @param sys Objeto SystemImpl de origem para clonagem.
-     * @return SystemImpl& Referência para o próprio objeto atualizado.
-     */
-    SystemImpl &operator=(const SystemImpl &sys);
+    SystemBody(std::string name, double value);
 
 public:
     /**
-     * @brief Destrutor virtual de SystemImpl.
+     * @brief Destrutor virtual de SystemBody.
     */
-    virtual ~SystemImpl();
+    virtual ~SystemBody();
     
-    std::string getName() const override;
-    double getValue() const override;
-    void setValue(double value) override;
-    void setName(std::string name) override;
+    std::string getName() const;
+    double getValue() const;
+    void setValue(double value);
+    void setName(std::string name);
 
+    friend class Handle<SystemBody>;
     friend class UnitSystem;
     friend class UnitModel;
-    friend class ModelImpl;
+    friend class ModelBody;
     friend class UnitFlow;    
     friend class UnitFlowTypes;
+};
+
+class SystemHandle : public System, public Handle<SystemBody>{
+    friend class UnitSystem;
+    friend class UnitModel;
+public:
+    SystemHandle(std::string n = "", double v = 0.0) {
+        pImpl_->setName(n);
+        pImpl_->setValue(v);
+    }
+    virtual ~SystemHandle() {}
+    std::string getName() const override { return pImpl_->getName(); }
+    void setName(std::string n) override { pImpl_->setName(n); }
+    double getValue() const override { return pImpl_->getValue(); }
+    void setValue(double v) override { pImpl_->setValue(v); }
 };
 
 #endif

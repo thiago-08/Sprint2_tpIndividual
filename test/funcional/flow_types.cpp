@@ -1,21 +1,13 @@
 #include "flow_types.h"
-#include "system.h"
+#include "../../src/system.h"
 //Implementação do FlowExponencial
 
-FlowExponencial::FlowExponencial() : FlowImpl() {}
+FlowExponencial::FlowExponencial() : FlowBody() {}
 
 FlowExponencial::FlowExponencial(std::string name, System *source, System *target) 
-    : FlowImpl(name, source, target) {}
-
-FlowExponencial::FlowExponencial(const FlowExponencial& f) : FlowImpl(f) {}
+    : FlowBody(name, source, target) {}
 
 FlowExponencial::~FlowExponencial() {}
-
-FlowExponencial& FlowExponencial::operator=(const FlowExponencial& f) {
-    if (this == &f) return *this;
-    Flow::operator=(f); 
-    return *this;
-}
 
 double FlowExponencial::execute() {
     if (getSource() != nullptr) {
@@ -26,20 +18,12 @@ double FlowExponencial::execute() {
 
 // Implementação do FlowLogistic
 
-FlowLogistic::FlowLogistic() : FlowImpl() {}
+FlowLogistic::FlowLogistic() : FlowBody() {}
 
 FlowLogistic::FlowLogistic(std::string name, System *source, System *target) 
-    : FlowImpl(name, source, target) {}
-
-FlowLogistic::FlowLogistic(const FlowLogistic& f) : FlowImpl(f) {}
+    : FlowBody(name, source, target) {}
 
 FlowLogistic::~FlowLogistic() {}
-
-FlowLogistic& FlowLogistic::operator=(const FlowLogistic& f) {
-    if (this == &f) return *this;
-    Flow::operator=(f);
-    return *this;
-}
 
 double FlowLogistic::execute() {
     if (getTarget() != nullptr) {
@@ -51,20 +35,12 @@ double FlowLogistic::execute() {
 
 // Implementação do FlowComplex
 
-FlowComplex::FlowComplex() : FlowImpl() {}
+FlowComplex::FlowComplex() : FlowBody() {}
 
 FlowComplex::FlowComplex(std::string name, System *source, System *target) 
-    : FlowImpl(name, source, target) {}
-
-FlowComplex::FlowComplex(const FlowComplex& f) : FlowImpl(f) {}
+    : FlowBody(name, source, target) {}
 
 FlowComplex::~FlowComplex() {}
-
-FlowComplex& FlowComplex::operator=(const FlowComplex& f) {
-    if (this == &f) return *this;
-    Flow::operator=(f);
-    return *this;
-}
 
 double FlowComplex::execute() {
     if (getSource() != nullptr) {

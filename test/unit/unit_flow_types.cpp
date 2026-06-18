@@ -1,7 +1,7 @@
 #include "unit_flow_types.h"
 #include <assert.h>
 #include <math.h>
-#include "../../src/flow_types.h"
+#include "../../test/funcional/flow_types.h"
 #include "../../src/systemImpl.h"
 
 bool compareRounded(double result, double expected){

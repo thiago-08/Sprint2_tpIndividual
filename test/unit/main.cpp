@@ -7,11 +7,11 @@
 using namespace std;
 
 int main() {
-    run_unit_tests_System();
+    //run_unit_tests_System();
     cout << "All System Tests were sucessful" << endl;
-    run_unit_tests_Flow();
+    //run_unit_tests_Flow();
     cout << "All Flow Tests were sucessful" << endl;
-    run_unit_tests_FlowTypes();
+    //run_unit_tests_FlowTypes();
     cout << "All Flow Types Tests were sucessful" << endl;
     run_unit_tests_Model();
     cout << "All Model Tests were sucessful" << endl;

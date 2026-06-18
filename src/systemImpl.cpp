@@ -1,37 +1,23 @@
 #include "systemImpl.h"
 
-SystemImpl::SystemImpl() : name(""), value(0.0) {}
+SystemBody::SystemBody() : name(""), value(0.0) {}
 
-SystemImpl::SystemImpl(const SystemImpl &sys){
-    this->name = sys.name;
-    this->value = sys.value;
-}
+SystemBody::~SystemBody() {}
 
-SystemImpl::~SystemImpl() {}
+SystemBody::SystemBody(std::string name, double value) : name(name), value(value) {}
 
-SystemImpl &SystemImpl::operator=(const SystemImpl &sys){
-    if (this == &sys){
-        return *this;
-    }
-    this->name = sys.name;
-    this->value = sys.value;
-    return *this;
-}
-
-SystemImpl::SystemImpl(std::string name, double value) : name(name), value(value) {}
-
-std::string SystemImpl::getName() const{
+std::string SystemBody::getName() const{
     return name;
 }
 
-void SystemImpl::setName(std::string n){
+void SystemBody::setName(std::string n){
     name = n;
 }
 
-double SystemImpl::getValue() const{
+double SystemBody::getValue() const{
     return value;
 }
 
-void SystemImpl::setValue(double v){
+void SystemBody::setValue(double v){
     value = v;
 }

@@ -1,14 +1,15 @@
-#ifndef FLOW_IMPL_H
-#define FLOW_IMPL_H
+#ifndef FLOW_Body_H
+#define FLOW_Body_H
 
+#include "handleBody.h"
 #include "flow.h"
 class System;
 
 /**
- * @brief Classe que implementa Fluxo (herda da interface). 
+ * @brief Classe que Bodyementa Fluxo (herda da interface). 
  * Armazena ponteiros para os sistemas de origem e destino, além do nome do fluxo.
  */
-class FlowImpl : public Flow
+class FlowBody : public Body
 {
 protected:
     /** @brief Nome do fluxo. */
@@ -18,41 +19,30 @@ protected:
     /** @brief Ponteiro para o sistema de destino. */
     System *target;
     /**
-     * @brief Construtor padrão de FlowImpl.
+     * @brief Construtor padrão de FlowBody.
      */
-    FlowImpl();
+    FlowBody();
     /**
-     * @brief Construtor de cópia de FlowImpl.
-     * @param fl Objeto FlowImpl de origem a ser copiado.
-     */
-    FlowImpl(const FlowImpl &fl);
-    /**
-     * @brief Operador de atribuição por cópia (Sobrecarga de operador =).
-     * @param fl Objeto FlowImpl de origem.
-     * @return FlowImpl& Referência para o próprio fluxo atualizado.
-     */
-    FlowImpl &operator=(const FlowImpl &fl);
-    /**
-     * @brief Construtor parametrizado de FlowImpl.
+     * @brief Construtor parametrizado de FlowBody.
      * @param name Nome a ser atribuído ao fluxo.
      * @param source Ponteiro do sistema inicial
      * @param target Ponteiro do sistema final
      */
-    FlowImpl(std::string name, System *source = nullptr, System *target = nullptr);
+    FlowBody(std::string name, System *source = nullptr, System *target = nullptr);
     
 public:
     /**
-     * @brief Destrutor virtual de FlowImpl.
+     * @brief Destrutor virtual de FlowBody.
      */
-    virtual ~FlowImpl();
+    virtual ~FlowBody();
 
-    void setSource(System *s) override;
-    void setTarget(System *t) override;
-    void setName(std::string n) override;
+    void setSource(System *s);
+    void setTarget(System *t);
+    void setName(std::string n);
 
-    System *getSource() const override;
-    System *getTarget() const override;
-    std::string getName() const override;
+    System *getSource() const;
+    System *getTarget() const;
+    std::string getName() const;
 
     virtual double execute() = 0;
 
@@ -67,6 +57,26 @@ public:
     friend class UnitFlow;
     friend class UnitFlowTypes;
     friend class UnitModel;
+    friend class Handle<FlowBody>;
+};
+
+class FlowHandle : public Flow, public Handle<FlowBody> {
+    friend class UnitFlow;
+    friend class UnitModel;
+public:
+    FlowHandle(std::string name = "", System* source = nullptr, System* target = nullptr) {
+        pImpl_->setName(name);
+        pImpl_->setSource(source);
+        pImpl_->setTarget(target);
+    }
+    virtual ~FlowHandle() {}
+    void setSource(System *s) override { pImpl_->setSource(s); }
+    void setTarget(System *t) override { pImpl_->setTarget(t); }
+    System *getSource() const override { return pImpl_->getSource(); }
+    System *getTarget() const override { return pImpl_->getTarget(); }
+    std::string getName() const override { return pImpl_->getName(); }
+    void setName(std::string name) override { pImpl_->setName(name); }
+    double execute() override { return pImpl_->execute(); }
 };
 
 #endif

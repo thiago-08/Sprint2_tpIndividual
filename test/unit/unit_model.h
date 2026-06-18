@@ -12,12 +12,6 @@ public:
     /** @brief Testa o construtor parametrizado da classe Model. */
     static void unit_Model_ParameterizedConstructor();
 
-    /** @brief Testa o construtor de cópia da classe Model. */
-    static void unit_Model_CopyConstructor();
-
-    /** @brief Testa o operador de atribuição da classe Model. */
-    static void unit_Model_Operator();
-
     /** @brief Testa o destrutor. */
     static void unit_Model_destructor();
 

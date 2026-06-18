@@ -3,19 +3,13 @@
 #include "flowImpl.h"
 
 //global variable
-std::vector<Model*> ModelImpl::models;
+std::vector<Model*> ModelBody::models;
 
-ModelImpl::ModelImpl() : name("") {}
+ModelBody::ModelBody() : name("") {}
 
-ModelImpl::ModelImpl(std::string name) : name(name) {}
+ModelBody::ModelBody(std::string name) : name(name) {}
 
-ModelImpl::ModelImpl(const ModelImpl &mod){
-    this->name = mod.name;
-    this->systems = mod.systems;
-    this->flows = mod.flows;
-}
-
-ModelImpl::~ModelImpl() {
+ModelBody::~ModelBody() {
     for (std::vector<System*>::iterator it = systems.begin(); it != systems.end(); ++it) {
         delete *it; 
     }
@@ -26,33 +20,23 @@ ModelImpl::~ModelImpl() {
     flows.clear();
 }
 
-ModelImpl &ModelImpl::operator=(const ModelImpl &mod){
-    if (this == &mod){
-        return *this;
-    }
-    this->name = mod.name;
-    this->systems = mod.systems;
-    this->flows = mod.flows;
-    return *this;
-}
-
 Model* Model::createModel(std::string name) {
-    Model* m = new ModelImpl(name);
-    ModelImpl::models.push_back(m);
+    Model* m = new ModelHandle(name);
+    ModelBody::models.push_back(m);
     return m;
 }
 
-System* ModelImpl::createSystem(std::string name, double value) {
-    System* s = new SystemImpl(name, value);
+System* ModelBody::createSystem(std::string name, double value) {
+    System* s = new SystemHandle(name, value);
     systems.push_back(s);
     return s;
 }
 
 bool Model::deleteModel(std::string name) {
-    for (auto it = ModelImpl::models.begin(); it != ModelImpl::models.end(); ++it) {
+    for (auto it = ModelBody::models.begin(); it != ModelBody::models.end(); ++it) {
         if ((*it)->getName() == name) {
             Model* m = *it;
-            ModelImpl::models.erase(it);
+            ModelBody::models.erase(it);
             delete m; 
             return true;
         }
@@ -60,7 +44,7 @@ bool Model::deleteModel(std::string name) {
     return false;
 }
 
-bool ModelImpl::deleteSystem(System* s) {
+bool ModelBody::deleteSystem(System* s) {
     for (auto it = systems.begin(); it != systems.end(); ++it) {
         if (*it == s) {
             systems.erase(it);
@@ -71,7 +55,7 @@ bool ModelImpl::deleteSystem(System* s) {
     return false;
 }
 
-bool ModelImpl::deleteFlow(Flow* f) {
+bool ModelBody::deleteFlow(Flow* f) {
     for (auto it = flows.begin(); it != flows.end(); ++it) {
         if (*it == f) {
             flows.erase(it);
@@ -82,23 +66,23 @@ bool ModelImpl::deleteFlow(Flow* f) {
     return false;
 }
 
-void ModelImpl::add(Flow* f) {
+void ModelBody::add(Flow* f) {
     flows.push_back(f);
 }
 
-void ModelImpl::add(System *s){
+void ModelBody::add(System *s){
     systems.push_back(s);
 }
 
-std::string ModelImpl::getName() const{
+std::string ModelBody::getName() const{
     return name;
 }
 
-void ModelImpl::setName(std::string n){
+void ModelBody::setName(std::string n){
     name = n;
 }
 
-void ModelImpl::run(int t_initial, int t_end){
+void ModelBody::run(int t_initial, int t_end){
     for (int time = t_initial; time < t_end; ++time){
         std::vector<double> results;
         for (auto it = flows.begin(); it != flows.end(); ++it){

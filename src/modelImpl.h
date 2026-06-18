@@ -1,6 +1,7 @@
-#ifndef MODEL_IMPL_H
-#define MODEL_IMPL_H
+#ifndef MODEL_Body_H
+#define MODEL_Body_H
 
+#include "handleBody.h"
 #include "model.h"
 #include <vector>
 
@@ -8,7 +9,7 @@
  * @brief Classe que implementa as funções de gerenciamento de múltiplos sistemas e fluxos.
  * Responsável por executar os ciclos da simulação temporal atualizando os dados.
  */
-class ModelImpl : public Model
+class ModelBody : public Body
 {
 protected:
     /** @brief Nome do modelo de simulação. */
@@ -21,61 +22,92 @@ protected:
     static std::vector<Model*> models; 
 
     /**
-     * @brief Construtor padrão de ModelImpl.
+     * @brief Construtor padrão de ModelBody.
      */
-    ModelImpl();
+    ModelBody();
 
     /**
-     * @brief Construtor de cópia de ModelImpl.
-     * @param mod Objeto ModelImpl de origem a ser copiado.
-     */
-    ModelImpl(const ModelImpl &mod);
-
-    /**
-     * @brief Construtor parametrizado de ModelImpl.
+     * @brief Construtor parametrizado de ModelBody.
      * @param name Nome do modelo de simulação.
      */
-    ModelImpl(std::string name);
-
-    /**
-     * @brief Operador de atribuição por cópia (Sobrecarga de operador =).
-     * @param mod Objeto ModelImpl de origem.
-     * @return ModelImpl& Referência para o próprio modelo atualizado.
-     */
-    ModelImpl &operator=(const ModelImpl &mod);
-
+    ModelBody(std::string name);
 
 public:
     /**
-     * @brief Destrutor virtual de ModelImpl.
+     * @brief Destrutor virtual de ModelBody.
      */
-    virtual ~ModelImpl();
+    virtual ~ModelBody();
 
-    void run(int t_initial, int t_end) override;
-    std::string getName() const override;
-    void setName(std::string name) override;
+    void run(int t_initial, int t_end);
+    std::string getName() const;
+    void setName(std::string name);
 
     /**
      * @brief Cria e adiciona um novo Sistema à implementação do modelo.
      */
-    System* createSystem(std::string name, double value) override;
+    System* createSystem(std::string name, double value);
 
     /**
      * @brief Remove o sistema do vetor interno e o destrói da memória
      */
-    bool deleteSystem(System* s) override;
+    bool deleteSystem(System* s);
 
     /**
      * @brief Remove o fluxo do vetor interno e o destrói da memória.
      */
-    bool deleteFlow(Flow* f) override;
+    bool deleteFlow(Flow* f);
 
     friend class Model; //to have acess to models
     friend class UnitModel;
+    friend class ModelHandle;
+    friend class Handle<ModelBody>;
 
 private:
-    void add(System *s) override;
-    void add(Flow *f) override;
+    void add(System *s);
+    void add(Flow *f);
+};
+
+class ModelHandle : public Model, public Handle<ModelBody>{
+friend class UnitModel;
+public:
+    ModelHandle(std::string name = "") {
+        pImpl_->setName(name);
+    }
+
+    virtual ~ModelHandle() {}
+
+    System* createSystem(std::string name, double value) override {
+        return pImpl_->createSystem(name, value);
+    }
+
+    bool deleteSystem(System* s) override {
+        return pImpl_->deleteSystem(s);
+    }
+
+    bool deleteFlow(Flow* f) override {
+        return pImpl_->deleteFlow(f);
+    }
+
+    void run(int t_initial, int t_end) override {
+        pImpl_->run(t_initial, t_end);
+    }
+
+    std::string getName() const override {
+        return pImpl_->getName();
+    }
+
+    void setName(std::string name) override {
+        pImpl_->setName(name);
+    }
+
+protected:
+    void add(System *s) override {
+        pImpl_->add(s);
+    }
+
+    void add(Flow *f) override {
+        pImpl_->add(f);
+    }
 };
 
 #endif
