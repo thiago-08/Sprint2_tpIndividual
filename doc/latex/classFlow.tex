@@ -11,7 +11,8 @@ Interface abstrata de especificação para um Fluxo.
 
 
 
-Inheritance diagram for Flow\+:\nopagebreak
+Inheritance diagram for Flow\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -30,33 +31,35 @@ Collaboration diagram for Flow\+:\nopagebreak
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classHandle}{virtual}} \mbox{\hyperlink{classFlow_a325d284a50ca3274b126b21f5c39b9af}{\texorpdfstring{$\sim$}{\string~}\+Flow}} ()
+virtual \mbox{\hyperlink{classFlow_a325d284a50ca3274b126b21f5c39b9af}{\texorpdfstring{$\sim$}{\string~}\+Flow}} ()
 \begin{DoxyCompactList}\small\item\em Destrutor virtual padrão. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classHandle}{virtual}} \mbox{\hyperlink{classHandle}{void}} \mbox{\hyperlink{classFlow_a4d756236982858350e7bf80a465926a7}{set\+Source}} (\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classHandle}{s}})=0
+virtual void \mbox{\hyperlink{classFlow_a4d756236982858350e7bf80a465926a7}{set\+Source}} (\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}s)=0
 \begin{DoxyCompactList}\small\item\em Define o sistema de origem (fonte) da transferência. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classHandle}{virtual}} \mbox{\hyperlink{classHandle}{void}} \mbox{\hyperlink{classFlow_abacc363985e28905dcc10c9fab7c4328}{set\+Target}} (\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classHandle}{t}})=0
+virtual void \mbox{\hyperlink{classFlow_abacc363985e28905dcc10c9fab7c4328}{set\+Target}} (\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}t)=0
 \begin{DoxyCompactList}\small\item\em Define o sistema de destino (alvo) da transferência. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classHandle}{virtual}} \mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classFlow_abf0f3dbb285fe82e5ba6449de06b97c8}{get\+Source}} () \mbox{\hyperlink{classHandle}{const}} =0
+virtual \mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classFlow_abf0f3dbb285fe82e5ba6449de06b97c8}{get\+Source}} () const =0
 \begin{DoxyCompactList}\small\item\em Retorna o ponteiro para o sistema de origem atual. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classHandle}{virtual}} \mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classFlow_afb9b8d93ea0fc81868b8e02dd382a787}{get\+Target}} () \mbox{\hyperlink{classHandle}{const}} =0
+virtual \mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classFlow_afb9b8d93ea0fc81868b8e02dd382a787}{get\+Target}} () const =0
 \begin{DoxyCompactList}\small\item\em Retorna o ponteiro para o sistema de destino atual. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classHandle}{virtual}} std\+::string \mbox{\hyperlink{classFlow_a2d0340d844ab2d275222938234e44169}{get\+Name}} () \mbox{\hyperlink{classHandle}{const}} =0
+virtual std\+::string \mbox{\hyperlink{classFlow_a2d0340d844ab2d275222938234e44169}{get\+Name}} () const =0
 \begin{DoxyCompactList}\small\item\em Retorna o nome identificador do fluxo. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classHandle}{virtual}} \mbox{\hyperlink{classHandle}{void}} \mbox{\hyperlink{classFlow_af83353015d9841e35c972625f450efe5}{set\+Name}} (std\+::string name)=0
+virtual void \mbox{\hyperlink{classFlow_af83353015d9841e35c972625f450efe5}{set\+Name}} (std\+::string name)=0
 \begin{DoxyCompactList}\small\item\em Define um nome identificador para o fluxo. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classHandle}{virtual}} \mbox{\hyperlink{classHandle}{double}} \mbox{\hyperlink{classFlow_a619be0b590c78202127bc6ac7fb04029}{execute}} ()=0
+virtual double \mbox{\hyperlink{classFlow_a619be0b590c78202127bc6ac7fb04029}{execute}} ()=0
 \begin{DoxyCompactList}\small\item\em Método virtual puro que executa a equação matemática do fluxo. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Interface abstrata de especificação para um Fluxo. 
 
+\label{doc-constructors}
+\Hypertarget{classFlow_doc-constructors}
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classFlow_a325d284a50ca3274b126b21f5c39b9af}\label{classFlow_a325d284a50ca3274b126b21f5c39b9af} 
-\index{Flow@{Flow}!````~Flow@{\texorpdfstring{$\sim$}{\string~}Flow}}
+\Hypertarget{classFlow_a325d284a50ca3274b126b21f5c39b9af}\index{Flow@{Flow}!````~Flow@{\texorpdfstring{$\sim$}{\string~}Flow}}
 \index{````~Flow@{\texorpdfstring{$\sim$}{\string~}Flow}!Flow@{Flow}}
 \doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Flow()}{\string~Flow()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classHandle}{virtual}} Flow\+::\texorpdfstring{$\sim$}{\string~}\+Flow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily \label{classFlow_a325d284a50ca3274b126b21f5c39b9af} 
+virtual Flow\+::\texorpdfstring{$\sim$}{\string~}\+Flow (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 
 
@@ -64,12 +67,14 @@ Destrutor virtual padrão.
 
 
 
+\label{doc-func-members}
+\Hypertarget{classFlow_doc-func-members}
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classFlow_a619be0b590c78202127bc6ac7fb04029}\label{classFlow_a619be0b590c78202127bc6ac7fb04029} 
-\index{Flow@{Flow}!execute@{execute}}
+\Hypertarget{classFlow_a619be0b590c78202127bc6ac7fb04029}\index{Flow@{Flow}!execute@{execute}}
 \index{execute@{execute}!Flow@{Flow}}
 \doxysubsubsection{\texorpdfstring{execute()}{execute()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classHandle}{virtual}} \mbox{\hyperlink{classHandle}{double}} Flow\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily \label{classFlow_a619be0b590c78202127bc6ac7fb04029} 
+virtual double Flow\+::execute (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -80,13 +85,13 @@ double O valor calculado a ser debitado da origem e creditado no destino.
 \end{DoxyReturn}
 
 
-Implemented in \mbox{\hyperlink{classFlowExponencial_ac56afcfed928e9b12fbf693eb37ec679}{Flow\+Exponencial}}, \mbox{\hyperlink{classFlowLogistic_a0e1cd18e73d89b19d6b8ed2fa6eeb604}{Flow\+Logistic}}, \mbox{\hyperlink{classFlowComplex_ad9b47eebc0d8b5ae969aa3f358543990}{Flow\+Complex}}, \mbox{\hyperlink{classFlowMock_a6f0e62e6111d0314fe986e78f531ca43}{Flow\+Mock}}, \mbox{\hyperlink{classFlowTestHandle_a45348eb62d74f2e3544be1ecccef7c66}{Flow\+Test\+Handle}}, and \mbox{\hyperlink{classFlowHandle_a4af8a4a490953bf061cf21d73528dc70}{Flow\+Handle}}.
+Implemented in \mbox{\hyperlink{classFlowComplex_ad9b47eebc0d8b5ae969aa3f358543990}{Flow\+Complex}}, \mbox{\hyperlink{classFlowExponencial_ac56afcfed928e9b12fbf693eb37ec679}{Flow\+Exponencial}}, \mbox{\hyperlink{classFlowHandle_a4af8a4a490953bf061cf21d73528dc70}{Flow\+Handle}}, \mbox{\hyperlink{classFlowLogistic_a0e1cd18e73d89b19d6b8ed2fa6eeb604}{Flow\+Logistic}}, \mbox{\hyperlink{classFlowMock_a6f0e62e6111d0314fe986e78f531ca43}{Flow\+Mock}}, and \mbox{\hyperlink{classFlowTestHandle_a45348eb62d74f2e3544be1ecccef7c66}{Flow\+Test\+Handle}}.
 
-\Hypertarget{classFlow_a2d0340d844ab2d275222938234e44169}\label{classFlow_a2d0340d844ab2d275222938234e44169} 
-\index{Flow@{Flow}!getName@{getName}}
+\Hypertarget{classFlow_a2d0340d844ab2d275222938234e44169}\index{Flow@{Flow}!getName@{getName}}
 \index{getName@{getName}!Flow@{Flow}}
 \doxysubsubsection{\texorpdfstring{getName()}{getName()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classHandle}{virtual}} std\+::string Flow\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily \label{classFlow_a2d0340d844ab2d275222938234e44169} 
+virtual std\+::string Flow\+::get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -99,11 +104,11 @@ std\+::string contendo o nome do fluxo.
 
 Implemented in \mbox{\hyperlink{classFlowHandle_a2445723abbc8ae3123e3589c6d590ec1}{Flow\+Handle}}, and \mbox{\hyperlink{classFlowTestHandle_a0026b40464e6c3e457a4eb38dc8b9f54}{Flow\+Test\+Handle}}.
 
-\Hypertarget{classFlow_abf0f3dbb285fe82e5ba6449de06b97c8}\label{classFlow_abf0f3dbb285fe82e5ba6449de06b97c8} 
-\index{Flow@{Flow}!getSource@{getSource}}
+\Hypertarget{classFlow_abf0f3dbb285fe82e5ba6449de06b97c8}\index{Flow@{Flow}!getSource@{getSource}}
 \index{getSource@{getSource}!Flow@{Flow}}
 \doxysubsubsection{\texorpdfstring{getSource()}{getSource()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classHandle}{virtual}} \mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*} Flow\+::get\+Source (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily \label{classFlow_abf0f3dbb285fe82e5ba6449de06b97c8} 
+virtual \mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*} Flow\+::get\+Source (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -116,11 +121,11 @@ System\texorpdfstring{$\ast$}{*} Ponteiro do sistema fonte.
 
 Implemented in \mbox{\hyperlink{classFlowHandle_a9ced76b3e7b67f47c8651dd4e8e6ff17}{Flow\+Handle}}, and \mbox{\hyperlink{classFlowTestHandle_a003a48eea7a7f873ff9c05f01b5e9d3f}{Flow\+Test\+Handle}}.
 
-\Hypertarget{classFlow_afb9b8d93ea0fc81868b8e02dd382a787}\label{classFlow_afb9b8d93ea0fc81868b8e02dd382a787} 
-\index{Flow@{Flow}!getTarget@{getTarget}}
+\Hypertarget{classFlow_afb9b8d93ea0fc81868b8e02dd382a787}\index{Flow@{Flow}!getTarget@{getTarget}}
 \index{getTarget@{getTarget}!Flow@{Flow}}
 \doxysubsubsection{\texorpdfstring{getTarget()}{getTarget()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classHandle}{virtual}} \mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*} Flow\+::get\+Target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily \label{classFlow_afb9b8d93ea0fc81868b8e02dd382a787} 
+virtual \mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*} Flow\+::get\+Target (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -133,11 +138,11 @@ System\texorpdfstring{$\ast$}{*} Ponteiro do sistema alvo.
 
 Implemented in \mbox{\hyperlink{classFlowHandle_a660808cc3bcc0ecc404e5e43ee2df5d9}{Flow\+Handle}}, and \mbox{\hyperlink{classFlowTestHandle_abfacc9fcbf5098c7c5c070b805a104ea}{Flow\+Test\+Handle}}.
 
-\Hypertarget{classFlow_af83353015d9841e35c972625f450efe5}\label{classFlow_af83353015d9841e35c972625f450efe5} 
-\index{Flow@{Flow}!setName@{setName}}
+\Hypertarget{classFlow_af83353015d9841e35c972625f450efe5}\index{Flow@{Flow}!setName@{setName}}
 \index{setName@{setName}!Flow@{Flow}}
 \doxysubsubsection{\texorpdfstring{setName()}{setName()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classHandle}{virtual}} \mbox{\hyperlink{classHandle}{void}} Flow\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily \label{classFlow_af83353015d9841e35c972625f450efe5} 
+virtual void Flow\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -150,13 +155,13 @@ Define um nome identificador para o fluxo.
 \end{DoxyParams}
 
 
-Implemented in \mbox{\hyperlink{classFlowTestHandle_aff4d80e1aab92e506f865c12f65210a0}{Flow\+Test\+Handle}}, and \mbox{\hyperlink{classFlowHandle_ab695ddf76ff4e9872ead3672fd46510b}{Flow\+Handle}}.
+Implemented in \mbox{\hyperlink{classFlowHandle_ab695ddf76ff4e9872ead3672fd46510b}{Flow\+Handle}}, and \mbox{\hyperlink{classFlowTestHandle_aff4d80e1aab92e506f865c12f65210a0}{Flow\+Test\+Handle}}.
 
-\Hypertarget{classFlow_a4d756236982858350e7bf80a465926a7}\label{classFlow_a4d756236982858350e7bf80a465926a7} 
-\index{Flow@{Flow}!setSource@{setSource}}
+\Hypertarget{classFlow_a4d756236982858350e7bf80a465926a7}\index{Flow@{Flow}!setSource@{setSource}}
 \index{setSource@{setSource}!Flow@{Flow}}
 \doxysubsubsection{\texorpdfstring{setSource()}{setSource()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classHandle}{virtual}} \mbox{\hyperlink{classHandle}{void}} Flow\+::set\+Source (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily \label{classFlow_a4d756236982858350e7bf80a465926a7} 
+virtual void Flow\+::set\+Source (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}}]{s}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -171,11 +176,11 @@ Define o sistema de origem (fonte) da transferência.
 
 Implemented in \mbox{\hyperlink{classFlowHandle_a24bd92b9d17cc644b9a6ef890592ef70}{Flow\+Handle}}, and \mbox{\hyperlink{classFlowTestHandle_ac3506ca82d2b5e12d237c01d6d471626}{Flow\+Test\+Handle}}.
 
-\Hypertarget{classFlow_abacc363985e28905dcc10c9fab7c4328}\label{classFlow_abacc363985e28905dcc10c9fab7c4328} 
-\index{Flow@{Flow}!setTarget@{setTarget}}
+\Hypertarget{classFlow_abacc363985e28905dcc10c9fab7c4328}\index{Flow@{Flow}!setTarget@{setTarget}}
 \index{setTarget@{setTarget}!Flow@{Flow}}
 \doxysubsubsection{\texorpdfstring{setTarget()}{setTarget()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classHandle}{virtual}} \mbox{\hyperlink{classHandle}{void}} Flow\+::set\+Target (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily \label{classFlow_abacc363985e28905dcc10c9fab7c4328} 
+virtual void Flow\+::set\+Target (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}}]{t}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 

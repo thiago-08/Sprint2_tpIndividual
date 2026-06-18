@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['c_20para_20simulação_20de_20dinâmica_20de_20sistemas_0',['MyVensim - Framework C++ para Simulação de Dinâmica de Sistemas',['../index.html',1,'']]]
+  ['arquitetura_20e_20padrões_20de_20projeto_0',['🛠️ Detalhes da Arquitetura e Padrões de Projeto',['../index.html#autotoc_md4',1,'']]],
+  ['autores_1',['👨‍💻 Autores',['../index.html#autotoc_md17',1,'']]]
 ];
